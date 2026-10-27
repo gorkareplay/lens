@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bx3i7n6agrjxy"]
+
+[ext_resource type="Script" uid="uid://bsm0sahmo6d35" path="res://Scripts/player.gd" id="1_i3pqv"]
+[ext_resource type="Script" uid="uid://qlav0nbawsas" path="res://Scripts/camera_3d.gd" id="2_hqtel"]
+[ext_resource type="Shader" uid="uid://bpjiy7vjv0lvg" path="res://1bit.gdshader" id="3_sweqy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jklv4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dkbjm"]
+shader = ExtResource("3_sweqy")
+shader_parameter/color_a = Color(0.05, 0.05, 0.1, 1)
+shader_parameter/color_b = Color(1, 1, 1, 1)
+
+[node name="CharacterBody3D" type="CharacterBody3D" unique_id=482356386]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.58355284, 0)
+script = ExtResource("1_i3pqv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=996362681]
+shape = SubResource("BoxShape3D_jklv4")
+
+[node name="CameraPivot" type="Node3D" parent="." unique_id=905563059]
+
+[node name="SpringArm3D" type="SpringArm3D" parent="CameraPivot" unique_id=779059579]
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot/SpringArm3D" unique_id=319491196]
+fov = 92.3
+script = ExtResource("2_hqtel")
+sensitivity = null
+
+[node name="ColorRect" type="ColorRect" parent="CameraPivot/SpringArm3D/Camera3D" unique_id=1214281580]
+material = SubResource("ShaderMaterial_dkbjm")
+offset_right = 1159.0
+offset_bottom = 658.0
