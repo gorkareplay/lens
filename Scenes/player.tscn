@@ -2,14 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bsm0sahmo6d35" path="res://Scripts/player.gd" id="1_i3pqv"]
 [ext_resource type="Script" uid="uid://qlav0nbawsas" path="res://Scripts/camera_3d.gd" id="2_hqtel"]
-[ext_resource type="Shader" uid="uid://bpjiy7vjv0lvg" path="res://1bit.gdshader" id="3_sweqy"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jklv4"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_dkbjm"]
-shader = ExtResource("3_sweqy")
-shader_parameter/color_a = Color(0.05, 0.05, 0.1, 1)
-shader_parameter/color_b = Color(1, 1, 1, 1)
 
 [node name="CharacterBody3D" type="CharacterBody3D" unique_id=482356386]
 script = ExtResource("1_i3pqv")
@@ -25,8 +19,3 @@ shape = SubResource("BoxShape3D_jklv4")
 fov = 92.3
 script = ExtResource("2_hqtel")
 sensitivity = null
-
-[node name="ColorRect" type="ColorRect" parent="CameraPivot/SpringArm3D/Camera3D" unique_id=1214281580]
-material = SubResource("ShaderMaterial_dkbjm")
-offset_right = 1159.0
-offset_bottom = 658.0

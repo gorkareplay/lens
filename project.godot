@@ -15,10 +15,19 @@ run/main_scene="uid://1uo6ytv7tfwn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Dialogue="*uid://dy3nmgkw3dcjn"
+PostFx="*uid://bpouhpt78oiox"
+
 [display]
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[gui]
+
+theme/default_font_antialiasing=0
 
 [input]
 

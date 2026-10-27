@@ -17,21 +17,23 @@ func _ready() -> void:
 	target_pitch = rotation.x
 
 func _input(event: InputEvent) -> void:
-	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
-		# Add to our target values instead of snapping the camera instantly
-		target_yaw -= event.relative.x * sensitivity
-		target_pitch -= event.relative.y * sensitivity
+	if not Dialogue.active:
+		if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+			# Add to our target values instead of snapping the camera instantly
+			target_yaw -= event.relative.x * sensitivity
+			target_pitch -= event.relative.y * sensitivity
 		
-		# Clamp the vertical look limit immediately
-		target_pitch = clamp(target_pitch, min_pitch, max_pitch)
+			# Clamp the vertical look limit immediately
+			target_pitch = clamp(target_pitch, min_pitch, max_pitch)
 
 func _process(delta: float) -> void:
-	# Smoothly glide (interpolate) the camera's actual rotation toward the targets every frame
-	rotation.y = lerp_angle(rotation.y, target_yaw, smooth_speed * delta)
-	rotation.x = lerp_angle(rotation.x, target_pitch, smooth_speed * delta)
+	if not Dialogue.active:
+		# Smoothly glide (interpolate) the camera's actual rotation toward the targets every frame
+		rotation.y = lerp_angle(rotation.y, target_yaw, smooth_speed * delta)
+		rotation.x = lerp_angle(rotation.x, target_pitch, smooth_speed * delta)
 	
-	# Keep roll locked to avoid tilting sideways
-	rotation.z = 0.0
+		# Keep roll locked to avoid tilting sideways
+		rotation.z = 0.0
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
