@@ -1,3 +1,56 @@
 [gd_scene format=3 uid="uid://1uo6ytv7tfwn"]
 
+[ext_resource type="Shader" uid="uid://bpjiy7vjv0lvg" path="res://1bit.gdshader" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://bsm0sahmo6d35" path="res://player.gd" id="3_h2yge"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dkbjm"]
+size = Vector3(2, 0, 2)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ti3qb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jklv4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dkbjm"]
+shader = ExtResource("1_0xm2m")
+shader_parameter/color_a = Color(0.05, 0.05, 0.1, 1)
+shader_parameter/color_b = Color(1, 1, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ydx41"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_jklv4"]
+material = SubResource("StandardMaterial3D_ydx41")
+
 [node name="Main" type="Node3D" unique_id=1089672469]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1937304955]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1198941447]
+shape = SubResource("BoxShape3D_dkbjm")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1919369410]
+mesh = SubResource("PlaneMesh_ti3qb")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=345366962]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.58355284, 0)
+script = ExtResource("3_h2yge")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=660442525]
+shape = SubResource("BoxShape3D_jklv4")
+
+[node name="CameraPivot" type="Node3D" parent="CharacterBody3D" unique_id=1899335305]
+
+[node name="SpringArm3D" type="SpringArm3D" parent="CharacterBody3D/CameraPivot" unique_id=1516822286]
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/CameraPivot/SpringArm3D" unique_id=919792294]
+
+[node name="ColorRect" type="ColorRect" parent="CharacterBody3D/CameraPivot/SpringArm3D/Camera3D" unique_id=2035191250]
+material = SubResource("ShaderMaterial_dkbjm")
+offset_right = 1159.0
+offset_bottom = 658.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=963053089]
+transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, 0.99999994, 0, -0.99999994, -4.3711385e-08, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=496486091]
+transform = Transform3D(-0.14771819, 0.49754003, -0.8547709, -0.98174334, 0.030950584, 0.18767661, 0.11983228, 0.866889, 0.4838846, -2.3908994, 1.2010003, 0)
+mesh = SubResource("PlaneMesh_jklv4")
