@@ -1,5 +1,10 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1793102695
-icon.svg::CompressedTexture2D::2168002415905648180::1793100052::1793103082::1::::<><><>0<>0<>9017cdc28e41bfb3ef4cbc40b6e4a1b9<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.etc2.ctex::
-main.tscn::PackedScene::1867104178089167109::1793100052::0::1::::<><><>0<>0<><>::
-1bit.gdshader::Shader::3458363046672049268::1793102695::0::1::::<><><>0<>0<><>::
+::res://::1793114472
+1bit.gdshader::Shader::3458363046672049268::1793114469::0::1::::<><><>0<>0<><>::
+icon.svg::CompressedTexture2D::2168002415905648180::1793099904::1793112104::1::::<><><>0<>0<>9017cdc28e41bfb3ef4cbc40b6e4a1b9<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.etc2.ctex::
+::res://Scenes/::1793114472
+main.tscn::PackedScene::1867104178089167109::1793114472::0::1::::<><><>0<>0<><>::uid://bsm0sahmo6d35::::res://Scripts/player.gd<>uid://qlav0nbawsas::::res://Scripts/camera_3d.gd<>uid://bpjiy7vjv0lvg::::res://1bit.gdshader
+player.tscn::PackedScene::4059110276529794162::1793114549::0::1::::<><><>0<>0<><>::uid://bsm0sahmo6d35::::res://Scripts/player.gd<>uid://qlav0nbawsas::::res://Scripts/camera_3d.gd<>uid://bpjiy7vjv0lvg::::res://1bit.gdshader
+::res://Scripts/::1793114472
+camera_3d.gd::GDScript::1145768488387710442::1793113935::0::1::::<>Camera3D<><>0<>0<><>::
+player.gd::GDScript::3676142482714638586::1793114549::0::1::::<>CharacterBody3D<><>0<>0<><>::
