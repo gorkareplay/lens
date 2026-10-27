@@ -1,6 +1,9 @@
 extends CharacterBody3D
 
 @onready var camera: Camera3D = $CameraPivot/SpringArm3D/Camera3D
+@onready var raycast: RayCast3D = $CameraPivot/SpringArm3D/Camera3D/RayCast3D
+@onready var secret_sound: AudioStreamPlayer = $SoundPlayer
+
 @export var max_speed := 4.0
 @export var ground_accel := 20.0
 @export var ground_friction := 30.0
@@ -8,9 +11,15 @@ extends CharacterBody3D
 @export var air_friction := 0.5
 @export var jump_velocity := 4.5
 
+
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func _physics_process(delta: float) -> void:
+	
+	if raycast.is_colliding():
+		if Input.is_action_just_pressed("interact"):
+			secret_sound.play()
+	
 	if not Dialogue.active:
 		if not is_on_floor():
 			velocity.y -= gravity * delta

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bsm0sahmo6d35" path="res://Scripts/player.gd" id="1_i3pqv"]
 [ext_resource type="Script" uid="uid://qlav0nbawsas" path="res://Scripts/camera_3d.gd" id="2_hqtel"]
+[ext_resource type="AudioStream" uid="uid://c5jns01sacgjr" path="res://Sound/guess_the_sound.wav" id="3_6t5aa"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jklv4"]
 
@@ -19,3 +20,12 @@ shape = SubResource("BoxShape3D_jklv4")
 fov = 92.3
 script = ExtResource("2_hqtel")
 sensitivity = null
+
+[node name="RayCast3D" type="RayCast3D" parent="CameraPivot/SpringArm3D/Camera3D" unique_id=681123607]
+transform = Transform3D(1, 0, 0, 0, -0.0031614131, -0.999995, 0, 0.999995, -0.0031614131, 0, -5.9604645e-08, 0)
+collision_mask = 2
+
+[node name="SoundPlayer" type="AudioStreamPlayer" parent="." unique_id=9180040]
+stream = ExtResource("3_6t5aa")
+volume_db = -6.804
+max_polyphony = 5
