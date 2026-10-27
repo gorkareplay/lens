@@ -12,7 +12,6 @@ shader_parameter/color_a = Color(0.05, 0.05, 0.1, 1)
 shader_parameter/color_b = Color(1, 1, 1, 1)
 
 [node name="CharacterBody3D" type="CharacterBody3D" unique_id=482356386]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.58355284, 0)
 script = ExtResource("1_i3pqv")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=996362681]
