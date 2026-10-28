@@ -19,7 +19,6 @@ shape = SubResource("BoxShape3D_jklv4")
 [node name="Camera3D" type="Camera3D" parent="CameraPivot/SpringArm3D" unique_id=319491196]
 fov = 92.3
 script = ExtResource("2_hqtel")
-sensitivity = null
 
 [node name="RayCast3D" type="RayCast3D" parent="CameraPivot/SpringArm3D/Camera3D" unique_id=681123607]
 transform = Transform3D(1, 0, 0, 0, -0.0031614131, -0.999995, 0, 0.999995, -0.0031614131, 0, -5.9604645e-08, 0)

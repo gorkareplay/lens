@@ -18,6 +18,7 @@ func _ready() -> void:
 
 func _input(event: InputEvent) -> void:
 	if not Dialogue.active:
+		
 		if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 			# Add to our target values instead of snapping the camera instantly
 			target_yaw -= event.relative.x * sensitivity
@@ -25,6 +26,7 @@ func _input(event: InputEvent) -> void:
 		
 			# Clamp the vertical look limit immediately
 			target_pitch = clamp(target_pitch, min_pitch, max_pitch)
+			
 
 func _process(delta: float) -> void:
 	if not Dialogue.active:
@@ -34,10 +36,3 @@ func _process(delta: float) -> void:
 	
 		# Keep roll locked to avoid tilting sideways
 		rotation.z = 0.0
-
-func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_cancel"):
-		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
-			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-		else:
-			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
