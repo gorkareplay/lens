@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://1uo6ytv7tfwn"]
 
+[ext_resource type="Script" uid="uid://d0pejyksncldl" path="res://Scenes/main.gd" id="1_8gbba"]
 [ext_resource type="PackedScene" uid="uid://bx3i7n6agrjxy" path="res://Scenes/player.tscn" id="1_jjgbg"]
 [ext_resource type="PackedScene" uid="uid://crs2qme6ukli" path="res://Scenes/interactable.tscn" id="2_bo1nx"]
+[ext_resource type="Script" uid="uid://da6udrssgufhh" path="res://Scenes/ui.gd" id="4_jjvhh"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dkbjm"]
 size = Vector3(2, 0, 2)
@@ -12,6 +14,8 @@ size = Vector3(2, 0, 2)
 material = SubResource("StandardMaterial3D_6t5aa")
 
 [node name="Main" type="Node3D" unique_id=1089672469]
+process_mode = 1
+script = ExtResource("1_8gbba")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1937304955]
 
@@ -31,3 +35,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 
 [node name="Interactable" parent="." unique_id=133969350 instance=ExtResource("2_bo1nx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8989558, 0.8618684, -0.51080894)
+
+[node name="UI" type="Control" parent="." unique_id=166735091]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("4_jjvhh")
+
+[node name="ResumeButton" type="Button" parent="UI" unique_id=396119556]
+visible = false
+layout_mode = 0
+offset_left = 370.0
+offset_top = 296.0
+offset_right = 824.0
+offset_bottom = 360.0
+disabled = true
+text = "resume you blackie"
+
+[connection signal="pressed" from="UI/ResumeButton" to="UI" method="_on_resume_button_pressed"]
