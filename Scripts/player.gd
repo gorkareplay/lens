@@ -11,6 +11,11 @@ extends CharacterBody3D
 @export var air_friction := 0.5
 @export var jump_velocity := 4.5
 
+# signals
+signal no_lens_signal
+signal red_lens_signal
+signal green_lens_signal
+signal blue_lens_signal 
 
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
@@ -57,3 +62,17 @@ func _physics_process(delta: float) -> void:
 		velocity.z = horizontal.z
 
 		move_and_slide()
+
+func _input(_event: InputEvent) -> void:
+	if Input.is_action_just_pressed("no_lens"):
+		emit_signal("no_lens_signal")
+		
+	if Input.is_action_just_pressed("red_lens"):
+		emit_signal("red_lens_signal")
+		
+	if Input.is_action_just_pressed("green_lens"):
+		emit_signal("green_lens_signal")
+		
+	if Input.is_action_just_pressed("blue_lens"):
+		emit_signal("blue_lens_signal")
+		

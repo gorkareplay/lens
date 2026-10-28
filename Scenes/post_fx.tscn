@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bpouhpt78oiox"]
 
 [ext_resource type="Shader" uid="uid://bpjiy7vjv0lvg" path="res://1bit.gdshader" id="1_7uwcl"]
+[ext_resource type="Script" uid="uid://b552j5ips72of" path="res://Scenes/post_fx.gd" id="1_hyrtn"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jeaex"]
 shader = ExtResource("1_7uwcl")
@@ -9,6 +10,7 @@ shader_parameter/color_b = Color(1, 1, 1, 1)
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1674007050]
 layer = 128
+script = ExtResource("1_hyrtn")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1021472019]
 material = SubResource("ShaderMaterial_jeaex")
