@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bx3i7n6agrjxy" path="res://Scenes/player.tscn" id="1_jjgbg"]
 [ext_resource type="PackedScene" uid="uid://crs2qme6ukli" path="res://Scenes/interactable.tscn" id="2_bo1nx"]
 [ext_resource type="Script" uid="uid://da6udrssgufhh" path="res://Scenes/ui.gd" id="4_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://bpouhpt78oiox" path="res://Scenes/post_fx.tscn" id="5_kry3j"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dkbjm"]
 size = Vector3(2, 0, 2)
@@ -17,13 +18,13 @@ material = SubResource("StandardMaterial3D_6t5aa")
 process_mode = 1
 script = ExtResource("1_8gbba")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1937304955]
+[node name="Platform" type="StaticBody3D" parent="." unique_id=1937304955]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1198941447]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform" unique_id=1198941447]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 shape = SubResource("BoxShape3D_dkbjm")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1919369410]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Platform" unique_id=1919369410]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 mesh = SubResource("PlaneMesh_ti3qb")
 
@@ -54,4 +55,10 @@ offset_bottom = 360.0
 disabled = true
 text = "resume you blackie"
 
+[node name="CanvasLayer" parent="." unique_id=1674007050 instance=ExtResource("5_kry3j")]
+
+[connection signal="blue_lens_signal" from="Player" to="CanvasLayer" method="_on_player_blue_lens_signal"]
+[connection signal="green_lens_signal" from="Player" to="CanvasLayer" method="_on_player_green_lens_signal"]
+[connection signal="no_lens_signal" from="Player" to="CanvasLayer" method="_on_player_no_lens_signal"]
+[connection signal="red_lens_signal" from="Player" to="CanvasLayer" method="_on_player_red_lens_signal"]
 [connection signal="pressed" from="UI/ResumeButton" to="UI" method="_on_resume_button_pressed"]
