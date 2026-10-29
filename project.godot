@@ -18,6 +18,7 @@ config/icon="res://Sprites/icon.svg"
 [autoload]
 
 Dialogue="*uid://dy3nmgkw3dcjn"
+VoiceSynth="*uid://4k7soo10fhf4"
 
 [display]
 

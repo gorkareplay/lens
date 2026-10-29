@@ -33,8 +33,7 @@ func say(lines: Array) -> void:
 func _ready() -> void:
 	layer = 100
 	_build_ui()
-	_voice = VoiceSynth.new()
-	add_child(_voice)
+	_voice = VoiceSynth
 	_root.hide()
 
 class Arrow extends Control:
