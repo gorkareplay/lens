@@ -5,18 +5,38 @@
 [ext_resource type="PackedScene" uid="uid://crs2qme6ukli" path="res://Scenes/interactable.tscn" id="2_bo1nx"]
 [ext_resource type="Script" uid="uid://da6udrssgufhh" path="res://Scenes/ui.gd" id="4_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://bpouhpt78oiox" path="res://Scenes/post_fx.tscn" id="5_kry3j"]
+[ext_resource type="PackedScene" uid="uid://decougth6v0d1" path="res://Scenes/Restaurant.tscn" id="6_21xkr"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kry3j"]
+sky_top_color = Color(1, 1, 1, 1)
+sky_horizon_color = Color(1.08325, 1.08325, 1.08325, 1)
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(1.08325, 1.08325, 1.08325, 1)
+
+[sub_resource type="Sky" id="Sky_21xkr"]
+sky_material = SubResource("ProceduralSkyMaterial_kry3j")
+
+[sub_resource type="Environment" id="Environment_6bp64"]
+background_mode = 2
+sky = SubResource("Sky_21xkr")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dkbjm"]
 size = Vector3(2, 0, 2)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6t5aa"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6bp64"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ti3qb"]
-material = SubResource("StandardMaterial3D_6t5aa")
+material = SubResource("StandardMaterial3D_6bp64")
 
 [node name="Main" type="Node3D" unique_id=1089672469]
 process_mode = 1
 script = ExtResource("1_8gbba")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1243784798]
+environment = SubResource("Environment_6bp64")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1129497530]
+transform = Transform3D(0.78534806, 0.58624995, 0.19884557, 0.12668848, -0.46661362, 0.87534094, 0.6059526, -0.6622558, -0.4407252, 0, 1.0787299, 0)
 
 [node name="Platform" type="StaticBody3D" parent="." unique_id=1937304955]
 
@@ -27,9 +47,6 @@ shape = SubResource("BoxShape3D_dkbjm")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Platform" unique_id=1919369410]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 mesh = SubResource("PlaneMesh_ti3qb")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=963053089]
-transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, 0.99999994, 0, -0.99999994, -4.3711385e-08, 0, 0, 0)
 
 [node name="Player" parent="." unique_id=482356386 instance=ExtResource("1_jjgbg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
@@ -56,6 +73,9 @@ disabled = true
 text = "resume you blackie"
 
 [node name="CanvasLayer" parent="." unique_id=1674007050 instance=ExtResource("5_kry3j")]
+
+[node name="Restaurant" parent="." unique_id=531500159 instance=ExtResource("6_21xkr")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 6.316672, 0.16271019, 9.151124)
 
 [connection signal="blue_lens_signal" from="Player" to="CanvasLayer" method="_on_player_blue_lens_signal"]
 [connection signal="green_lens_signal" from="Player" to="CanvasLayer" method="_on_player_green_lens_signal"]

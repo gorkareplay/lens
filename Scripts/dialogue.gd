@@ -6,7 +6,7 @@ const CHARS_PER_SECOND := 30.0
 const PUNCT_PAUSE := 0.12
 const FONT_SIZE := 28
 
-var active := false 	# check this to freeze the player.
+var active := false
 
 var _lines: Array = []
 var _index := 0

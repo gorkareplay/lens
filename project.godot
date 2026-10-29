@@ -23,6 +23,7 @@ Dialogue="*uid://dy3nmgkw3dcjn"
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+display_server/driver.linuxbsd="x11"
 
 [gui]
 
