@@ -9,7 +9,7 @@ extends CharacterBody3D
 @export var ground_friction := 30.0
 @export var air_accel := 6.0
 @export var air_friction := 0.5
-@export var jump_velocity := 4.5
+# @export var jump_velocity := 4.5
 
 # signals
 signal no_lens_signal
@@ -28,8 +28,8 @@ func _physics_process(delta: float) -> void:
 	if not Dialogue.active:
 		if not is_on_floor():
 			velocity.y -= gravity * delta
-		elif Input.is_action_just_pressed("ui_accept"):
-			velocity.y = jump_velocity
+#		elif Input.is_action_just_pressed("ui_accept"):
+#			velocity.y = jump_velocity
 
 		var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 		var direction := Vector3.ZERO

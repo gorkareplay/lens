@@ -20,14 +20,6 @@ sky_material = SubResource("ProceduralSkyMaterial_kry3j")
 background_mode = 2
 sky = SubResource("Sky_21xkr")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_dkbjm"]
-size = Vector3(2, 0, 2)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6bp64"]
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_ti3qb"]
-material = SubResource("StandardMaterial3D_6bp64")
-
 [node name="Main" type="Node3D" unique_id=1089672469]
 process_mode = 1
 script = ExtResource("1_8gbba")
@@ -37,16 +29,6 @@ environment = SubResource("Environment_6bp64")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1129497530]
 transform = Transform3D(0.78534806, 0.58624995, 0.19884557, 0.12668848, -0.46661362, 0.87534094, 0.6059526, -0.6622558, -0.4407252, 0, 1.0787299, 0)
-
-[node name="Platform" type="StaticBody3D" parent="." unique_id=1937304955]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform" unique_id=1198941447]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
-shape = SubResource("BoxShape3D_dkbjm")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Platform" unique_id=1919369410]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
-mesh = SubResource("PlaneMesh_ti3qb")
 
 [node name="Player" parent="." unique_id=482356386 instance=ExtResource("1_jjgbg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
@@ -75,7 +57,7 @@ text = "resume you blackie"
 [node name="CanvasLayer" parent="." unique_id=1674007050 instance=ExtResource("5_kry3j")]
 
 [node name="Restaurant" parent="." unique_id=531500159 instance=ExtResource("6_21xkr")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 6.316672, 0.16271019, 9.151124)
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -5.683, 0, -7.332061)
 
 [connection signal="blue_lens_signal" from="Player" to="CanvasLayer" method="_on_player_blue_lens_signal"]
 [connection signal="green_lens_signal" from="Player" to="CanvasLayer" method="_on_player_green_lens_signal"]
