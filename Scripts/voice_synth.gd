@@ -6,11 +6,11 @@ const DURATION := 0.13
 const VARIANTS := 4
 
 # character of the voice synth
-const BASE_PITCH_HZ := 92.0
-const GRAVEL := 0.55
-const BREATH := 0.10
-const WARMTH := 0.55
-const VOLUME_DB := -9.0
+var BASE_PITCH_HZ: float = 92.0
+var GRAVEL: float = 0.55
+var BREATH: float = 0.10
+var WARMTH: float = 0.55
+var VOLUME_DB: float = -9.0
 
 const VOWELS := {
 	"a": Vector3(730, 1090, 2440),
@@ -40,6 +40,13 @@ func _ready() -> void:
 			list.append(_synth_vowel(VOWELS[v], rng))
 		_vowel_streams[v] = list
 
+func _set_voice(pitch: float, gravel: float, breath: float, warmth: float, volume: float):
+	BASE_PITCH_HZ = pitch
+	GRAVEL = gravel
+	BREATH = breath
+	WARMTH = warmth
+	VOLUME_DB = volume
+	
 func play_for(ch: String) -> void:
 	var c := ch.to_lower()
 	if _vowel_streams.has(c):
