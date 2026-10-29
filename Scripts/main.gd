@@ -386,8 +386,8 @@ var lines: Array = [
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	await _dialouge_talk(sherif_voice, "Sherif", lines[0])
-	await _dialouge_talk(sherif_voice, "Sherif", lines[1])
+	await _dialouge_talk(sherif_voice, "Detective", lines[0])
+	await _dialouge_talk(sherif_voice, "Detective", lines[1])
 	await _dialouge_talk(sherif_voice, "#%$^!", ["Press 1, 2, 3 and 4 to change lenses."])
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -400,6 +400,6 @@ func _input(_event: InputEvent) -> void:
 		get_tree().paused = true
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
-func _dialouge_talk(voice: Array, _name: String, line: Array):
+func _dialouge_talk(voice: Array, speaker: String, line: Array):
 	VoiceSynth.set_voice.callv(voice)
-	await Dialogue.say(line)
+	await Dialogue.say(line, speaker)
