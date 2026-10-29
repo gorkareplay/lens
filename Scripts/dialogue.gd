@@ -17,15 +17,19 @@ var _pause := 0.0
 var _blink_timer: Timer
 var _root: Control
 var _label: Label
+var _name_row: HBoxContainer
+var _name_label: Label
 var _arrow: Control
 var _voice: VoiceSynth
 
-func say(lines: Array) -> void:
+func say(lines: Array, speaker: String = "") -> void:
 	if active or lines.is_empty():
 		return
 	_lines = lines
 	_index = 0
 	active = true
+	_name_label.text = speaker
+	_name_row.visible = speaker != ""
 	_root.show()
 	_show_line()
 	await finished
@@ -76,11 +80,50 @@ func _build_ui() -> void:
 	margin.add_child(vbox)
 	vbox.alignment = BoxContainer.ALIGNMENT_END
 	vbox.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	vbox.add_theme_constant_override("separation", -4)
 
+	_name_row = HBoxContainer.new()
+	vbox.add_child(_name_row)
+	_name_row.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_name_row.z_index = 1
+
+	var name_panel := PanelContainer.new()
+	_name_row.add_child(name_panel)
+	name_panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
+
+	var spacer := Control.new()
+	_name_row.add_child(spacer)
+	spacer.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	spacer.mouse_filter = Control.MOUSE_FILTER_IGNORE
+
+	var name_style := StyleBoxFlat.new()
+	name_style.bg_color = Color.BLACK
+	name_style.border_color = Color.WHITE
+	name_style.border_width_left = 4
+	name_style.border_width_top = 4
+	name_style.border_width_right = 4
+	name_style.border_width_bottom = 0
+	name_panel.add_theme_stylebox_override("panel", name_style)
+
+	var name_pad := MarginContainer.new()
+	name_panel.add_child(name_pad)
+	name_pad.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	name_pad.add_theme_constant_override("margin_left", 20)
+	name_pad.add_theme_constant_override("margin_right", 20)
+	name_pad.add_theme_constant_override("margin_top", 8)
+	name_pad.add_theme_constant_override("margin_bottom", 12)
+
+	_name_label = Label.new()
+	name_pad.add_child(_name_label)
+	_name_label.add_theme_font_size_override("font_size", FONT_SIZE - 4)
+	_name_label.add_theme_color_override("font_color", Color.WHITE)
+	_name_label.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	
 	var panel := PanelContainer.new()
 	vbox.add_child(panel)
 	panel.custom_minimum_size = Vector2(0, 170)
 	panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	
 	var style := StyleBoxFlat.new()
 	style.bg_color = Color.BLACK
 	style.border_color = Color.WHITE
