@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://1uo6ytv7tfwn"]
 
-[ext_resource type="Script" uid="uid://d0pejyksncldl" path="res://Scenes/main.gd" id="1_8gbba"]
+[ext_resource type="Script" uid="uid://d0pejyksncldl" path="res://Scripts/main.gd" id="1_8gbba"]
 [ext_resource type="PackedScene" uid="uid://bx3i7n6agrjxy" path="res://Scenes/player.tscn" id="1_jjgbg"]
 [ext_resource type="PackedScene" uid="uid://crs2qme6ukli" path="res://Scenes/interactable.tscn" id="2_bo1nx"]
-[ext_resource type="Script" uid="uid://da6udrssgufhh" path="res://Scenes/ui.gd" id="4_jjvhh"]
+[ext_resource type="Script" uid="uid://da6udrssgufhh" path="res://Scripts/ui.gd" id="4_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://bpouhpt78oiox" path="res://Scenes/post_fx.tscn" id="5_kry3j"]
 [ext_resource type="PackedScene" uid="uid://decougth6v0d1" path="res://Scenes/Restaurant.tscn" id="6_21xkr"]
 
