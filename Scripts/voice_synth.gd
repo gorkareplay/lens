@@ -1,4 +1,3 @@
-class_name VoiceSynth
 extends Node
 
 const RATE := 22050
@@ -40,7 +39,7 @@ func _ready() -> void:
 			list.append(_synth_vowel(VOWELS[v], rng))
 		_vowel_streams[v] = list
 
-func _set_voice(pitch: float, gravel: float, breath: float, warmth: float, volume: float):
+func set_voice(pitch: float, gravel: float, breath: float, warmth: float, volume: float):
 	BASE_PITCH_HZ = pitch
 	GRAVEL = gravel
 	BREATH = breath
