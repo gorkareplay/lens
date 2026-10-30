@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://dbwu2w076pb0b"]
+
+[ext_resource type="Script" uid="uid://cucfc5pygwq25" path="res://Scripts/dialogue_resource.gd" id="1_43vh2"]
+
+[resource]
+script = ExtResource("1_43vh2")
+id = "tutorial_green"
+speaker = "Detective"
+lines = Array[String](["Green filter.", "Excellent for highlighting mechanical parts, object structures, and signs of wear.", "Perfect for spotting recent repairs or forced break-ins."])

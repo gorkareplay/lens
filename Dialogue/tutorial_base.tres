@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://dn30lvv7kf1dv"]
+
+[ext_resource type="Script" uid="uid://cucfc5pygwq25" path="res://Scripts/dialogue_resource.gd" id="1_csuuw"]
+
+[resource]
+script = ExtResource("1_csuuw")
+id = "tutorial_base"
+speaker = "Detective"
+lines = Array[String](["The ordinary physical world.", "Clean, neat, completely unremarkable.", "Time to switch lenses."])

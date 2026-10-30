@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://c5fye21sv34s3"]
+
+[ext_resource type="Script" uid="uid://cucfc5pygwq25" path="res://Scripts/dialogue_resource.gd" id="1_pxaap"]
+
+[resource]
+script = ExtResource("1_pxaap")
+id = "guest_a"
+speaker = "Regular Guest"
+lines = Array[String](["Oh, son...", "Something out of the ordinary?", "You know the manager around here.", "A real beast of a man, always yelling at the staff and threatening to fire people.", "And today, I didn't see him at all.", "But I did see one of the new waiters, such a quiet lad, walking around looking pale,", "like he was sick or something happened to him.", "Ah, poor boy, the manager probably gave it to him good...", "Oh, what a disaster."])

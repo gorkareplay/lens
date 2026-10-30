@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://ccw61m54t6tlq"]
+
+[ext_resource type="Script" uid="uid://cucfc5pygwq25" path="res://Scripts/dialogue_resource.gd" id="1_h5flp"]
+
+[resource]
+script = ExtResource("1_h5flp")
+id = "waiter1_plea"
+speaker = "Waiter #1"
+lines = Array[String](["The manager strictly forbids anyone near his office!", "Even calling the cops has to go through him.", "But he's not picking up his phone.", "Regular staff aren't even allowed within ten feet of the door,", "we'd get fired on the spot.", "But you... you're a professional.", "Can you just take a quick look before the boss gets back?", "Otherwise, we're all screwed."])

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://ccoeodieengdq"]
+
+[ext_resource type="Script" uid="uid://cucfc5pygwq25" path="res://Scripts/dialogue_resource.gd" id="1_4gakd"]
+
+[resource]
+script = ExtResource("1_4gakd")
+id = "detective_suppose"
+speaker = "Detective"
+lines = Array[String](["Suppose I am.", "What happened?", "You look like you've seen a ghost."])

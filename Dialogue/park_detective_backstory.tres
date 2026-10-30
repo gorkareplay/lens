@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://7fpreceq0suw"]
+
+[ext_resource type="Script" uid="uid://cucfc5pygwq25" path="res://Scripts/dialogue_resource.gd" id="1_8v61j"]
+
+[resource]
+script = ExtResource("1_8v61j")
+id = "park_detective_backstory"
+speaker = "Detective"
+lines = Array[String](["...", "That was years ago.", "...", "That scum decided other people's lives meant nothing and rigged a gas explosion in the kitchen.", "He took my sight just for being in the wrong place at the wrong time.", "I came here to put him behind bars the legal way...", "...", "But you beat me to it."])

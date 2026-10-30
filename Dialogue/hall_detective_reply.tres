@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://bmyypk6j2k07q"]
+
+[ext_resource type="Script" uid="uid://cucfc5pygwq25" path="res://Scripts/dialogue_resource.gd" id="1_jtp67"]
+
+[resource]
+script = ExtResource("1_jtp67")
+id = "hall_detective_reply"
+speaker = "Detective"
+lines = Array[String](["Some documents are missing.", "But don't panic.", "It'll be easier to continue the investigation if everyone stays calm.", "Which staff members should I talk to?"])

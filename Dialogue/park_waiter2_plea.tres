@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://gvgvlqxcnhmx"]
+
+[ext_resource type="Script" uid="uid://cucfc5pygwq25" path="res://Scripts/dialogue_resource.gd" id="1_56jpi"]
+
+[resource]
+script = ExtResource("1_56jpi")
+id = "park_waiter2_plea"
+speaker = "Waiter #2"
+lines = Array[String](["Detective... Mercier... you used to... you used to work at this place too!", "Before the incident.", "I saw your personal file.", "You understand me...", "you knew what that tyrant was like."])

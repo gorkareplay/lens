@@ -3,13 +3,7 @@ extends Node
 const RATE := 22050
 const DURATION := 0.13
 const VARIANTS := 4
-
-# character of the voice synth
-var BASE_PITCH_HZ: float = 92.0
-var GRAVEL: float = 0.55
-var BREATH: float = 0.10
-var WARMTH: float = 0.55
-var VOLUME_DB: float = -9.0
+const DEFAULT_VOICE := "Default"
 
 const VOWELS := {
 	"a": Vector3(730, 1090, 2440),
@@ -19,61 +13,81 @@ const VOWELS := {
 	"u": Vector3(300, 870, 2240),
 }
 
-var _vowel_streams: Dictionary = {}
+const VOICES := {
+	"Default": {"pitch": 110.0, "gravel": 0.30, "breath": 0.10, "warmth": 0.55, "volume": -9.0},
+	"Detective": {"pitch": 92.0,  "gravel": 0.55, "breath": 0.10, "warmth": 0.55, "volume": -9.0},
+	"Waiter #1": {"pitch": 150.0, "gravel": 0.15, "breath": 0.20, "warmth": 0.60, "volume": -10.0},
+	"Waiter #2": {"pitch": 135.0, "gravel": 0.10, "breath": 0.30, "warmth": 0.60, "volume": -11.0},
+	"Regular Guest": {"pitch": 78.0,  "gravel": 0.75, "breath": 0.15, "warmth": 0.45, "volume": -9.0},
+	"Chef": {"pitch": 100.0, "gravel": 0.45, "breath": 0.12, "warmth": 0.50, "volume": -8.0},
+	"Cook": {"pitch": 165.0, "gravel": 0.10, "breath": 0.25, "warmth": 0.65, "volume": -11.0},
+}
+
+var _streams: Dictionary = {}
 var _last_variant: Dictionary = {}
 var _players: Array[AudioStreamPlayer] = []
 var _next_player: int = 0
+var _current: String = DEFAULT_VOICE
 
 func _ready() -> void:
 	for i in 2:
 		var p := AudioStreamPlayer.new()
-		p.volume_db = VOLUME_DB
 		add_child(p)
 		_players.append(p)
 
+	for voice_name in VOICES:
+		_bake_voice(voice_name)
+
+func _bake_voice(voice_name: String) -> void:
+	var voice: Dictionary = VOICES[voice_name]
 	var rng := RandomNumberGenerator.new()
-	rng.seed = 1337
+	rng.seed = hash(voice_name)
+	var bank: Dictionary = {}
 	for v in VOWELS:
 		var list: Array[AudioStreamWAV] = []
 		for i in VARIANTS:
-			list.append(_synth_vowel(VOWELS[v], rng))
-		_vowel_streams[v] = list
+			list.append(_synth_vowel(VOWELS[v], rng, voice))
+		bank[v] = list
+	_streams[voice_name] = bank
 
-func set_voice(pitch: float, gravel: float, breath: float, warmth: float, volume: float):
-	BASE_PITCH_HZ = pitch
-	GRAVEL = gravel
-	BREATH = breath
-	WARMTH = warmth
-	VOLUME_DB = volume
-	
+func set_voice(speaker: String = "") -> void:
+	_current = speaker if VOICES.has(speaker) else DEFAULT_VOICE
+
 func play_for(ch: String) -> void:
 	var c := ch.to_lower()
-	if _vowel_streams.has(c):
-		var list: Array = _vowel_streams[c]
+	var bank: Dictionary = _streams[_current]
+	if bank.has(c):
+		var list: Array = bank[c]
 		var idx: int = randi() % list.size()
 		if idx == _last_variant.get(c, -1):
 			idx = (idx + 1) % list.size()
 		_last_variant[c] = idx
-		_play(list[idx], randf_range(0.93, 1.07), 0.0)
+		var volume: float = VOICES[_current]["volume"]
+		_play(list[idx], randf_range(0.93, 1.07), volume)
 
-func _play(s: AudioStream, pitch: float, extra_db: float) -> void:
+func _play(s: AudioStream, pitch: float, volume_db: float) -> void:
 	var p := _players[_next_player]
 	_next_player = (_next_player + 1) % _players.size()
 	p.stream = s
 	p.pitch_scale = pitch
-	p.volume_db = VOLUME_DB + extra_db
+	p.volume_db = volume_db
 	p.play()
 
 func _resonator(freq: float, bw: float) -> Vector3:
 	var r: float = exp(-PI * bw / RATE)
 	return Vector3(1.0 - r, 2.0 * r * cos(TAU * freq / RATE), -r * r)
 
-func _synth_vowel(f: Vector3, rng: RandomNumberGenerator) -> AudioStreamWAV:
+func _synth_vowel(f: Vector3, rng: RandomNumberGenerator, voice: Dictionary) -> AudioStreamWAV:
+	var base_pitch: float = voice["pitch"]
+	var gravel: float = voice["gravel"]
+	var breath: float = voice["breath"]
+	var warmth: float = voice["warmth"]
+
 	var n: int = int(RATE * DURATION)
 	var out := PackedFloat32Array()
 	out.resize(n)
 
-	var pitch: float = BASE_PITCH_HZ * rng.randf_range(0.92, 1.12)
+	var pitch: float = base_pitch * rng.randf_range(0.92, 1.12)
 	var drift: float = rng.randf_range(-0.12, 0.03)
 	var vib_rate: float = rng.randf_range(4.5, 6.5)
 	var form_start := Vector3(
@@ -107,10 +121,10 @@ func _synth_vowel(f: Vector3, rng: RandomNumberGenerator) -> AudioStreamWAV:
 		if phase >= 1.0:
 			phase -= 1.0
 			pulse_count += 1
-			phase = maxf(phase + rng.randf_range(-0.03, 0.03) * GRAVEL, 0.0)
-			pulse_amp = 1.0 + rng.randf_range(-0.15, 0.15) * GRAVEL
+			phase = maxf(phase + rng.randf_range(-0.03, 0.03) * gravel, 0.0)
+			pulse_amp = 1.0 + rng.randf_range(-0.15, 0.15) * gravel
 			if pulse_count % 2 == 1:
-				pulse_amp *= lerpf(1.0, 0.45, GRAVEL)
+				pulse_amp *= lerpf(1.0, 0.45, gravel)
 
 		var g: float = 0.0
 		if phase < 0.6:
@@ -118,7 +132,7 @@ func _synth_vowel(f: Vector3, rng: RandomNumberGenerator) -> AudioStreamWAV:
 			g = sn * sn
 		var src: float = (g - prev_g) * (RATE / f0) * pulse_amp
 		prev_g = g
-		src += rng.randf_range(-1.0, 1.0) * BREATH * 4.0
+		src += rng.randf_range(-1.0, 1.0) * breath * 4.0
 
 		var o := Vector3(
 			c1.x * src + c1.y * y1.x + c1.z * y2.x,
@@ -134,7 +148,7 @@ func _synth_vowel(f: Vector3, rng: RandomNumberGenerator) -> AudioStreamWAV:
 
 	var lp: float = 0.0
 	for i in n:
-		lp = lerpf(lp, out[i], WARMTH)
+		lp = lerpf(lp, out[i], warmth)
 		out[i] = lp
 
 	return _to_wav(out, 0.75)

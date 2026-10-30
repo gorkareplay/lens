@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://cyhp85xbgp5mm"]
+
+[ext_resource type="Script" uid="uid://cucfc5pygwq25" path="res://Scripts/dialogue_resource.gd" id="1_p7ych"]
+
+[resource]
+script = ExtResource("1_p7ych")
+id = "ending2_detective_responsibility"
+speaker = "Detective"
+lines = Array[String](["I said I'm taking full responsibility.", "None of this will touch you or the rest of the staff.", "And keep your voice down.", "No panic, and don't breathe a word of what happened today to anyone."])

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://c8nq2yke1e2om"]
+
+[ext_resource type="Script" uid="uid://cucfc5pygwq25" path="res://Scripts/dialogue_resource.gd" id="1_bb2e3"]
+
+[resource]
+script = ExtResource("1_bb2e3")
+id = "ending2_help"
+speaker = "Detective"
+lines = Array[String](["I said sit tight.", "I'm going to help you."])

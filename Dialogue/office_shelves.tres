@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://bxkl4jd2ew05t"]
+
+[ext_resource type="Script" uid="uid://cucfc5pygwq25" path="res://Scripts/dialogue_resource.gd" id="1_vjnh0"]
+
+[resource]
+script = ExtResource("1_vjnh0")
+id = "office_shelves"
+speaker = "Detective"
+lines = Array[String](["The personnel files were out of order.", "Someone was digging around for a specific paper and left a mess behind."])
