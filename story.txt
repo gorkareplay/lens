@@ -1,0 +1,393 @@
+Звуки / музыка
+Описание локации
+Движение / действие игрока
+
+
+Сцена 1: Пролог
+Локация: Обеденный зал ресторана. На заднем плане сидит пара человек из массовки. Тихо играет фоновая музыка
+
+Персонажи: Детектив, массовка
+
+Действие: Детектив заходит в ресторан и садится за свободный столик. Открывается отличный обзор на весь зал.
+
+Detective (internal monologue): 
+A complete renovation. Everything sparkles, squeaky clean, modern... Nothing like the old Sables de Mars that burned to the ground. 
+(звук побрякивающий линз) 
+Better double-check that everything is in working order.
+
+
+
+(Игрок получает управление и обучается переключению линз)
+
+Без линзы (Базовый режим): 
+
+Что видит игрок: Деревянные столики, стулья, обычные чистые тарелки и приборы на столах. Люди выглядят просто как силуэты безликих фигур.
+
+Detective (inner monologue):
+The ordinary physical world. Clean, neat, completely unremarkable. Time to switch lenses.
+
+
+
+Зелёная линза (Механизмы и предметы):
+
+Что видит игрок: На столах ярко подсвечиваются вилки, ножки столов, замки на дверях, кассовый аппарат у стойки и мелкие царапины на мебели.
+
+Detective (inner monologue):
+Green filter. Excellent for highlighting mechanical parts, object structures, and signs of wear. Perfect for spotting recent repairs or forced break-ins.
+
+
+Красная линза (Органика):
+
+Что видит игрок: На полу и столах видны легкие следы от пролитых напитков или еды.
+
+Detective (inner monologue):
+Red filter. Organic traces, blood, biological tissues. Clean for now... hopefully.
+
+
+Синяя линза (Социальные связи и люди):
+
+Что видит игрок: Посетители массовки подсвечиваются тускло, но один силуэт неподалеку начинает приближаться.
+
+Detective (inner monologue):
+Blue filter. Information networks and connections. Looks like someone on the staff wants to talk to me.
+
+
+
+Сцена 2: Завязка
+Локация: Обеденный зал ресторана (тот же столик). 
+
+Персонажи: Детектив, Официант №1. 
+
+Действие: Пока детектив держит включенной синюю линзу, к его столику быстрым,  шагом подбегает молодой парень в форме официанта (Официант №1). Он оглядывается по сторонам.
+
+Waiter #1 (panicking):
+I'm sorry, I'm sorry! You're... you're that detective from the news, right? Mercier?
+
+Detective (calmly):
+Suppose I am. What happened? You look like you've seen a ghost.
+
+Waiter #1 (lowering his voice):
+Some shady character just slipped into the back rooms, and a minute later, he bolted out of the manager's office like a bat out of hell, heading straight for the park! I think he stole something!
+
+Detective:
+Call the police, or tell the manager.
+
+Waiter #1:
+The manager strictly forbids anyone near his office! Even calling the cops has to go through him. But he's not picking up his phone. Regular staff aren't even allowed within ten feet of the door we'd get fired on the spot. But you... you're a professional. Can you just take a quick look before the boss gets back? Otherwise, we're all screwed.
+
+
+Detective (standing up from the table with a faint smirk):
+The manager's office... Lead the way.
+
+
+
+
+Сцена 3: Кабинет менеджера
+
+Локация: Сначала ресторан (от столика,. сквозь главный зал, мимо прилавка, в сторону кабинета менеджера). После кабинет менеджера. 
+
+Персонажи: Детектив, Официант №1, труп менеджера, массовка (гости, поварята, официанты)
+
+Действие: Официант №1 ведёт детектива сквозь ресторан (знакомство с локацией). Они отходят от столика, идут мимо прилавка. Из кухонной двери выходят официанты и разносят блюда. Детектив с Официантом №1 подходят к двери в комнату менеджера рядом с прилавком. Они останавливаются.
+
+Waiter #1 (turning to face the detective):
+You're on your own from here. Please, try to figure out what was stolen as fast as you can!
+
+Detective (stepping into the office):
+I'll do what I can.
+
+
+(музыка меняется на приглушенную, либо вовсе на другую более медленную)
+
+Кабинет менеджера – Без линзы
+По середине стоит стол с множеством бумажек и работающим компьютером на нём и чашкой кофе. Позади стола открытое окно. Слева низкие полки с ящиками бумажек. Справа стена.
+
+Зелёная линза
+Пока что подсвечивается только окно и оборванные обои внизу правой стены. 
+
+Красная линза
+На полу немного и чуть побольше около правой стены пятнами кровь. Слева в самом дальнем ящике просто пятно
+
+Синяя линза
+Ничего не подсвечивается
+
+
+
+(Игрок подходит к правой стене, он должен кликнуть на оборванную часть обоев в зелёной линзе. Целая стена отодвинется. Небольшая кладовка, посередине лежит труп)
+
+
+(музыка останавливается. Либо тихий белый шум)
+
+Detective:
+…
+
+Кладовка – Без линзы
+Маленькое пространство. По всем стенам множество полок с бумагами. Справа стоит сейф. Посередине всего этого на полу лежит кое-как запиханный труп.
+
+Зелёная линза
+Подсвечиваются сейф, выпадающие ключи из кармана.
+
+Красная линза
+Кровь на теле и несколько пятен на полках
+
+Синяя линза
+Сам труп
+
+
+
+Игрок в зелёной линзе нажимает на сейф:
+Detective: 
+Nothing inside. The killer might have taken something from it.
+
+
+Игрок в зелёной линзе забирает ключи:
+	Добавляются в инвентарь?
+Detective: 
+The keys are probably from the restaurant's lock.
+
+
+Игрок в красной линзе нажимает на пятна крови:
+Detective: 
+The blow was struck in a hurry. The wallpaper and shelves are splattered. He was trying to defend himself or grabbing at the racks before falling. The killer acted in a panic.
+
+
+Игрок в синей линзе нажимает на труп:
+(слышен смех)
+Detective: 
+... 
+It's the manager himself. He was killed just a moment ago. There's no pulse.
+
+
+
+
+(Игрок возвращается в кабинет менеджера+)
+
+(Снова начинает играть музыка кабинета менеджера)
+
+Игрок в зелёной линзе (при нажатии на предмет):
+Окно — На оконной раме свежие царапины, следы от обуви, содранная краска:
+Detective: 
+The window was opened from the inside, but someone used it to climb out. Into the courtyard.
+
+
+Компьютер — Контур компьютера и открытые таблицы
+Detective: 
+The manager was doing routine work up until the incident.
+
+
+Полки слева — документы
+Detective: 
+The personnel files were out of order. Someone was digging around for a specific paper and left a mess behind.
+
+
+Игрок в красной линзе (при нажатии на предмет):
+На полу немного и чуть побольше около правой стены пятнами кровь. Слева в самом дальнем ящике просто пятно. 
+Detective: 
+The manager's blood.
+
+
+Синяя линза
+Ничего не подсвечивается
+
+
+
+(Игрок выходит обратно в главный зал)
+
+(Музыка меняется на музыку ресторана)
+
+Waiter #1 (standing near the door): 
+So? Did you find anything? Is everything okay? The manager usually comes around this time!
+
+Detective (calmly): 
+Some documents are missing. But don't panic. It'll be easier to continue the investigation if everyone stays calm. Which staff members should I talk to?
+
+Waiter #1: 
+Well, if you're looking for a thief... you'd better ask our regular customer. He's been sitting here since this morning, so he might have seen someone. And you can also drop by the kitchen to check on the chef. He's always keeping an eye on everything and everyone.
+
+Detective (inner monologue): 
+Better play along and act like I'm hunting a common thief while I question them all. I need to dig deeper into their relationship with the manager and uncover more about the killer.
+
+
+
+
+
+Сцена 4: Опрос персонала и сбор улик
+
+Локация: Главный зал, кухня.
+
+Персонажи: Детектив, Официант №1, Шеф-повар, Постоянный клиент, поварёнок, массовка (гости, остальные поварята)
+
+Действие: Детектив перемещается по ресторану под видом расследования обычной кражи. Используя разные линзы, он опрашивает персонал и посетителей
+
+
+Синяя линза:
+Официант №1(около двери в кабинет менеджера) — диалог
+Detective: 
+The guy who ran out. Have you seen him among the guests before?
+
+Waiter #1: 
+No. A total stranger. Honestly, I didn't see anyone lurking around the office. You'd better ask our regular guest.
+
+
+Постоянный клиент(за столиком около окна) — диалог
+Detective: 
+Good afternoon. They say you're a big fan of the local cuisine. Did you notice anything out of the ordinary this morning?
+
+Regular Guest: 
+Oh, son... Something out of the ordinary? You know the manager around here. A real beast of a man, always yelling at the staff and threatening to fire people. And today, I didn't see him at all. But I did see one of the new waiters, such a quiet lad, walking around looking pale, like he was sick or something happened to him. Ah, poor boy, the manager probably gave it to him good... Oh, what a disaster.
+
+
+Шеф-повар (кухня) — диалог
+Detective: 
+Chef, how's the atmosphere among the staff? Was the manager pressing the team hard?
+
+Chef (angrily): 
+Pressure? The man didn't view us as human beings. Yesterday he was screaming at everyone again, threatening to slash bonuses over some inventory shortfall. But our poor rookie, Arthur, got the worst of it. He's been walking on eggshells since yesterday
+…
+Wonder where he ran off to anyway... whatever. 
+
+Кухня — Без линзы
+
+(приглушенная музыка ресторана, чуть слышны побрякивание столовых приборов)
+
+	П-образные столы с основным столов в середине(меньше деталей). В разных частях ходят поварята.
+
+
+Зелёная линза
+Кухонные приборы. Справа около плиты видны сильные повреждения (остатки от взрыва)
+
+Красная линза
+Около плиты на той же поврежденной стене совсем маленькая полоса крови внизу. Остатки пищи и лужи от напитков
+
+Синяя линза
+Сначала шеф-повар. После разговора с шефом -> ещё один поварёнок в самом дальнем углу.
+Если нажать на него:
+Cook (scared): 
+Sorry! It was an accident, I'll fix everything!
+
+Detective:
+Pardon?
+
+Cook: 
+Oh... sorry. I thought you were the manag... 
+... 
+Sorry, I need to get back to work.
+
+
+
+
+Сцена 5: Дворик
+
+Локация: Дворик ресторана, переходящий в парк с большими деревьями
+
+Персонажи: Детектив, Официант №2
+
+Действие: Детектив выходит через служебную дверь в кухне на ресторанный дворик. Столики на улице пустые, впереди идет парк.
+
+(Монотонная тихая музыка, может с пением птиц)
+
+Дворик — Без линзы
+По линии ресторана стоят столики. Посетителей нет. За невысоким забором идет парк с густыми деревьями
+
+Зелёная линза
+Стулья, столы и калитка забора
+
+Красная линза
+Линия крови из окна менеджера в глубь парка
+
+Синяя линза
+Ничего не подсвечивается
+
+
+
+Дорога в парк / парк — Красная линза 
+На траве и деревьях капли крови, ведущие в глубь парка. 
+
+(Игрок идёт по следам и за стволом одного из деревьев сидит Официант №2. Он прижимает к груди сумку с деньгами и документами. На нём видны пятна крови.)
+
+(Как только встретил Официанта №2 тишина или напряженная музыка, слышны всхлипы)
+
+Зелёная линза.
+Путь к Официанту№2 ничего не подсвечивается. 
+Документы, деньги и нож в кармане
+
+Синяя линза
+Путь к Официанту№2 ничего не подсвечивается. 
+Официант №2
+
+
+
+Сцена 6: Финал
+
+Локация: Парк возле ресторана
+
+Персонажи: Детектив, Официант №2, официант №1
+
+Действие: Официант №2 рассказывает про убийство, детектив рассказывает свою историю, выбор концовки.
+
+Waiter #2 (whispering): 
+Stay back! Please! I didn't want to! He... he brought this on himself! That bastard was blackmailing me, threatening to kill my family over debts, forcing me to run his damn illegal trade! When I tried to walk away, he... he grabbed the knife himself! I was just defending myself...
+
+Detective: 
+...
+
+Waiter #2:
+Detective... Mercier... you used to... you used to work at this place too! Before the incident. I saw your personal file. You understand me... you knew what that tyrant  was like.
+
+Detective:
+ ... 
+That was years ago. 
+... 
+That scum  decided other people's lives meant nothing and rigged a gas explosion in the kitchen. He took my sight just for being in the wrong place at the wrong time. I came here to put him behind bars the legal way... 
+... 
+But you beat me to it.
+
+
+(На экране появляется выбор для игрока)
+
+Option 1: Hand Over the Criminal 
+
+Detective: 
+Enough excuses. The law is the law. 
+
+Действие — Детектив с официантом №2 идут к выходу из парка и вызывает полицию.
+
+Detective: 
+Restaurant Sables de Mars. A manager was murdered an hour ago. The killer is in custody. Send a unit. 
+
+End: The price of life
+
+
+OPTION 2: HELP THE KILLER 
+
+Detective: 
+... 
+Sit here. Don't go anywhere.
+
+Waiter #2 (surprised):
+You... you're not turning me in?
+
+Detective:
+I said sit tight. I'm going to help you.
+
+
+Действие — Детектив возвращается в ресторан.
+
+Waiter #1: 
+Did you find the thief?
+
+Detective: 
+Not yet. The thief slipped away into the park. However, I’ll brief your manager and take full responsibility for it.
+
+Waiter #1: 
+Maybe... maybe we shouldn't tell the manager?
+
+Detective (stepping closer):
+I said I’m taking full responsibility. None of this will touch you or the rest of the staff. And keep your voice down. No panic, and don't breathe a word of what happened today to anyone.
+
+
+(Детектив выходит из ресторана. На экране появляются электронные часы. Время идёт(просто надписи): 13:00 // 16:00 // 19:00 // 22:00 // 01:00 )
+
+Звук поворота ключа в замочной скважине. Звук, как кто-то тащит тело. Звук копания. Звук падения.
+
+End: The price of revenge

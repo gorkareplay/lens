@@ -15,17 +15,21 @@ extends CharacterBody3D
 signal no_lens_signal
 signal red_lens_signal
 signal green_lens_signal
-signal blue_lens_signal 
+signal blue_lens_signal
+signal lens_changed(lens: String)
+signal interaction_requested(target: Object)
+
+var lens := "base"
+var controls_locked := false
 
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func _physics_process(delta: float) -> void:
 	
-	if raycast.is_colliding():
-		if Input.is_action_just_pressed("interact"):
-			secret_sound.play()
+	if not Dialogue.active and not controls_locked and Input.is_action_just_pressed("interact") and raycast.is_colliding():
+		interaction_requested.emit(raycast.get_collider())
 	
-	if not Dialogue.active:
+	if not Dialogue.active and not controls_locked:
 		if not is_on_floor():
 			velocity.y -= gravity * delta
 #		elif Input.is_action_just_pressed("ui_accept"):
@@ -64,15 +68,25 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 
 func _input(_event: InputEvent) -> void:
+	if Dialogue.active or controls_locked:
+		return
 	if Input.is_action_just_pressed("no_lens"):
+		lens = "base"
+		lens_changed.emit(lens)
 		emit_signal("no_lens_signal")
 		
 	if Input.is_action_just_pressed("red_lens"):
+		lens = "red"
+		lens_changed.emit(lens)
 		emit_signal("red_lens_signal")
 		
 	if Input.is_action_just_pressed("green_lens"):
+		lens = "green"
+		lens_changed.emit(lens)
 		emit_signal("green_lens_signal")
 		
 	if Input.is_action_just_pressed("blue_lens"):
+		lens = "blue"
+		lens_changed.emit(lens)
 		emit_signal("blue_lens_signal")
 		
