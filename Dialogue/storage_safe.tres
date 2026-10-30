@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://dxdaru8wi31r4"]
+
+[ext_resource type="Script" uid="uid://cucfc5pygwq25" path="res://Scripts/dialogue_resource.gd" id="1_v427d"]
+
+[resource]
+script = ExtResource("1_v427d")
+id = "storage_safe"
+speaker = "Detective"
+lines = Array[String](["Nothing inside.", "The killer might have taken something from it."])

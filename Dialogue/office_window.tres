@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://besjgt664ilys"]
+
+[ext_resource type="Script" uid="uid://cucfc5pygwq25" path="res://Scripts/dialogue_resource.gd" id="1_nacey"]
+
+[resource]
+script = ExtResource("1_nacey")
+id = "office_window"
+speaker = "Detective"
+lines = Array[String](["The window was opened from the inside, but someone used it to climb out.", "Into the courtyard."])

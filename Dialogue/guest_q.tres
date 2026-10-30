@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://b5x1gespgmi3d"]
+
+[ext_resource type="Script" uid="uid://cucfc5pygwq25" path="res://Scripts/dialogue_resource.gd" id="1_reqra"]
+
+[resource]
+script = ExtResource("1_reqra")
+id = "guest_q"
+speaker = "Detective"
+lines = Array[String](["Good afternoon.", "They say you're a big fan of the local cuisine.", "Did you notice anything out of the ordinary this morning?"])

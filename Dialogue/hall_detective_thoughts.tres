@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://b4j6jiw3whxp1"]
+
+[ext_resource type="Script" uid="uid://cucfc5pygwq25" path="res://Scripts/dialogue_resource.gd" id="1_3as5h"]
+
+[resource]
+script = ExtResource("1_3as5h")
+id = "hall_detective_thoughts"
+speaker = "Detective"
+lines = Array[String](["Better play along and act like I'm hunting a common thief while I question them all.", "I need to dig deeper into their relationship with the manager and uncover more about the killer."])

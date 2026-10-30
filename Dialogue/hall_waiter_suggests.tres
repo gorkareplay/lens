@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://bprv2lf5ftnmr"]
+
+[ext_resource type="Script" uid="uid://cucfc5pygwq25" path="res://Scripts/dialogue_resource.gd" id="1_7ipql"]
+
+[resource]
+script = ExtResource("1_7ipql")
+id = "hall_waiter_suggests"
+speaker = "Waiter #1"
+lines = Array[String](["Well, if you're looking for a thief...", "you'd better ask our regular customer.", "He's been sitting here since this morning,", "so he might have seen someone.", "And you can also drop by the kitchen to check on the chef.", "He's always keeping an eye on everything and everyone."])

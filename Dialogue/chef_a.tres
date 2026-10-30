@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://cfgaepb2s1yow"]
+
+[ext_resource type="Script" uid="uid://cucfc5pygwq25" path="res://Scripts/dialogue_resource.gd" id="1_fln0l"]
+
+[resource]
+script = ExtResource("1_fln0l")
+id = "chef_a"
+speaker = "Chef"
+lines = Array[String](["Pressure?", "The man didn't view us as human beings.", "Yesterday he was screaming at everyone again, threatening to slash bonuses over some inventory shortfall.", "But our poor rookie, Arthur, got the worst of it.", "He's been walking on eggshells since yesterday", "…", "Wonder where he ran off to anyway...", "whatever."])

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://b0xedspkxmx0t"]
+
+[ext_resource type="Script" uid="uid://cucfc5pygwq25" path="res://Scripts/dialogue_resource.gd" id="1_32eys"]
+
+[resource]
+script = ExtResource("1_32eys")
+id = "park_waiter2_confession"
+speaker = "Waiter #2"
+lines = Array[String](["Stay back!", "Please!", "I didn't want to!", "He... he brought this on himself!", "That bastard was blackmailing me, threatening to kill my family over debts, forcing me to run his damn illegal trade!", "When I tried to walk away, he... he grabbed the knife himself!", "I was just defending myself..."])

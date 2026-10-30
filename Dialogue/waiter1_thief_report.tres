@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://c7w05nru7x3am"]
+
+[ext_resource type="Script" uid="uid://cucfc5pygwq25" path="res://Scripts/dialogue_resource.gd" id="1_x017y"]
+
+[resource]
+script = ExtResource("1_x017y")
+id = "waiter1_thief_report"
+speaker = "Waiter #1"
+lines = Array[String](["Some shady character just slipped into the back rooms,", "and a minute later, he bolted out of the manager's office like a bat out of hell,", "heading straight for the park!", "I think he stole something!"])

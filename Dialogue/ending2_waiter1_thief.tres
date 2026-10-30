@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://b5w8sf6dbh1de"]
+
+[ext_resource type="Script" uid="uid://cucfc5pygwq25" path="res://Scripts/dialogue_resource.gd" id="1_80vwe"]
+
+[resource]
+script = ExtResource("1_80vwe")
+id = "ending2_waiter1_thief"
+speaker = "Waiter #1"
+lines = Array[String](["Did you find the thief?"])

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://dmcws5ssvdm48"]
+
+[ext_resource type="Script" uid="uid://cucfc5pygwq25" path="res://Scripts/dialogue_resource.gd" id="1_qqnc7"]
+
+[resource]
+script = ExtResource("1_qqnc7")
+id = "tutorial_red"
+speaker = "Detective"
+lines = Array[String](["Red filter.", "Organic traces, blood, biological tissues.", "Clean for now... hopefully."])

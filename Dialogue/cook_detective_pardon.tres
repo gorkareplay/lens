@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://dkv6bgfq5f3x6"]
+
+[ext_resource type="Script" uid="uid://cucfc5pygwq25" path="res://Scripts/dialogue_resource.gd" id="1_sqttx"]
+
+[resource]
+script = ExtResource("1_sqttx")
+id = "cook_detective_pardon"
+speaker = "Detective"
+lines = Array[String](["Pardon?"])

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://bjb3clqn8fcmn"]
+
+[ext_resource type="Script" uid="uid://cucfc5pygwq25" path="res://Scripts/dialogue_resource.gd" id="1_tpys3"]
+
+[resource]
+script = ExtResource("1_tpys3")
+id = "ending1_police_call"
+speaker = "Detective"
+lines = Array[String](["Restaurant Sables de Mars.", "A manager was murdered an hour ago.", "The killer is in custody.", "Send a unit."])

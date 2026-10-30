@@ -1,6 +1,8 @@
 extends CanvasLayer
 
-signal finished
+signal dialogue_started(dialogue: DialogueData)
+signal dialogue_finished(dialogue: DialogueData)
+signal line_started(index: int)
 
 const CHARS_PER_SECOND := 30.0
 const PUNCT_PAUSE := 0.12
@@ -8,6 +10,7 @@ const FONT_SIZE := 28
 
 var active := false
 
+var _current: DialogueData
 var _lines: Array = []
 var _index := 0
 var _typing := false
@@ -20,24 +23,34 @@ var _label: Label
 var _name_row: HBoxContainer
 var _name_label: Label
 var _arrow: Control
-var _voice: VoiceSynth
 
-func say(lines: Array, speaker: String = "") -> void:
-	if active or lines.is_empty():
+func say(dialogue: DialogueData, speaker: String = "") -> void:
+	if active or dialogue == null:
 		return
-	_lines = lines
+	_current = dialogue
+	_lines = dialogue.lines
 	_index = 0
 	active = true
-	_name_label.text = speaker
-	_name_row.visible = speaker != ""
+
+	var who := speaker if speaker != "" else dialogue.speaker
+	VoiceSynth.set_voice(who)
+	_name_label.text = who
+	_name_row.visible = who != ""
 	_root.show()
+
+	dialogue_started.emit(dialogue)
 	_show_line()
-	await finished
+	await dialogue_finished
+
+func say_raw(lines: Array, speaker: String = "") -> void:
+	var d := DialogueData.new()
+	d.lines.assign(lines)
+	d.speaker = speaker
+	await say(d)
 
 func _ready() -> void:
 	layer = 100
 	_build_ui()
-	_voice = VoiceSynth
 	_root.hide()
 
 class Arrow extends Control:
@@ -118,12 +131,12 @@ func _build_ui() -> void:
 	_name_label.add_theme_font_size_override("font_size", FONT_SIZE - 4)
 	_name_label.add_theme_color_override("font_color", Color.WHITE)
 	_name_label.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	
+
 	var panel := PanelContainer.new()
 	vbox.add_child(panel)
 	panel.custom_minimum_size = Vector2(0, 170)
 	panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	
+
 	var style := StyleBoxFlat.new()
 	style.bg_color = Color.BLACK
 	style.border_color = Color.WHITE
@@ -158,6 +171,7 @@ func _build_ui() -> void:
 	_blink_timer.timeout.connect(func(): _arrow.lit = not _arrow.lit)
 
 func _show_line() -> void:
+	line_started.emit(_index)
 	_label.text = str(_lines[_index])
 	_label.visible_characters = 0
 	_progress = 0.0
@@ -171,7 +185,7 @@ func _next() -> void:
 	if _index >= _lines.size():
 		active = false
 		_root.hide()
-		finished.emit()
+		dialogue_finished.emit(_current)
 	else:
 		_show_line()
 
@@ -197,7 +211,7 @@ func _process(delta: float) -> void:
 	while _label.visible_characters < target:
 		var ch := _label.text[_label.visible_characters]
 		_label.visible_characters += 1
-		_voice.play_for(ch)
+		VoiceSynth.play_for(ch)
 		if ch in ".,!?;:":
 			_pause = PUNCT_PAUSE
 			break

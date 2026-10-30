@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://din5xxkb4c223"]
+
+[ext_resource type="Script" uid="uid://cucfc5pygwq25" path="res://Scripts/dialogue_resource.gd" id="1_je6n0"]
+
+[resource]
+script = ExtResource("1_je6n0")
+id = "detective_follow"
+speaker = "Detective"
+lines = Array[String](["The manager's office...", "Lead the way."])

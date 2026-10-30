@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://4buysu1de3ub"]
+
+[ext_resource type="Script" uid="uid://cucfc5pygwq25" path="res://Scripts/dialogue_resource.gd" id="1_m1v8x"]
+
+[resource]
+script = ExtResource("1_m1v8x")
+id = "ending2_detective_reply"
+speaker = "Detective"
+lines = Array[String](["Not yet.", "The thief slipped away into the park.", "However, I'll brief your manager and take full responsibility for it."])
