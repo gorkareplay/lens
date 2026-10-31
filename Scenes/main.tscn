@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://da6udrssgufhh" path="res://Scripts/ui.gd" id="4_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://bpouhpt78oiox" path="res://Scenes/post_fx.tscn" id="5_kry3j"]
 [ext_resource type="PackedScene" uid="uid://decougth6v0d1" path="res://Scenes/Restaurant.tscn" id="6_21xkr"]
+[ext_resource type="AudioStream" uid="uid://bgxli1ggacuc5" path="res://Sound/song_placeholder.mp3" id="8_344ge"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kry3j"]
 sky_top_color = Color(1, 1, 1, 1)
@@ -58,6 +59,11 @@ text = "Resume"
 
 [node name="Restaurant" parent="." unique_id=531500159 instance=ExtResource("6_21xkr")]
 transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -5.683, 0, -7.332061)
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=2090362334]
+stream = ExtResource("8_344ge")
+autoplay = true
+bus = &"Bitcrushed"
 
 [connection signal="blue_lens_signal" from="Player" to="CanvasLayer" method="_on_player_blue_lens_signal"]
 [connection signal="green_lens_signal" from="Player" to="CanvasLayer" method="_on_player_green_lens_signal"]

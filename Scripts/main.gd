@@ -90,14 +90,23 @@ func _lens_changed(lens: String) -> void:
 	busy = false
 	if seen_lenses.size() == 3:
 		phase = "approach"
-		_set_objective("Use the blue lens and speak to the waiter.")
+		_set_objective("Speak to the waiter.")
 		_update_markers()
 
-func _say(ids: Array) -> void:
+func _say(ids: Array, character: Node3D = null) -> void:
+	var animator: AnimatedSprite3D
+	if character:
+		animator = character.get_node_or_null("Interactable") as AnimatedSprite3D
 	for id in ids:
-		var data = load("res://Dialogue/%s.tres" % id)
+		var data := load("res://Dialogue/%s.tres" % id) as DialogueData
 		if data:
+			if animator:
+				var animation := "talk" if data.speaker == character.get_meta("label", "") else "idle"
+				if animator.sprite_frames and animator.sprite_frames.has_animation(animation):
+					animator.play(animation)
 			await Dialogue.say(data)
+	if animator and animator.sprite_frames and animator.sprite_frames.has_animation("idle"):
+		animator.play("idle")
 
 func _character(id: String, file: String, pos: Vector3, title: String, parent: Node3D = restaurant) -> void:
 	var node: StaticBody3D = load("res://Scenes/Characters/%s.tscn" % file).instantiate()
@@ -155,19 +164,19 @@ func _floor_at(center: Vector3, size: Vector3, color: Color) -> void:
 
 func _build_world() -> void:
 	_character("waiter1", "waiter_one", Vector3(5.2, 0.65, 4.0), "Waiter #1")
-	_character("guest", "loyal_customer", Vector3(9.0, 0.65, 5.6), "Regular guest")
+	_character("guest", "loyal_customer", Vector3(8.64, 0.65, 4.7), "Regular guest")
 	_character("chef", "chef", Vector3(5.3, 0.65, 0.8), "Chef")
 	_character("cook", "cook", Vector3(4.3, 0.65, 0.8), "Cook")
-	_marker("office_door", "Office door", Vector3(9.95, 0.85, 2.9), "any")
-	_marker("wallpaper", "Torn wallpaper", Vector3(10.15, 0.7, 1.8), "green")
-	_marker("office_window", "Office window", Vector3(10.2, 1.05, 1.1), "green")
-	_marker("office_computer", "Computer", Vector3(8.8, 0.65, 1.15), "green")
-	_marker("office_shelves", "Personnel files", Vector3(7.85, 0.7, 0.4), "green")
-	_marker("office_blood", "Blood", Vector3(9.8, 0.18, 1.75), "red")
-	_marker("counter", "Counter", Vector3(3.0, 0.85, 3.75), "green")
-	_marker("kitchen_stove", "Damaged stove", Vector3(4.3, 0.72, 0.15), "green")
-	_marker("kitchen_blood", "Blood by the stove", Vector3(4.8, 0.2, 0.15), "red")
-	_marker("back_door", "Service door to courtyard", Vector3(0.86, 0.8, -0.25), "any")
+	_marker("office_door", "Office door", Vector3(9.74, 0.85, 2.35), "any")
+	_marker("wallpaper", "Torn wallpaper", Vector3(10.35, 0.7, 1.8), "green")
+	_marker("office_window", "Office window", Vector3(10.35, 1.05, 1.1), "green")
+	_marker("office_computer", "Computer", Vector3(8.6, 0.82, 0.25), "green")
+	_marker("office_shelves", "Personnel files", Vector3(10.25, 0.8, -0.95), "green")
+	_marker("office_blood", "Blood", Vector3(9.35, 0.12, 1.75), "red")
+	_marker("counter", "Counter", Vector3(1.2, 0.85, 3.25), "green")
+	_marker("kitchen_stove", "Damaged stove", Vector3(4.3, 0.82, -0.95), "green")
+	_marker("kitchen_blood", "Blood by the stove", Vector3(4.9, 0.16, -0.95), "red")
+	_marker("back_door", "Service door to courtyard", Vector3(0.57, 0.82, -0.95), "any")
 	# Separate placeholder spaces preserve the original restaurant geometry.
 	_floor_at(Vector3(25, -0.1, 0), Vector3(6, 0.2, 5), Color(0.32, 0.29, 0.25))
 	_floor_at(Vector3(25, 0.9, -2.4), Vector3(6, 1.8, 0.2), Color(0.4, 0.34, 0.3))
@@ -231,37 +240,37 @@ func _interact(target: Object) -> void:
 	match id:
 		"waiter1":
 			if phase == "approach":
-				await _say(["waiter1_panic", "detective_suppose", "waiter1_thief_report", "detective_call_police", "waiter1_plea", "detective_follow"])
+				await _say(["waiter1_panic", "detective_suppose", "waiter1_thief_report", "detective_call_police", "waiter1_plea", "detective_follow"], target as Node3D)
 				phase = "lead"
 				_set_objective("Follow the waiter to the office door.")
 				var tween := create_tween()
 				tween.tween_property(actors.waiter1, "position", waiter_home, 4.0)
 			elif phase == "hall":
-				await _say(["hall_waiter_asks", "hall_detective_reply", "hall_waiter_suggests", "hall_detective_thoughts"])
+				await _say(["hall_waiter_asks", "hall_detective_reply", "hall_waiter_suggests", "hall_detective_thoughts"], target as Node3D)
 				phase = "investigate"
-				_set_objective("Question the regular guest and the chef with the blue lens.")
+				_set_objective("Question the regular guest and the chef.")
 			elif phase == "help_return":
-				await _say(["ending2_waiter1_thief", "ending2_detective_reply", "ending2_waiter1_hesitate", "ending2_detective_responsibility"])
+				await _say(["ending2_waiter1_thief", "ending2_detective_reply", "ending2_waiter1_hesitate", "ending2_detective_responsibility"], target as Node3D)
 				await _revenge_ending()
 			elif phase == "investigate":
-				await _say(["waiter1_q_runner", "waiter1_a_runner"])
+				await _say(["waiter1_q_runner", "waiter1_a_runner"], target as Node3D)
 		"office_door":
 			if phase == "lead":
-				await _say(["office_door_waiter", "office_enter"])
+				await _say(["office_door_waiter", "office_enter"], actors.waiter1)
 				phase = "office"
 				_set_objective("Search the office. Try the green lens on the torn wallpaper.")
 				_travel(restaurant.to_global(Vector3(9.85, 0.5, 2.0)))
 			elif phase == "office" and clues.has("body"):
 				_travel(restaurant.to_global(Vector3(9.95, 0.5, 3.25)))
 				phase = "hall"
-				_set_objective("Speak to the waiter outside the office with the blue lens.")
+				_set_objective("Speak to the waiter outside the office.")
 			elif phase == "office":
 				await Dialogue.say_raw(["I should search the office before leaving."], "Detective")
 		"wallpaper":
 			clues.wallpaper = true
 			_travel(Vector3(25, 0.5, 1.0))
 			await _say(["storage_body_reveal"])
-			_set_objective("Search the hidden storeroom. Examine the manager with the blue lens.")
+			_set_objective("Search the hidden storeroom. Examine the manager.")
 		"closet_exit":
 			_travel(restaurant.to_global(Vector3(9.7, 0.5, 1.75)))
 			_set_objective("Search the office, then use the office door to return to the hall.")
@@ -280,15 +289,15 @@ func _interact(target: Object) -> void:
 			await Dialogue.say_raw(["A faint streak of blood near the damaged wall."], "Detective")
 		"guest":
 			if phase == "investigate":
-				await _say(["guest_q", "guest_a"])
+				await _say(["guest_q", "guest_a"], target as Node3D)
 				clues.guest = true
 		"chef":
 			if phase == "investigate":
-				await _say(["chef_q", "chef_a"])
+				await _say(["chef_q", "chef_a"], target as Node3D)
 				clues.chef = true
 		"cook":
 			if phase == "investigate" and clues.has("chef"):
-				await _say(["cook_scared", "cook_detective_pardon", "cook_reply"])
+				await _say(["cook_scared", "cook_detective_pardon", "cook_reply"], target as Node3D)
 		"back_door":
 			if phase == "investigate" and clues.has("guest") and clues.has("chef"):
 				phase = "park"
@@ -301,12 +310,12 @@ func _interact(target: Object) -> void:
 			if phase == "help_return": _set_objective("Return to the waiter by the office and speak to him.")
 		"trail":
 			await Dialogue.say_raw(["Blood leads from the office window into the park."], "Detective")
-			_set_objective("Follow the trail, then use the blue lens to speak to the figure in the park.")
+			_set_objective("Follow the trail and speak to the figure in the park.")
 		"possessions":
 			await Dialogue.say_raw(["Documents, money, and a knife. He took them from the restaurant."], "Detective")
 		"waiter2":
 			if phase == "park":
-				await _say(["park_waiter2_confession", "park_detective_silence", "park_waiter2_plea", "park_detective_backstory"])
+				await _say(["park_waiter2_confession", "park_detective_silence", "park_waiter2_plea", "park_detective_backstory"], target as Node3D)
 				await _choose_ending()
 	if phase == "investigate" and clues.has("guest") and clues.has("chef"):
 		_set_objective("Explore the kitchen or use the service door to reach the courtyard.")
