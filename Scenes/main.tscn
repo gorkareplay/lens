@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://bx3i7n6agrjxy" path="res://Scenes/player.tscn" id="1_jjgbg"]
 [ext_resource type="Resource" uid="uid://dn30lvv7kf1dv" path="res://Dialogue/tutorial_base.tres" id="2_6bp64"]
 [ext_resource type="Resource" uid="uid://bthy3qblcwfhp" path="res://Dialogue/prologue_sit_down.tres" id="2_344ge"]
-[ext_resource type="PackedScene" uid="uid://crs2qme6ukli" path="res://Scenes/interactable.tscn" id="2_bo1nx"]
 [ext_resource type="Script" uid="uid://da6udrssgufhh" path="res://Scripts/ui.gd" id="4_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://bpouhpt78oiox" path="res://Scenes/post_fx.tscn" id="5_kry3j"]
 [ext_resource type="PackedScene" uid="uid://decougth6v0d1" path="res://Scenes/Restaurant.tscn" id="6_21xkr"]
