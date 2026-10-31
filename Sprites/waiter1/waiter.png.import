@@ -3,16 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bx3yhsm4j47l3"
-path.s3tc="res://.godot/imported/waiter.png-311c55a6c0dee0e1c72f011cf2611d12.s3tc.ctex"
+path.etc2="res://.godot/imported/waiter.png-311c55a6c0dee0e1c72f011cf2611d12.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Sprites/waiter1/waiter.png"
-dest_files=["res://.godot/imported/waiter.png-311c55a6c0dee0e1c72f011cf2611d12.s3tc.ctex"]
+dest_files=["res://.godot/imported/waiter.png-311c55a6c0dee0e1c72f011cf2611d12.etc2.ctex"]
 
 [params]
 

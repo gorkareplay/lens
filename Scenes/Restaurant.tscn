@@ -46,7 +46,7 @@ next_pass = SubResource("ShaderMaterial_mdxsm")
 albedo_color = Color(0.35, 0.4, 0.5, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hje71"]
-size = Vector3(3.0285716, 0.05714286, 3.6420062)
+size = Vector3(3.0285716, 0.05714286, 3.9142857)
 
 [sub_resource type="BoxMesh" id="BoxMesh_fy5am"]
 lightmap_size_hint = Vector2i(82, 49)
@@ -5201,7 +5201,7 @@ mesh = SubResource("BoxMesh_vo6fk")
 surface_material_override/0 = SubResource("StandardMaterial3D_vo6fk")
 
 [node name="_CollisionShape3D_18" type="CollisionShape3D" parent="Floor_Office" unique_id=593789679]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5067173)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.3705775)
 shape = SubResource("BoxShape3D_hje71")
 
 [node name="Floor_Dining_A" type="StaticBody3D" parent="." unique_id=345892738]
@@ -7716,7 +7716,7 @@ transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 1.4432521, 0.5537406, 2
 billboard = 2
 texture = ExtResource("3_yfx12")
 
-[node name="Woman" type="Sprite3D" parent="." unique_id=997867186]
+[node name="Womanstand" type="Sprite3D" parent="." unique_id=997867186]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 3.5449724, 0.5537406, 8.936922)
 billboard = 2
 texture = ExtResource("4_piffy")
