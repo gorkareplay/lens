@@ -14,6 +14,9 @@
 [ext_resource type="Texture2D" uid="uid://dqrh2hpecsdkv" path="res://Sprites/silent-guys/mango.PNG" id="5_mdxsm"]
 [ext_resource type="PackedScene" uid="uid://dsvrpfopktb5w" path="res://Scenes/Interactables/kitchen_stove.tscn" id="10_fy5am"]
 [ext_resource type="Texture2D" uid="uid://dlicv72krfu06" path="res://Sprites/items/normal_stove.png" id="11_bue68"]
+[ext_resource type="Texture2D" uid="uid://dc7v2ormdwqeh" path="res://Sprites/wallpapers/порванные wallpapers .jpg" id="13_boa77"]
+[ext_resource type="Texture2D" uid="uid://cp4r8nyatux8s" path="res://Sprites/wallpapers/IMG_9765.jpg" id="13_iqu8l"]
+[ext_resource type="PackedScene" uid="uid://ou5e01uhsivk" path="res://Scenes/Interactables/safe.tscn" id="14_boa77"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bue68"]
 
@@ -6720,3 +6723,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6352315, 0.29150718, -0.720
 [node name="Stove" type="Sprite3D" parent="." unique_id=975027964]
 transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 4.022167, 0.38302672, -0.7201079)
 texture = ExtResource("11_bue68")
+
+[node name="NormalWallpaper" type="Sprite3D" parent="." unique_id=1714369644]
+transform = Transform3D(0.048705664, 0, 0, 0, 0.05914151, 0, 0, 0, 0.025, 9.775516, 0.85685766, -1.2070756)
+texture = ExtResource("13_iqu8l")
+
+[node name="TornTuzWallpaper" type="Sprite3D" parent="." unique_id=808412295]
+transform = Transform3D(0.034052365, 0, 0, 0, 0.050124615, 0, 0, 0, 0.025, 8.231959, 0.8740885, -1.2077479)
+texture = ExtResource("13_boa77")
+
+[node name="Safe" parent="." unique_id=1368170225 instance=ExtResource("14_boa77")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.724816, 0.3630979, -1.5420687)

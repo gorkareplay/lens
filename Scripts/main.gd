@@ -5,6 +5,8 @@ extends Node3D
 
 @onready var player = $Player
 @onready var restaurant: Node3D = $Restaurant
+@onready var wallpaper_costil = $StaticBody3D/WallpaperCostil
+
 var phase := "tutorial"
 var in_kitchen := false
 var in_park := false
@@ -155,13 +157,13 @@ func _build_world() -> void:
 	_marker("office_door", "Office door", Vector3(9.737, 0.0, 2.631), "any")
 	_marker("back_door", "Back door", Vector3(0.572, 0.0, -1.241), "any")
 	_marker("kitchen_door", "Kitchen door", Vector3(5.91, 0.0, 2.052), "any")
-	_marker("wallpaper", "Torn wallpaper", Vector3(8.784, 0.9, -1.185), "green")
+	_marker("wallpaper", "Torn wallpaper", Vector3(8.249, 0.822, -1.163), "green")
 	_marker("office_window", "Office window", Vector3(10.527, 0.857, 1.111), "green")
 	_marker("office_computer", "Computer", Vector3(8.593, 0.723, 0.379), "green")
 	_marker("office_blood", "Blood", Vector3(9.35, 0.12, 1.75), "red")
 	_marker("kitchen_stove", "Damaged stove", Vector3(4.635, 0.292, -0.721), "green")
 	_marker("kitchen_blood", "Blood by the stove", Vector3(4.9, 0.16, -0.95), "red")
-	_marker("safe", "Empty safe", Vector3(8.517, 0.257, -1.2), "green")
+	_marker("safe", "Empty safe", Vector3(8.725, 0.363, -1.542), "green")
 	_marker("keys", "Keys", Vector3(8.517, 0.257, -2.426), "green")
 	_marker("storage_blood", "Blood on shelves", Vector3(26.5, 0.9, -1), "red")
 	_marker("trail", "Blood trail", Vector3(40, 0.2, 4), "red")
@@ -242,6 +244,7 @@ func _interact(target: Object) -> void:
 				phase = "office"
 				_set_objective("Search the office.")
 				_travel(restaurant.to_global(Vector3(9.85, 0.5, 2.0)))
+				await Dialogue.say_raw(["The hell is this abomination of a wallpaper?...", "They look horrible."])
 			elif phase == "office" and clues.has("body"):
 				_travel(restaurant.to_global(Vector3(9.95, 0.5, 3.25)))
 				phase = "hall"
@@ -259,6 +262,8 @@ func _interact(target: Object) -> void:
 			clues.wallpaper = true
 			await _say(["storage_body_reveal"])
 			_set_objective("Search the hidden space.")
+			target.queue_free()
+			wallpaper_costil.queue_free()
 		"closet_exit":
 			_travel(restaurant.to_global(Vector3(9.7, 0.5, 1.75)))
 			_set_objective("Search the office.")

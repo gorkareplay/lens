@@ -3,13 +3,18 @@
 [ext_resource type="Texture2D" uid="uid://dc7v2ormdwqeh" path="res://Sprites/wallpapers/порванные wallpapers .jpg" id="1_jql1n"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b1gpb"]
-size = Vector3(1.0148773, 0.8994751, 0.068603516)
+size = Vector3(1.1257286, 1.3974762, 0.068603516)
 
 [node name="Wallpaper" type="StaticBody3D" unique_id=384205814]
+collision_layer = 4
+collision_mask = 4
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=318909402]
-transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 0, 0, 0)
+transform = Transform3D(0.02784202, 0, 0, 0, 0.040896762, 0, 0, 0, 0.025, 0, 0, 0)
+visible = false
+layers = 3
 texture = ExtResource("1_jql1n")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1653740698]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010255814, 0.030265808, 0)
 shape = SubResource("BoxShape3D_b1gpb")
