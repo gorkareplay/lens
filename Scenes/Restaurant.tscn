@@ -392,14 +392,19 @@ size = Vector3(0.085714296, 1.7142859, 3.8932269)
 size = Vector3(0.085714296, 1.7142859, 3.8968053)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rutji"]
-albedo_color = Color(0.85, 0.82, 0.76, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_2kfo6"]
 material = SubResource("StandardMaterial3D_rutji")
-size = Vector3(2.1572337, 1.7142859, 0.085714296)
+size = Vector3(2.1572337, 1.7702289, 0.085714296)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gkbx8"]
 size = Vector3(2.114286, 1.7142859, 0.085714296)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g28q7"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j3pel"]
+albedo_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t6kid"]
 albedo_color = Color(0.85, 0.82, 0.76, 1)
@@ -4781,6 +4786,7 @@ transform = Transform3D(-1, -4.371139e-08, -4.3711385e-08, 4.371139e-08, -4.3711
 [node name="_MeshInstance3D_89" type="MeshInstance3D" parent="Office_South_solid5" unique_id=1404092240]
 transform = Transform3D(1, 0, -1.6420282e-15, 0, 1, 0, -1.6420282e-15, 0, 1, -0.021473885, 0, -0.034648124)
 mesh = SubResource("BoxMesh_2kfo6")
+surface_material_override/0 = SubResource("StandardMaterial3D_g28q7")
 
 [node name="_CollisionShape3D_90" type="CollisionShape3D" parent="Office_South_solid5" unique_id=459540595]
 shape = SubResource("BoxShape3D_gkbx8")
@@ -4789,8 +4795,9 @@ shape = SubResource("BoxShape3D_gkbx8")
 transform = Transform3D(-1, -4.371139e-08, -4.3711385e-08, 4.371139e-08, -4.371139e-08, -1, 4.3711385e-08, -1, 4.3711392e-08, 8.46764, 1.7223876, -2.1173615)
 
 [node name="_MeshInstance3D_89" type="MeshInstance3D" parent="Office_South_solid6" unique_id=735733396]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.021473885, 0, 0)
+transform = Transform3D(1, 0, -1.6420282e-15, 0, 1, 0, -1.6420282e-15, 0, 1, -0.021473885, -0.027971506, 0)
 mesh = SubResource("BoxMesh_2kfo6")
+surface_material_override/0 = SubResource("StandardMaterial3D_j3pel")
 
 [node name="_CollisionShape3D_90" type="CollisionShape3D" parent="Office_South_solid6" unique_id=1732635920]
 shape = SubResource("BoxShape3D_gkbx8")

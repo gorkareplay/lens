@@ -161,7 +161,7 @@ func _build_world() -> void:
 	#_marker("kitchen_stove", "Damaged stove", Vector3(4.3, 0.82, -0.95), "green")
 	#_marker("kitchen_blood", "Blood by the stove", Vector3(4.9, 0.16, -0.95), "red")
 	#_marker("safe", "Empty safe", Vector3(23.2, 0.8, -1), "green", self)
-	_marker("keys", "Keys", Vector3(25.9, 0.4, -0.5), "green", self)
+	_marker("keys", "Keys", Vector3(8.613, 0.3, -1.645), "green", self)
 	#_marker("storage_blood", "Blood on shelves", Vector3(26.5, 0.9, -1), "red", self)
 	_marker("trail", "Blood trail", Vector3(40, 0.2, 4), "red", self)
 	_marker("possessions", "Documents, money and knife", Vector3(41, 0.45, -7), "green", self)
@@ -257,9 +257,9 @@ func _interact(target: Object) -> void:
 				in_kitchen = true
 		"wallpaper":
 			clues.wallpaper = true
-			_travel(Vector3(25, 0.5, 1.0))
+			self.get_child(6).get_child(104).position = Vector3(10, 10, 10)
 			await _say(["storage_body_reveal"])
-			_set_objective("Search the hidden storeroom.")
+			_set_objective("Search the hidden space.")
 		"closet_exit":
 			_travel(restaurant.to_global(Vector3(9.7, 0.5, 1.75)))
 			_set_objective("Search the office.")
