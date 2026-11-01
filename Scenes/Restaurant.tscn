@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://decougth6v0d1"]
 
+[ext_resource type="Texture2D" uid="uid://d00djdht4b55g" path="res://Sprites/office/Office window.png" id="1_axxsr"]
+[ext_resource type="PackedScene" uid="uid://b6u7pec3ej8oh" path="res://Scenes/Interactables/office_window.tscn" id="1_mdxsm"]
 [ext_resource type="Shader" uid="uid://d03x0husnhw7h" path="res://outline_shader.gdshader" id="1_tfhkb"]
+[ext_resource type="PackedScene" uid="uid://chaa7eoflv5fb" path="res://Scenes/Interactables/office_computer.tscn" id="1_vo6fk"]
+[ext_resource type="Texture2D" uid="uid://d3xrov4hlmops" path="res://Sprites/office/Keyboard.png" id="2_hje71"]
 [ext_resource type="Texture2D" uid="uid://xtmu0arg4sv8" path="res://Sprites/silent-guys/Untitled4_20261030182751.PNG" id="2_tfhkb"]
 [ext_resource type="Texture2D" uid="uid://jviga58utpjm" path="res://Sprites/silent-guys/Untitled4_20261030182855.PNG" id="3_yfx12"]
 [ext_resource type="Texture2D" uid="uid://cfs02uaqdh574" path="res://Sprites/silent-guys/womanstand.PNG" id="4_piffy"]
@@ -13,16 +17,8 @@ albedo_color = Color(0.7, 0.72, 0.74, 1)
 material = SubResource("StandardMaterial3D_tfhkb")
 size = Vector3(8.597155, 0.05714286, 3.33411)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_yfx12"]
-render_priority = 0
-shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.7, 0.72, 0.74, 1)
-shader_parameter/use_base_texture = false
-shader_parameter/size = 1.05
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_piffy"]
-next_pass = SubResource("ShaderMaterial_yfx12")
-albedo_color = Color(0.7, 0.72, 0.74, 1)
+albedo_color = Color(0, 0, 0, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_piffy"]
 size = Vector3(8.596408, 0.05714286, 3.3411274)
@@ -34,16 +30,8 @@ albedo_color = Color(0.35, 0.4, 0.5, 1)
 material = SubResource("StandardMaterial3D_mdxsm")
 size = Vector3(3.0285716, 0.05714286, 3.8978655)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_mdxsm"]
-render_priority = 0
-shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.35, 0.4, 0.5, 1)
-shader_parameter/use_base_texture = false
-shader_parameter/size = 1.05
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vo6fk"]
-next_pass = SubResource("ShaderMaterial_mdxsm")
-albedo_color = Color(0.35, 0.4, 0.5, 1)
+albedo_color = Color(0, 0, 0, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hje71"]
 size = Vector3(3.0285716, 0.05714286, 3.9142857)
@@ -51,6 +39,9 @@ size = Vector3(3.0285716, 0.05714286, 3.9142857)
 [sub_resource type="BoxMesh" id="BoxMesh_fy5am"]
 lightmap_size_hint = Vector2i(82, 49)
 size = Vector3(8.597629, 0.05714286, 7.155019)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fy5am"]
+albedo_color = Color(0, 0, 0, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bue68"]
 size = Vector3(8.590786, 0.05714286, 7.1506867)
@@ -63,6 +54,9 @@ size = Vector3(11.643162, 0.05714286, 10.534439)
 
 [sub_resource type="BoxMesh" id="BoxMesh_iqu8l"]
 size = Vector3(3.0285716, 0.05714286, 6.6203055)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_axxsr"]
+albedo_color = Color(0, 0, 0, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_boa77"]
 size = Vector3(3.0285716, 0.05714286, 6.620822)
@@ -3088,13 +3082,13 @@ size = Vector3(0.9142858, 0.022857143, 0.4571429)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7tlvo"]
 render_priority = 0
 shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.45, 0.3, 0.18, 1)
+shader_parameter/base_color = Color(0, 0, 0, 1)
 shader_parameter/use_base_texture = false
 shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oyi8d"]
 next_pass = SubResource("ShaderMaterial_7tlvo")
-albedo_color = Color(0.45, 0.3, 0.18, 1)
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.9
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qc523"]
@@ -3108,17 +3102,17 @@ size = Vector3(0.017142858, 0.4057143, 0.42285717)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6slv8"]
 render_priority = 0
 shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.45, 0.3, 0.18, 1)
+shader_parameter/base_color = Color(0, 0, 0, 1)
 shader_parameter/use_base_texture = false
 shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p5g5h"]
 next_pass = SubResource("ShaderMaterial_6slv8")
-albedo_color = Color(0.45, 0.3, 0.18, 1)
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.9
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5rnjl"]
-albedo_color = Color(0.45, 0.3, 0.18, 1)
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.9
 
 [sub_resource type="BoxMesh" id="BoxMesh_qbpi8"]
@@ -3128,17 +3122,17 @@ size = Vector3(0.24000001, 0.4057143, 0.42285717)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_x82pc"]
 render_priority = 0
 shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.45, 0.3, 0.18, 1)
+shader_parameter/base_color = Color(0, 0, 0, 1)
 shader_parameter/use_base_texture = false
 shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ab3im"]
 next_pass = SubResource("ShaderMaterial_x82pc")
-albedo_color = Color(0.45, 0.3, 0.18, 1)
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.9
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r8kv2"]
-albedo_color = Color(0.45, 0.3, 0.18, 1)
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.9
 
 [sub_resource type="BoxMesh" id="BoxMesh_kejcc"]
@@ -3148,13 +3142,13 @@ size = Vector3(0.66317767, 0.21714287, 0.011428571)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lnyo4"]
 render_priority = 0
 shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.45, 0.3, 0.18, 1)
+shader_parameter/base_color = Color(0, 0, 0, 1)
 shader_parameter/use_base_texture = false
 shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a3xmt"]
 next_pass = SubResource("ShaderMaterial_lnyo4")
-albedo_color = Color(0.45, 0.3, 0.18, 1)
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.9
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1ga8r"]
@@ -3168,13 +3162,13 @@ size = Vector3(0.21714287, 0.1152381, 0.008)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_h3ddn"]
 render_priority = 0
 shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.52, 0.36, 0.22, 1)
+shader_parameter/base_color = Color(0, 0, 0, 1)
 shader_parameter/use_base_texture = false
 shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_38usi"]
 next_pass = SubResource("ShaderMaterial_h3ddn")
-albedo_color = Color(0.52, 0.36, 0.22, 1)
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.9
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wgh6g"]
@@ -3189,13 +3183,12 @@ size = Vector3(0.06857143, 0.008571429, 0.011428571)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2du5t"]
 render_priority = 0
 shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.72, 0.74, 0.77, 1)
+shader_parameter/base_color = Color(1, 1, 1, 1)
 shader_parameter/use_base_texture = false
 shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xf78n"]
 next_pass = SubResource("ShaderMaterial_2du5t")
-albedo_color = Color(0.72, 0.74, 0.77, 1)
 metallic = 0.3
 roughness = 0.75
 
@@ -3210,13 +3203,13 @@ size = Vector3(0.21714287, 0.1152381, 0.008)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_j0oyv"]
 render_priority = 0
 shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.52, 0.36, 0.22, 1)
+shader_parameter/base_color = Color(0, 0, 0, 1)
 shader_parameter/use_base_texture = false
 shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_37ob0"]
 next_pass = SubResource("ShaderMaterial_j0oyv")
-albedo_color = Color(0.52, 0.36, 0.22, 1)
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.9
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w4071"]
@@ -3231,13 +3224,12 @@ size = Vector3(0.06857143, 0.008571429, 0.011428571)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_morf7"]
 render_priority = 0
 shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.72, 0.74, 0.77, 1)
+shader_parameter/base_color = Color(1, 1, 1, 1)
 shader_parameter/use_base_texture = false
 shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cglfl"]
 next_pass = SubResource("ShaderMaterial_morf7")
-albedo_color = Color(0.72, 0.74, 0.77, 1)
 metallic = 0.3
 roughness = 0.75
 
@@ -3252,13 +3244,13 @@ size = Vector3(0.21714287, 0.1152381, 0.008)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mx44m"]
 render_priority = 0
 shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.52, 0.36, 0.22, 1)
+shader_parameter/base_color = Color(0, 0, 0, 1)
 shader_parameter/use_base_texture = false
 shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0ukof"]
 next_pass = SubResource("ShaderMaterial_mx44m")
-albedo_color = Color(0.52, 0.36, 0.22, 1)
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.9
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tv7d2"]
@@ -3273,13 +3265,12 @@ size = Vector3(0.06857143, 0.008571429, 0.011428571)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8q5b5"]
 render_priority = 0
 shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.72, 0.74, 0.77, 1)
+shader_parameter/base_color = Color(1, 1, 1, 1)
 shader_parameter/use_base_texture = false
 shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jas4j"]
 next_pass = SubResource("ShaderMaterial_8q5b5")
-albedo_color = Color(0.72, 0.74, 0.77, 1)
 metallic = 0.3
 roughness = 0.75
 
@@ -3304,7 +3295,7 @@ shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o74e6"]
 next_pass = SubResource("ShaderMaterial_7w7sm")
-albedo_color = Color(0.55, 0.57, 0.6, 1)
+albedo_color = Color(0, 0, 0, 1)
 metallic = 0.3
 roughness = 0.75
 
@@ -3326,7 +3317,7 @@ shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_574kg"]
 next_pass = SubResource("ShaderMaterial_52eyu")
-albedo_color = Color(0.55, 0.57, 0.6, 1)
+albedo_color = Color(0, 0, 0, 1)
 metallic = 0.3
 roughness = 0.75
 
@@ -3348,7 +3339,7 @@ shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g4rku"]
 next_pass = SubResource("ShaderMaterial_k48uv")
-albedo_color = Color(0.55, 0.57, 0.6, 1)
+albedo_color = Color(0, 0, 0, 1)
 metallic = 0.3
 roughness = 0.75
 
@@ -3518,7 +3509,7 @@ shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jxbfs"]
 next_pass = SubResource("ShaderMaterial_3tjku")
-albedo_color = Color(0.55, 0.57, 0.6, 1)
+albedo_color = Color(0, 0, 0, 1)
 metallic = 0.3
 roughness = 0.75
 
@@ -3539,7 +3530,7 @@ shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_is1vi"]
 next_pass = SubResource("ShaderMaterial_a46rl")
-albedo_color = Color(0.16, 0.16, 0.19, 1)
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.9
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tlnve"]
@@ -3560,7 +3551,7 @@ shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c6c2i"]
 next_pass = SubResource("ShaderMaterial_ydbsk")
-albedo_color = Color(0.55, 0.57, 0.6, 1)
+albedo_color = Color(0, 0, 0, 1)
 metallic = 0.3
 roughness = 0.75
 
@@ -3581,7 +3572,7 @@ shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_stx8p"]
 next_pass = SubResource("ShaderMaterial_3frpt")
-albedo_color = Color(0.16, 0.16, 0.19, 1)
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.9
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cwr0n"]
@@ -3622,7 +3613,7 @@ shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5ntc1"]
 next_pass = SubResource("ShaderMaterial_evhck")
-albedo_color = Color(0.55, 0.57, 0.6, 1)
+albedo_color = Color(0, 0, 0, 1)
 metallic = 0.3
 roughness = 0.75
 
@@ -3643,7 +3634,7 @@ shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3y4e7"]
 next_pass = SubResource("ShaderMaterial_a5101")
-albedo_color = Color(0.16, 0.16, 0.19, 1)
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.9
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hsfaf"]
@@ -3664,7 +3655,7 @@ shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lci6g"]
 next_pass = SubResource("ShaderMaterial_egey8")
-albedo_color = Color(0.55, 0.57, 0.6, 1)
+albedo_color = Color(0, 0, 0, 1)
 metallic = 0.3
 roughness = 0.75
 
@@ -3685,7 +3676,7 @@ shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_affmt"]
 next_pass = SubResource("ShaderMaterial_xq4ma")
-albedo_color = Color(0.16, 0.16, 0.19, 1)
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.9
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dkbjm"]
@@ -3724,13 +3715,13 @@ size = Vector3(0.34285718, 0.7085715, 0.34285718)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bfvyn"]
 render_priority = 0
 shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.45, 0.5, 0.55, 1)
+shader_parameter/base_color = Color(0, 0, 0, 1)
 shader_parameter/use_base_texture = false
 shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n6wjd"]
 next_pass = SubResource("ShaderMaterial_bfvyn")
-albedo_color = Color(0.45, 0.5, 0.55, 1)
+albedo_color = Color(0, 0, 0, 1)
 metallic = 0.2
 roughness = 0.8
 
@@ -3746,13 +3737,13 @@ size = Vector3(0.32000002, 0.21714287, 0.009142858)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0mc1n"]
 render_priority = 0
 shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.505, 0.55, 0.595, 1)
+shader_parameter/base_color = Color(0, 0, 0, 1)
 shader_parameter/use_base_texture = false
 shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eolbb"]
 next_pass = SubResource("ShaderMaterial_0mc1n")
-albedo_color = Color(0.505, 0.55, 0.595, 1)
+albedo_color = Color(0, 0, 0, 1)
 metallic = 0.2
 roughness = 0.8
 
@@ -3774,7 +3765,6 @@ shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_38urt"]
 next_pass = SubResource("ShaderMaterial_gfk08")
-albedo_color = Color(0.78, 0.8, 0.83, 1)
 metallic = 0.3
 roughness = 0.75
 
@@ -3810,13 +3800,13 @@ size = Vector3(0.32000002, 0.21714287, 0.009142858)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ho117"]
 render_priority = 0
 shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.505, 0.55, 0.595, 1)
+shader_parameter/base_color = Color(0, 0, 0, 1)
 shader_parameter/use_base_texture = false
 shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_65aq0"]
 next_pass = SubResource("ShaderMaterial_ho117")
-albedo_color = Color(0.505, 0.55, 0.595, 1)
+albedo_color = Color(0, 0, 0, 1)
 metallic = 0.2
 roughness = 0.8
 
@@ -3838,7 +3828,6 @@ shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7vq7g"]
 next_pass = SubResource("ShaderMaterial_sdmgl")
-albedo_color = Color(0.78, 0.8, 0.83, 1)
 metallic = 0.3
 roughness = 0.75
 
@@ -3874,13 +3863,13 @@ size = Vector3(0.32000002, 0.21714287, 0.009142858)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_r48b8"]
 render_priority = 0
 shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.505, 0.55, 0.595, 1)
+shader_parameter/base_color = Color(0, 0, 0, 1)
 shader_parameter/use_base_texture = false
 shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dujum"]
 next_pass = SubResource("ShaderMaterial_r48b8")
-albedo_color = Color(0.505, 0.55, 0.595, 1)
+albedo_color = Color(0, 0, 0, 1)
 metallic = 0.2
 roughness = 0.8
 
@@ -3902,7 +3891,6 @@ shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_afvnc"]
 next_pass = SubResource("ShaderMaterial_kik8y")
-albedo_color = Color(0.78, 0.8, 0.83, 1)
 metallic = 0.3
 roughness = 0.75
 
@@ -3937,16 +3925,16 @@ roughness = 0.9
 material = SubResource("StandardMaterial3D_kkenl")
 size = Vector3(0.48142856, 0.51428574, 0.022857143)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_lwafx"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_axxsr"]
 render_priority = 0
 shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.5, 0.34, 0.2, 1)
+shader_parameter/base_color = Color(0, 0, 0, 1)
 shader_parameter/use_base_texture = false
 shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tduf1"]
-next_pass = SubResource("ShaderMaterial_lwafx")
-albedo_color = Color(0.5, 0.34, 0.2, 1)
+next_pass = SubResource("ShaderMaterial_axxsr")
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.9
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yjvas"]
@@ -3960,13 +3948,13 @@ size = Vector3(0.48142856, 0.085714296, 0.022857143)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_x1wlo"]
 render_priority = 0
 shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.5, 0.34, 0.2, 1)
+shader_parameter/base_color = Color(0, 0, 0, 1)
 shader_parameter/use_base_texture = false
 shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_emf57"]
 next_pass = SubResource("ShaderMaterial_x1wlo")
-albedo_color = Color(0.5, 0.34, 0.2, 1)
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.9
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6mhkn"]
@@ -3980,13 +3968,13 @@ size = Vector3(0.045714285, 0.5942857, 0.022857143)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_etqst"]
 render_priority = 0
 shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.5, 0.34, 0.2, 1)
+shader_parameter/base_color = Color(0, 0, 0, 1)
 shader_parameter/use_base_texture = false
 shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gtayp"]
 next_pass = SubResource("ShaderMaterial_etqst")
-albedo_color = Color(0.5, 0.34, 0.2, 1)
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.9
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ekdsw"]
@@ -4000,13 +3988,13 @@ size = Vector3(0.045714285, 0.5942857, 0.022857143)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5avjn"]
 render_priority = 0
 shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.5, 0.34, 0.2, 1)
+shader_parameter/base_color = Color(0, 0, 0, 1)
 shader_parameter/use_base_texture = false
 shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xwnhe"]
 next_pass = SubResource("ShaderMaterial_5avjn")
-albedo_color = Color(0.5, 0.34, 0.2, 1)
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.9
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8gvl5"]
@@ -4018,17 +4006,9 @@ roughness = 0.9
 material = SubResource("StandardMaterial3D_8gvl5")
 size = Vector3(0.39000002, 0.5942857, 0.009142858)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_yglep"]
-render_priority = 0
-shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.7, 0.85, 0.95, 0.35)
-shader_parameter/use_base_texture = false
-shader_parameter/size = 1.05
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rhhr0"]
-next_pass = SubResource("ShaderMaterial_yglep")
 transparency = 1
-albedo_color = Color(0.7, 0.85, 0.95, 0.35)
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.9
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_32fo7"]
@@ -4127,16 +4107,16 @@ roughness = 0.9
 material = SubResource("StandardMaterial3D_5cg3r")
 size = Vector3(0.48142856, 0.51428574, 0.022857143)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_kii1w"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hje71"]
 render_priority = 0
 shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.5, 0.34, 0.2, 1)
+shader_parameter/base_color = Color(0, 0, 0, 1)
 shader_parameter/use_base_texture = false
 shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jbkp6"]
-next_pass = SubResource("ShaderMaterial_kii1w")
-albedo_color = Color(0.5, 0.34, 0.2, 1)
+next_pass = SubResource("ShaderMaterial_hje71")
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.9
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ffh51"]
@@ -4150,13 +4130,13 @@ size = Vector3(0.48142856, 0.085714296, 0.022857143)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_upqb2"]
 render_priority = 0
 shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.5, 0.34, 0.2, 1)
+shader_parameter/base_color = Color(0, 0, 0, 1)
 shader_parameter/use_base_texture = false
 shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fodkf"]
 next_pass = SubResource("ShaderMaterial_upqb2")
-albedo_color = Color(0.5, 0.34, 0.2, 1)
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.9
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jujc3"]
@@ -4170,13 +4150,13 @@ size = Vector3(0.045714285, 0.5942857, 0.022857143)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bijtg"]
 render_priority = 0
 shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.5, 0.34, 0.2, 1)
+shader_parameter/base_color = Color(0, 0, 0, 1)
 shader_parameter/use_base_texture = false
 shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s6r5b"]
 next_pass = SubResource("ShaderMaterial_bijtg")
-albedo_color = Color(0.5, 0.34, 0.2, 1)
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.9
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rr7wg"]
@@ -4190,13 +4170,13 @@ size = Vector3(0.045714285, 0.5942857, 0.022857143)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_egegd"]
 render_priority = 0
 shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.5, 0.34, 0.2, 1)
+shader_parameter/base_color = Color(0, 0, 0, 1)
 shader_parameter/use_base_texture = false
 shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l0ekd"]
 next_pass = SubResource("ShaderMaterial_egegd")
-albedo_color = Color(0.5, 0.34, 0.2, 1)
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.9
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dlrin"]
@@ -4208,17 +4188,9 @@ roughness = 0.9
 material = SubResource("StandardMaterial3D_dlrin")
 size = Vector3(0.39000002, 0.5942857, 0.009142858)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_sykad"]
-render_priority = 0
-shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.7, 0.85, 0.95, 0.35)
-shader_parameter/use_base_texture = false
-shader_parameter/size = 1.05
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gung0"]
-next_pass = SubResource("ShaderMaterial_sykad")
 transparency = 1
-albedo_color = Color(0.7, 0.85, 0.95, 0.35)
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.9
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fctal"]
@@ -4428,13 +4400,13 @@ size = Vector3(0.51428574, 0.022857143, 0.51428574)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5566g"]
 render_priority = 0
 shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.5, 0.34, 0.2, 1)
+shader_parameter/base_color = Color(0, 0, 0, 1)
 shader_parameter/use_base_texture = false
 shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q2f42"]
 next_pass = SubResource("ShaderMaterial_5566g")
-albedo_color = Color(0.5, 0.34, 0.2, 1)
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.9
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ldhru"]
@@ -4454,7 +4426,7 @@ shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hj80e"]
 next_pass = SubResource("ShaderMaterial_cakbs")
-albedo_color = Color(0.38, 0.25, 0.15, 1)
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.9
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hjgoa"]
@@ -4468,13 +4440,13 @@ size = Vector3(0.034285717, 0.4057143, 0.034285717)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_84ytb"]
 render_priority = 0
 shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.38, 0.25, 0.15, 1)
+shader_parameter/base_color = Color(0, 0, 0, 1)
 shader_parameter/use_base_texture = false
 shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v3sy1"]
 next_pass = SubResource("ShaderMaterial_84ytb")
-albedo_color = Color(0.38, 0.25, 0.15, 1)
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.9
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_51qlo"]
@@ -4488,13 +4460,13 @@ size = Vector3(0.034285717, 0.4057143, 0.034285717)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qtkgh"]
 render_priority = 0
 shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.38, 0.25, 0.15, 1)
+shader_parameter/base_color = Color(0, 0, 0, 1)
 shader_parameter/use_base_texture = false
 shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e1ar1"]
 next_pass = SubResource("ShaderMaterial_qtkgh")
-albedo_color = Color(0.38, 0.25, 0.15, 1)
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.9
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dl3n2"]
@@ -4508,13 +4480,13 @@ size = Vector3(0.034285717, 0.4057143, 0.034285717)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tl1pe"]
 render_priority = 0
 shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.38, 0.25, 0.15, 1)
+shader_parameter/base_color = Color(0, 0, 0, 1)
 shader_parameter/use_base_texture = false
 shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nvqwg"]
 next_pass = SubResource("ShaderMaterial_tl1pe")
-albedo_color = Color(0.38, 0.25, 0.15, 1)
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.9
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ksnwd"]
@@ -4528,13 +4500,13 @@ size = Vector3(0.42285714, 0.040000003, 0.011428571)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_m8pxm"]
 render_priority = 0
 shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.38, 0.25, 0.15, 1)
+shader_parameter/base_color = Color(0, 0, 0, 1)
 shader_parameter/use_base_texture = false
 shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bwnx3"]
 next_pass = SubResource("ShaderMaterial_m8pxm")
-albedo_color = Color(0.38, 0.25, 0.15, 1)
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.9
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mftbd"]
@@ -4548,13 +4520,13 @@ size = Vector3(0.42285714, 0.040000003, 0.011428571)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jm0e8"]
 render_priority = 0
 shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.38, 0.25, 0.15, 1)
+shader_parameter/base_color = Color(0, 0, 0, 1)
 shader_parameter/use_base_texture = false
 shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_10sbc"]
 next_pass = SubResource("ShaderMaterial_jm0e8")
-albedo_color = Color(0.38, 0.25, 0.15, 1)
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.9
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_22s6g"]
@@ -4568,13 +4540,13 @@ size = Vector3(0.011428571, 0.040000003, 0.42285714)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_w7wce"]
 render_priority = 0
 shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.38, 0.25, 0.15, 1)
+shader_parameter/base_color = Color(0, 0, 0, 1)
 shader_parameter/use_base_texture = false
 shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2go2v"]
 next_pass = SubResource("ShaderMaterial_w7wce")
-albedo_color = Color(0.38, 0.25, 0.15, 1)
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.9
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_44icf"]
@@ -4588,13 +4560,13 @@ size = Vector3(0.011428571, 0.040000003, 0.42285714)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_417on"]
 render_priority = 0
 shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.38, 0.25, 0.15, 1)
+shader_parameter/base_color = Color(0, 0, 0, 1)
 shader_parameter/use_base_texture = false
 shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5f0rv"]
 next_pass = SubResource("ShaderMaterial_417on")
-albedo_color = Color(0.38, 0.25, 0.15, 1)
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.9
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_a0g4o"]
@@ -4611,13 +4583,13 @@ size = Vector3(0.022857143, 0.51428574, 0.022857143)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_a7k7j"]
 render_priority = 0
 shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.3, 0.2, 0.12, 1)
+shader_parameter/base_color = Color(0, 0, 0, 1)
 shader_parameter/use_base_texture = false
 shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_keo52"]
 next_pass = SubResource("ShaderMaterial_a7k7j")
-albedo_color = Color(0.3, 0.2, 0.12, 1)
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.9
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wcb7n"]
@@ -4631,13 +4603,13 @@ size = Vector3(0.022857143, 0.21714287, 0.022857143)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yks8m"]
 render_priority = 0
 shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.3, 0.2, 0.12, 1)
+shader_parameter/base_color = Color(0, 0, 0, 1)
 shader_parameter/use_base_texture = false
 shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_66sxg"]
 next_pass = SubResource("ShaderMaterial_yks8m")
-albedo_color = Color(0.3, 0.2, 0.12, 1)
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.9
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2y6u2"]
@@ -4651,13 +4623,13 @@ size = Vector3(0.022857143, 0.51428574, 0.022857143)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4acbt"]
 render_priority = 0
 shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.3, 0.2, 0.12, 1)
+shader_parameter/base_color = Color(0, 0, 0, 1)
 shader_parameter/use_base_texture = false
 shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_38pcs"]
 next_pass = SubResource("ShaderMaterial_4acbt")
-albedo_color = Color(0.3, 0.2, 0.12, 1)
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.9
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_esb04"]
@@ -4671,13 +4643,13 @@ size = Vector3(0.022857143, 0.21714287, 0.022857143)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_d4ox3"]
 render_priority = 0
 shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.3, 0.2, 0.12, 1)
+shader_parameter/base_color = Color(0, 0, 0, 1)
 shader_parameter/use_base_texture = false
 shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_onrdd"]
 next_pass = SubResource("ShaderMaterial_d4ox3")
-albedo_color = Color(0.3, 0.2, 0.12, 1)
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.9
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3lxfn"]
@@ -4691,13 +4663,13 @@ size = Vector3(0.25714287, 0.022857143, 0.25714287)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bl1vt"]
 render_priority = 0
 shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.3, 0.2, 0.12, 1)
+shader_parameter/base_color = Color(0, 0, 0, 1)
 shader_parameter/use_base_texture = false
 shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eqfwx"]
 next_pass = SubResource("ShaderMaterial_bl1vt")
-albedo_color = Color(0.3, 0.2, 0.12, 1)
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.9
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qtv66"]
@@ -4711,13 +4683,13 @@ size = Vector3(0.22285715, 0.017142858, 0.22285715)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_cvcop"]
 render_priority = 0
 shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.2, 0.2, 0.24, 1)
+shader_parameter/base_color = Color(0, 0, 0, 1)
 shader_parameter/use_base_texture = false
 shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5hwpj"]
 next_pass = SubResource("ShaderMaterial_cvcop")
-albedo_color = Color(0.2, 0.2, 0.24, 1)
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.9
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7edi8"]
@@ -4731,13 +4703,13 @@ size = Vector3(0.21142858, 0.05714286, 0.014285715)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bbrp4"]
 render_priority = 0
 shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.3, 0.2, 0.12, 1)
+shader_parameter/base_color = Color(0, 0, 0, 1)
 shader_parameter/use_base_texture = false
 shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vqove"]
 next_pass = SubResource("ShaderMaterial_bbrp4")
-albedo_color = Color(0.3, 0.2, 0.12, 1)
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.9
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ibplh"]
@@ -4751,19 +4723,29 @@ size = Vector3(0.21142858, 0.040000003, 0.014285715)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_v6nwq"]
 render_priority = 0
 shader = ExtResource("1_tfhkb")
-shader_parameter/base_color = Color(0.3, 0.2, 0.12, 1)
+shader_parameter/base_color = Color(0, 0, 0, 1)
 shader_parameter/use_base_texture = false
 shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0dorw"]
 next_pass = SubResource("ShaderMaterial_v6nwq")
-albedo_color = Color(0.3, 0.2, 0.12, 1)
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.9
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ca01p"]
 size = Vector3(0.2581787, 0.5149231, 0.25793457)
 
 [node name="Restaurant" type="Node3D" unique_id=531500159]
+
+[node name="OfficeComputer" parent="." unique_id=177017824 instance=ExtResource("1_vo6fk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.593175, 0.72256815, 0.37897962)
+
+[node name="Keyboard" type="Sprite3D" parent="OfficeComputer" unique_id=2079950060]
+transform = Transform3D(0.09, 0, 0, 0, -3.934025e-09, -0.09, 0, 0.09, -3.934025e-09, -0.0036201477, -0.2935006, -0.36232036)
+texture = ExtResource("2_hje71")
+
+[node name="OfficeWindow" parent="." unique_id=1861236078 instance=ExtResource("1_mdxsm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.527374, 0.85729706, 1.11144)
 
 [node name="Floor_Kitchen" type="StaticBody3D" parent="." unique_id=821198957]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7714286, -0.02857143, 0.78956664)
@@ -4793,8 +4775,9 @@ shape = SubResource("BoxShape3D_hje71")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7714286, -0.02857143, 4.885714)
 
 [node name="_MeshInstance3D_19" type="MeshInstance3D" parent="Floor_Dining_A" unique_id=846493746]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5273857, 0, 0.7489381)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5218334, 0, 0.73832035)
 mesh = SubResource("BoxMesh_fy5am")
+surface_material_override/0 = SubResource("StandardMaterial3D_fy5am")
 
 [node name="_CollisionShape3D_20" type="CollisionShape3D" parent="Floor_Dining_A" unique_id=2040893670]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5299034, 0, 0.75330687)
@@ -4815,8 +4798,9 @@ shape = SubResource("BoxShape3D_3p8wv")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.057143, -0.02857143, 5.171428)
 
 [node name="_MeshInstance3D_21" type="MeshInstance3D" parent="Floor_Dining_B" unique_id=1170724883]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.76729536)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.005552292, 0, 0.7566776)
 mesh = SubResource("BoxMesh_iqu8l")
+surface_material_override/0 = SubResource("StandardMaterial3D_axxsr")
 
 [node name="_CollisionShape3D_22" type="CollisionShape3D" parent="Floor_Dining_B" unique_id=1224376161]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.7675538)
@@ -7136,3 +7120,27 @@ texture = ExtResource("4_piffy")
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 4.2494726, 0.5537406, 8.936922)
 billboard = 2
 texture = ExtResource("5_mdxsm")
+
+[node name="Windows" type="Sprite3D" parent="." unique_id=291822027]
+transform = Transform3D(-6.834958e-09, 0, 0.09200001, 0, 0.09200001, 0, -0.1563656, 0, -4.021448e-09, 10.521885, 0.37210763, 6.443029)
+texture = ExtResource("1_axxsr")
+
+[node name="Windows2" type="Sprite3D" parent="." unique_id=1286365764]
+transform = Transform3D(-6.8349584e-09, 0, 0.09200001, 0, 0.09200001, 0, -0.15636562, 0, -4.021448e-09, 10.525065, 0.37210763, 4.683723)
+texture = ExtResource("1_axxsr")
+
+[node name="Windows3" type="Sprite3D" parent="." unique_id=1515359768]
+transform = Transform3D(-0.1563656, 0, 8.042895e-09, 0, 0.09200001, 0, -1.3669915e-08, 0, -0.092, 8.487792, 0.37210763, 9.171416)
+texture = ExtResource("1_axxsr")
+
+[node name="Windows4" type="Sprite3D" parent="." unique_id=423619276]
+transform = Transform3D(-0.1563656, 0, -8.042896e-09, 0, 0.09200001, 0, 1.3669915e-08, 0, -0.09200001, 1.839551, 0.37210763, 9.167957)
+texture = ExtResource("1_axxsr")
+
+[node name="Windows5" type="Sprite3D" parent="." unique_id=2147420277]
+transform = Transform3D(-6.834958e-09, 0, 0.09200001, 0, 0.09200001, 0, -0.1563656, 0, -4.021448e-09, -0.9710722, 0.37210763, 6.443029)
+texture = ExtResource("1_axxsr")
+
+[node name="Windows6" type="Sprite3D" parent="." unique_id=1322905106]
+transform = Transform3D(-6.834958e-09, 0, 0.09200001, 0, 0.09200001, 0, -0.1563656, 0, -4.021448e-09, -0.97321033, 0.37210763, 4.372928)
+texture = ExtResource("1_axxsr")

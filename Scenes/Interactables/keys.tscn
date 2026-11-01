@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dbqkf2y5du2lm"]
+
+[ext_resource type="Texture2D" uid="uid://c0aa1oyalk8d5" path="res://Sprites/keys.png" id="1_k35bn"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b1gpb"]
+size = Vector3(3.3964844, 4.3415527, 0.09667969)
+
+[node name="Keys" type="StaticBody3D" unique_id=1184181661]
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=514810920]
+transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, 0, 0, 0)
+texture = ExtResource("1_k35bn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1902994394]
+transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, 0, 0, 0)
+shape = SubResource("BoxShape3D_b1gpb")

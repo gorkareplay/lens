@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d0mbms6db2v45"]
 
 [ext_resource type="Texture2D" uid="uid://bx3yhsm4j47l3" path="res://Sprites/waiter1/waiter.png" id="1_8cir0"]
+[ext_resource type="PackedScene" uid="uid://da52qkxlsm2vb" path="res://Scenes/arrow.tscn" id="1_jswmb"]
 [ext_resource type="Texture2D" uid="uid://bkkyswrnc76qn" path="res://Sprites/waiter1/waiter_speak.png" id="2_glhvb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_b1gpb"]
@@ -31,6 +32,9 @@ size = Vector3(0.44665527, 1.1401367, 0.5303955)
 [node name="WaiterOne" type="StaticBody3D" unique_id=450510121]
 collision_layer = 2
 collision_mask = 2
+
+[node name="Arrow" parent="." unique_id=1920264104 instance=ExtResource("1_jswmb")]
+transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, 0.0046347976, 0, 0)
 
 [node name="Interactable" type="AnimatedSprite3D" parent="." unique_id=1050739420]
 transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, 0, 0, 0)

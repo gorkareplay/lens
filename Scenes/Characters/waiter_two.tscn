@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://car3t6ivl8c1n"]
 
+[ext_resource type="PackedScene" uid="uid://da52qkxlsm2vb" path="res://Scenes/arrow.tscn" id="1_gyojy"]
 [ext_resource type="Texture2D" uid="uid://55gxhuict02c" path="res://Sprites/icon.svg" id="1_u4v3k"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b1gpb"]
@@ -8,6 +9,8 @@ size = Vector3(1, 1.1401367, 1)
 [node name="WaiterTwo" type="StaticBody3D" unique_id=450510121]
 collision_layer = 2
 collision_mask = 2
+
+[node name="Arrow" parent="." unique_id=1920264104 instance=ExtResource("1_gyojy")]
 
 [node name="Interactable" type="Sprite3D" parent="." unique_id=133969350]
 cast_shadow = 0

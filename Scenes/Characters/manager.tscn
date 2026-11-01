@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c5muq6casn0n8"]
 
 [ext_resource type="Texture2D" uid="uid://55gxhuict02c" path="res://Sprites/icon.svg" id="1_453op"]
+[ext_resource type="PackedScene" uid="uid://da52qkxlsm2vb" path="res://Scenes/arrow.tscn" id="1_arrow"]
 [ext_resource type="Script" uid="uid://bw1ovqufltrkk" path="res://manager.gd" id="1_uscr2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b1gpb"]
@@ -10,6 +11,8 @@ size = Vector3(1, 1.1401367, 1)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_uscr2")
+
+[node name="Arrow" parent="." unique_id=1920264104 instance=ExtResource("1_arrow")]
 
 [node name="Interactable" type="Sprite3D" parent="." unique_id=133969350]
 cast_shadow = 0
