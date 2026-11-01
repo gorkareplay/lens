@@ -7,6 +7,7 @@ extends Node3D
 @onready var restaurant: Node3D = $Restaurant
 var phase := "tutorial"
 var in_kitchen := false
+var in_park := false
 var busy := false
 var seen_lenses := {}
 var clues := {}
@@ -284,15 +285,20 @@ func _interact(target: Object) -> void:
 			if phase == "investigate" and clues.has("chef"):
 				await _say(["cook_scared", "cook_detective_pardon", "cook_reply"], target as Node3D)
 		"back_door":
-			if phase == "investigate" and clues.has("guest") and clues.has("chef"):
+			if phase == "investigate" and clues.has("guest") and clues.has("chef") and not in_park:
 				phase = "park"
-				_travel(Vector3(40, 0.5, 8))
+				_travel(restaurant.to_global(Vector3(0.844, 0.5, -1.799)))
 				_set_objective("Follow the blood trail.")
+				in_park = true
+			elif in_park:
+				_travel(restaurant.to_global(Vector3(0.844, 0.5, -0.829)))
+				in_park = false
+				if phase == "help_return": 
+					_set_objective("Return to the waiter by the office and speak to him.")
+			elif clues.has("keys"):
+				await Dialogue.say_raw(["I should get more information first"], "Detective")
 			else:
 				await Dialogue.say_raw(["Locked"], "Detective")
-		"park_exit":
-			_travel(restaurant.to_global(Vector3(1.0, 0.5, 0.45)))
-			if phase == "help_return": _set_objective("Return to the waiter by the office and speak to him.")
 		"trail":
 			await Dialogue.say_raw(["Blood leads from the office window into the park."], "Detective")
 			_set_objective("Follow the blood trail.")
