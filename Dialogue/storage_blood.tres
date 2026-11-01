@@ -6,4 +6,4 @@
 script = ExtResource("1_g6mes")
 id = "storage_blood"
 speaker = "Detective"
-lines = Array[String](["The blow was struck in a hurry.", "The wallpaper and shelves are splattered.", "He was trying to defend himself or grabbing at the racks before falling.", "The killer acted in a panic."])
+lines = Array[String](["The blow was struck in a hurry.", "The wallpaper is splattered.", "He was trying to defend himself or grabbing at the walls before falling.", "The killer acted in a panic."])

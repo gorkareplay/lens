@@ -6,4 +6,4 @@
 script = ExtResource("1_yul2b")
 id = "storage_body_reveal"
 speaker = "Detective"
-lines = Array[String](["…"])
+lines = Array[String](["Looks like I can walk through"])

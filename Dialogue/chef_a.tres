@@ -6,4 +6,4 @@
 script = ExtResource("1_fln0l")
 id = "chef_a"
 speaker = "Chef"
-lines = Array[String](["Pressure?", "The man didn't view us as human beings.", "Yesterday he was screaming at everyone again, threatening to slash bonuses over some inventory shortfall.", "But our poor rookie, Arthur, got the worst of it.", "He's been walking on eggshells since yesterday", "…", "Wonder where he ran off to anyway...", "whatever."])
+lines = Array[String](["Pressure?", "The man didn't view us as human beings.", "Yesterday he was screaming at everyone again, threatening to slash bonuses over some inventory shortfall.", "But our poor rookie, Arthur, got the worst of it.", "He's been on edge since yesterday", "…", "Wonder where he ran off to anyway...", "Whatever."])

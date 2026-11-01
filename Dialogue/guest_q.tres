@@ -6,4 +6,4 @@
 script = ExtResource("1_reqra")
 id = "guest_q"
 speaker = "Detective"
-lines = Array[String](["Good afternoon.", "They say you're a big fan of the local cuisine.", "Did you notice anything out of the ordinary this morning?"])
+lines = Array[String](["Good afternoon.", "They say you're a regular here.", "Did you notice anything out of the ordinary this morning?"])

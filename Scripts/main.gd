@@ -160,17 +160,17 @@ func _build_world() -> void:
 	_marker("office_blood", "Blood", Vector3(9.35, 0.12, 1.75), "red")
 	_marker("kitchen_stove", "Damaged stove", Vector3(4.635, 0.292, -0.721), "green")
 	_marker("kitchen_blood", "Blood by the stove", Vector3(4.9, 0.16, -0.95), "red")
-	_marker("safe", "Empty safe", Vector3(23.2, 0.8, -1), "green", self)
-	_marker("keys", "Keys", Vector3(25.9, 0.4, -0.5), "green", self)
-	_marker("storage_blood", "Blood on shelves", Vector3(26.5, 0.9, -1), "red", self)
-	_marker("trail", "Blood trail", Vector3(40, 0.2, 4), "red", self)
-	_marker("possessions", "Documents, money and knife", Vector3(41, 0.45, -7), "green", self)
+	_marker("safe", "Empty safe", Vector3(8.517, 0.257, -1.2), "green")
+	_marker("keys", "Keys", Vector3(8.517, 0.257, -2.426), "green")
+	_marker("storage_blood", "Blood on shelves", Vector3(26.5, 0.9, -1), "red")
+	_marker("trail", "Blood trail", Vector3(40, 0.2, 4), "red")
+	_marker("possessions", "Documents, money and knife", Vector3(41, 0.45, -7), "green")
 	# Separate placeholder spaces preserve the original restaurant geometry.
 	_floor_at(Vector3(25, -0.1, 0), Vector3(6, 0.2, 5), Color(0.32, 0.29, 0.25))
 	_floor_at(Vector3(25, 0.9, -2.4), Vector3(6, 1.8, 0.2), Color(0.4, 0.34, 0.3))
 	_floor_at(Vector3(22.1, 0.9, 0), Vector3(0.2, 1.8, 5), Color(0.35, 0.29, 0.25))
 	_floor_at(Vector3(27.9, 0.9, 0), Vector3(0.2, 1.8, 5), Color(0.35, 0.29, 0.25))
-	_character("body", "manager", Vector3(25, 0.45, -0.8), "Manager", self)
+	_character("body", "manager", Vector3(7.75, 0.257, -2.1), "Manager")
 	actors.body.rotation.z = PI / 2
 	_floor_at(Vector3(40, -0.1, 0), Vector3(12, 0.2, 24), Color(0.26, 0.39, 0.24))
 	for tree_pos in [Vector3(36, 0.8, 3), Vector3(44, 0.8, 1), Vector3(37, 0.8, -4), Vector3(42.5, 0.8, -8)]:
@@ -256,7 +256,6 @@ func _interact(target: Object) -> void:
 				in_kitchen = true
 		"wallpaper":
 			clues.wallpaper = true
-			self.get_child(6).get_child(104).position = Vector3(10, 10, 10)
 			await _say(["storage_body_reveal"])
 			_set_objective("Search the hidden space.")
 		"closet_exit":
@@ -304,7 +303,7 @@ func _interact(target: Object) -> void:
 				await _say(["park_waiter2_confession", "park_detective_silence", "park_waiter2_plea", "park_detective_backstory"], target as Node3D)
 				_choose_ending()
 	if phase == "investigate" and clues.has("guest") and clues.has("chef"):
-		_set_objective("Explore the kitchen.")
+		_set_objective("Investigate the courtyard")
 	_update_markers()
 	busy = false
 

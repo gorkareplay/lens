@@ -30,13 +30,13 @@ albedo_color = Color(0.35, 0.4, 0.5, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_vo6fk"]
 material = SubResource("StandardMaterial3D_mdxsm")
-size = Vector3(3.0285716, 0.05714286, 3.8978655)
+size = Vector3(3.0285716, 0.05714286, 6.0062046)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vo6fk"]
 albedo_color = Color(0, 0, 0, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hje71"]
-size = Vector3(3.0285716, 0.05714286, 3.9142857)
+size = Vector3(3.0285716, 0.05714286, 5.516225)
 
 [sub_resource type="BoxMesh" id="BoxMesh_fy5am"]
 lightmap_size_hint = Vector2i(82, 49)
@@ -91,7 +91,7 @@ material = SubResource("StandardMaterial3D_b5mis")
 size = Vector3(6.454322, 1.7142859, 0.085714296)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xoj7m"]
-size = Vector3(9.465751, 1.7142859, 0.085714296)
+size = Vector3(6.4348583, 1.7142859, 0.085714296)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gdgsi"]
 albedo_color = Color(0.85, 0.82, 0.76, 1)
@@ -400,10 +400,7 @@ material = SubResource("StandardMaterial3D_rutji")
 size = Vector3(2.1572337, 1.7702289, 0.085714296)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gkbx8"]
-size = Vector3(2.114286, 1.7142859, 0.085714296)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g28q7"]
-albedo_color = Color(0, 0, 0, 1)
+size = Vector3(2.1499164, 1.7142859, 0.085714296)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j3pel"]
 albedo_color = Color(0, 0, 0, 1)
@@ -1010,6 +1007,7 @@ shader_parameter/size = 1.12999999709424
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wypmy"]
 next_pass = SubResource("ShaderMaterial_brr87")
+albedo_color = Color(0.25, 0.25, 0.28, 1)
 metallic = 0.3
 roughness = 0.75
 
@@ -1051,6 +1049,7 @@ shader_parameter/size = 1.12999999709424
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d8fao"]
 next_pass = SubResource("ShaderMaterial_08h5l")
+albedo_color = Color(0.25, 0.25, 0.28, 1)
 metallic = 0.3
 roughness = 0.75
 
@@ -1092,6 +1091,7 @@ shader_parameter/size = 1.12999999709424
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ytggo"]
 next_pass = SubResource("ShaderMaterial_ksbo6")
+albedo_color = Color(0.25, 0.25, 0.28, 1)
 metallic = 0.3
 roughness = 0.75
 
@@ -1133,6 +1133,7 @@ shader_parameter/size = 1.12999999709424
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3pysv"]
 next_pass = SubResource("ShaderMaterial_lly0u")
+albedo_color = Color(0.25, 0.25, 0.28, 1)
 metallic = 0.3
 roughness = 0.75
 
@@ -1174,6 +1175,7 @@ shader_parameter/size = 1.12999999709424
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3erap"]
 next_pass = SubResource("ShaderMaterial_686v6")
+albedo_color = Color(0.25, 0.25, 0.28, 1)
 metallic = 0.3
 roughness = 0.75
 
@@ -1495,6 +1497,7 @@ shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_unm6v"]
 next_pass = SubResource("ShaderMaterial_nnpvd")
+albedo_color = Color(0.72, 0.55, 0.35, 1)
 roughness = 0.9
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dkbjm"]
@@ -1604,6 +1607,7 @@ shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j6lmk"]
 next_pass = SubResource("ShaderMaterial_1xl74")
+albedo_color = Color(0.2, 0.2, 0.22, 1)
 metallic = 0.3
 roughness = 0.75
 
@@ -1647,6 +1651,7 @@ shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0u0bd"]
 next_pass = SubResource("ShaderMaterial_l5dvi")
+albedo_color = Color(0.2, 0.2, 0.22, 1)
 metallic = 0.3
 roughness = 0.75
 
@@ -1690,6 +1695,7 @@ shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0syfs"]
 next_pass = SubResource("ShaderMaterial_j1jck")
+albedo_color = Color(0.2, 0.2, 0.22, 1)
 metallic = 0.3
 roughness = 0.75
 
@@ -1733,6 +1739,7 @@ shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uljrc"]
 next_pass = SubResource("ShaderMaterial_ga00w")
+albedo_color = Color(0.2, 0.2, 0.22, 1)
 metallic = 0.3
 roughness = 0.75
 
@@ -1776,6 +1783,7 @@ shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ikm3q"]
 next_pass = SubResource("ShaderMaterial_g2wmf")
+albedo_color = Color(0.2, 0.2, 0.22, 1)
 metallic = 0.3
 roughness = 0.75
 
@@ -1819,6 +1827,7 @@ shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0r8ex"]
 next_pass = SubResource("ShaderMaterial_8gumm")
+albedo_color = Color(0.2, 0.2, 0.22, 1)
 metallic = 0.3
 roughness = 0.75
 
@@ -1862,6 +1871,7 @@ shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vh2vt"]
 next_pass = SubResource("ShaderMaterial_xrwv5")
+albedo_color = Color(0.2, 0.2, 0.22, 1)
 metallic = 0.3
 roughness = 0.75
 
@@ -1905,6 +1915,7 @@ shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wlgkb"]
 next_pass = SubResource("ShaderMaterial_kuat1")
+albedo_color = Color(0.2, 0.2, 0.22, 1)
 metallic = 0.3
 roughness = 0.75
 
@@ -2286,6 +2297,7 @@ shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_17nt3"]
 next_pass = SubResource("ShaderMaterial_1gif2")
+albedo_color = Color(0.74, 0.76, 0.79, 1)
 metallic = 0.4
 roughness = 0.7
 
@@ -2307,6 +2319,7 @@ shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qv2y5"]
 next_pass = SubResource("ShaderMaterial_y8q4e")
+albedo_color = Color(0.74, 0.76, 0.79, 1)
 metallic = 0.4
 roughness = 0.7
 
@@ -2350,6 +2363,7 @@ shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fe3dg"]
 next_pass = SubResource("ShaderMaterial_456o6")
+albedo_color = Color(0.385, 0.399, 0.42000002, 1)
 metallic = 0.3
 roughness = 0.75
 
@@ -2393,6 +2407,7 @@ shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ijkk4"]
 next_pass = SubResource("ShaderMaterial_8vwur")
+albedo_color = Color(0.385, 0.399, 0.42000002, 1)
 metallic = 0.3
 roughness = 0.75
 
@@ -2436,6 +2451,7 @@ shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6gh5y"]
 next_pass = SubResource("ShaderMaterial_mnrtw")
+albedo_color = Color(0.385, 0.399, 0.42000002, 1)
 metallic = 0.3
 roughness = 0.75
 
@@ -2546,6 +2562,7 @@ shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wgd5s"]
 next_pass = SubResource("ShaderMaterial_xxutt")
+albedo_color = Color(0.15, 0.15, 0.17, 1)
 metallic = 0.3
 roughness = 0.75
 
@@ -2567,6 +2584,7 @@ shader_parameter/size = 1.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_02jqg"]
 next_pass = SubResource("ShaderMaterial_scbgh")
+albedo_color = Color(0.15, 0.15, 0.17, 1)
 metallic = 0.3
 roughness = 0.75
 
@@ -4262,15 +4280,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.52677536, 0, -0.38931358)
 shape = SubResource("BoxShape3D_piffy")
 
 [node name="Floor_Office" type="StaticBody3D" parent="." unique_id=1542234223]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.057143, -0.02857143, 1.0546967)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.057143, -0.034305993, 1.0546967)
 
 [node name="_MeshInstance3D_17" type="MeshInstance3D" parent="Floor_Office" unique_id=975464294]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.37382114)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.4279907)
 mesh = SubResource("BoxMesh_vo6fk")
 surface_material_override/0 = SubResource("StandardMaterial3D_vo6fk")
 
 [node name="_CollisionShape3D_18" type="CollisionShape3D" parent="Floor_Office" unique_id=593789679]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.3705775)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.1715472)
 shape = SubResource("BoxShape3D_hje71")
 
 [node name="Floor_Dining_A" type="StaticBody3D" parent="." unique_id=345892738]
@@ -4336,7 +4354,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4871249, 0, 0)
 mesh = SubResource("BoxMesh_6udpb")
 
 [node name="_CollisionShape3D_28" type="CollisionShape3D" parent="Back_solid1" unique_id=1809139760]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.018589497, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4968567, 0, 0)
 shape = SubResource("BoxShape3D_xoj7m")
 
 [node name="West_solid0" type="StaticBody3D" parent="." unique_id=452750281]
@@ -4651,6 +4669,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.021473885, 0, 0)
 mesh = SubResource("BoxMesh_2kfo6")
 
 [node name="_CollisionShape3D_90" type="CollisionShape3D" parent="Office_South_solid7" unique_id=307858338]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01781559, 0, 0)
 shape = SubResource("BoxShape3D_gkbx8")
 
 [node name="Office_South_solid3" type="StaticBody3D" parent="." unique_id=1478745539]
@@ -4671,17 +4690,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.021473885, 0, 0)
 mesh = SubResource("BoxMesh_2kfo6")
 
 [node name="_CollisionShape3D_90" type="CollisionShape3D" parent="Office_South_solid4" unique_id=604024889]
-shape = SubResource("BoxShape3D_gkbx8")
-
-[node name="Office_South_solid5" type="StaticBody3D" parent="." unique_id=2139125768]
-transform = Transform3D(-1, -4.371139e-08, -4.3711385e-08, 4.371139e-08, -4.371139e-08, -1, 4.3711385e-08, -1, 4.3711392e-08, 8.46764, 0.0067551136, -2.1173615)
-
-[node name="_MeshInstance3D_89" type="MeshInstance3D" parent="Office_South_solid5" unique_id=1404092240]
-transform = Transform3D(1, 0, -1.6420282e-15, 0, 1, 0, -1.6420282e-15, 0, 1, -0.021473885, 0, -0.034648124)
-mesh = SubResource("BoxMesh_2kfo6")
-surface_material_override/0 = SubResource("StandardMaterial3D_g28q7")
-
-[node name="_CollisionShape3D_90" type="CollisionShape3D" parent="Office_South_solid5" unique_id=459540595]
 shape = SubResource("BoxShape3D_gkbx8")
 
 [node name="Office_South_solid6" type="StaticBody3D" parent="." unique_id=196908106]
@@ -5925,7 +5933,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0004272461, 0.2563324, -6.1
 shape = SubResource("BoxShape3D_ca01p")
 
 [node name="DiningChair_04_B" type="StaticBody3D" parent="." unique_id=443937669]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.446933, 0, 4.7)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9.405468, 0, 5.139519)
 
 [node name="Leg" type="MeshInstance3D" parent="DiningChair_04_B" unique_id=887884412]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11714286, 0.25714287, -0.11714286)
