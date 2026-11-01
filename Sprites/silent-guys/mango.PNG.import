@@ -3,16 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dqrh2hpecsdkv"
-path.s3tc="res://.godot/imported/mango.PNG-1ce95d2a3ddee01ed95d1d7037c7e81f.s3tc.ctex"
+path.etc2="res://.godot/imported/mango.PNG-1ce95d2a3ddee01ed95d1d7037c7e81f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Sprites/silent-guys/mango.PNG"
-dest_files=["res://.godot/imported/mango.PNG-1ce95d2a3ddee01ed95d1d7037c7e81f.s3tc.ctex"]
+dest_files=["res://.godot/imported/mango.PNG-1ce95d2a3ddee01ed95d1d7037c7e81f.etc2.ctex"]
 
 [params]
 

@@ -194,6 +194,7 @@ roughness = 0.75
 size = Vector3(0.6874491, 1.1942858, 0.028175224)
 
 [node name="Singledoor" type="StaticBody3D" unique_id=218332650]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 4, 0, 0, 0)
 
 [node name="Panel" type="MeshInstance3D" parent="." unique_id=1562566393]
 transform = Transform3D(1.1936067, 0, 0, 0, 1, 0, 0, 0, 1, 0.26294327, 0.6, 0)

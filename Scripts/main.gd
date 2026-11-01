@@ -23,7 +23,7 @@ func _ready() -> void:
 	player.global_position = restaurant.to_global(Vector3(5.2, 0.5, 5.5))
 	player.interaction_requested.connect(_interact)
 	player.lens_changed.connect(_lens_changed)
-	_set_objective("Try the green (3), red (2), and blue (4) lenses.")
+	_set_objective("Try the red (2), green (3), and blue (4) lenses.")
 	busy = true
 	await Dialogue.say(prologue_sit_down)
 	await Dialogue.say(tutorial_base)
@@ -154,7 +154,7 @@ func _build_world() -> void:
 	_marker("office_door", "Office door", Vector3(9.737, 0.0, 2.631), "any")
 	_marker("back_door", "Back door", Vector3(0.572, 0.0, -1.241), "any")
 	_marker("kitchen_door", "Kitchen door", Vector3(5.91, 0.0, 2.052), "any")
-	_marker("wallpaper", "Torn wallpaper", Vector3(10.35, 0.7, 1.8), "green")
+	_marker("wallpaper", "Torn wallpaper", Vector3(8.784, 0.9, -1.185), "green")
 	_marker("office_window", "Office window", Vector3(10.527, 0.857, 1.111), "green")
 	_marker("office_computer", "Computer", Vector3(8.593, 0.723, 0.379), "green")
 	#_marker("office_blood", "Blood", Vector3(9.35, 0.12, 1.75), "red")
