@@ -1,26 +1,48 @@
 [gd_scene format=3 uid="uid://decougth6v0d1"]
 
 [ext_resource type="Texture2D" uid="uid://d00djdht4b55g" path="res://Sprites/office/Office window.png" id="1_axxsr"]
+[ext_resource type="Texture2D" uid="uid://dcqbdefb88frj" path="res://Sprites/Trees/Tree1.png" id="1_boa77"]
 [ext_resource type="PackedScene" uid="uid://b6u7pec3ej8oh" path="res://Scenes/Interactables/office_window.tscn" id="1_mdxsm"]
 [ext_resource type="Shader" uid="uid://d03x0husnhw7h" path="res://outline_shader.gdshader" id="1_tfhkb"]
 [ext_resource type="PackedScene" uid="uid://chaa7eoflv5fb" path="res://Scenes/Interactables/office_computer.tscn" id="1_vo6fk"]
 [ext_resource type="Texture2D" uid="uid://d3xrov4hlmops" path="res://Sprites/office/Keyboard.png" id="2_hje71"]
+[ext_resource type="Texture2D" uid="uid://0bl1xjw1oia6" path="res://Sprites/Trees/Tree2.png" id="2_mnjd0"]
 [ext_resource type="Texture2D" uid="uid://xtmu0arg4sv8" path="res://Sprites/silent-guys/Untitled4_20261030182751.PNG" id="2_tfhkb"]
 [ext_resource type="Texture2D" uid="uid://jviga58utpjm" path="res://Sprites/silent-guys/Untitled4_20261030182855.PNG" id="3_yfx12"]
+[ext_resource type="Texture2D" uid="uid://clr60irc668na" path="res://Sprites/photo_2026-11-01_11-31-24 (2).jpg" id="4_ix3f7"]
 [ext_resource type="Texture2D" uid="uid://cfs02uaqdh574" path="res://Sprites/silent-guys/womanstand.PNG" id="4_piffy"]
 [ext_resource type="Texture2D" uid="uid://dqrh2hpecsdkv" path="res://Sprites/silent-guys/mango.PNG" id="5_mdxsm"]
 [ext_resource type="PackedScene" uid="uid://dsvrpfopktb5w" path="res://Scenes/Interactables/kitchen_stove.tscn" id="10_fy5am"]
 [ext_resource type="Texture2D" uid="uid://dlicv72krfu06" path="res://Sprites/items/normal_stove.png" id="11_bue68"]
+[ext_resource type="Texture2D" uid="uid://dc7v2ormdwqeh" path="res://Sprites/wallpapers/порванные wallpapers .jpg" id="13_boa77"]
+[ext_resource type="Texture2D" uid="uid://cp4r8nyatux8s" path="res://Sprites/wallpapers/IMG_9765.jpg" id="13_iqu8l"]
+[ext_resource type="PackedScene" uid="uid://ou5e01uhsivk" path="res://Scenes/Interactables/safe.tscn" id="14_boa77"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bue68"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_gdgsi"]
+material = SubResource("StandardMaterial3D_bue68")
+size = Vector3(8.368771, 0.05714286, 12.690217)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_piffy"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2te41"]
+size = Vector3(8.366543, 0.05714286, 12.707185)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bh2la"]
+size = Vector3(0.40858078, 1.4290161, 0.016479492)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wyeoc"]
+size = Vector3(1.8983154, 1.6501465, 0.026000977)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tfhkb"]
 albedo_color = Color(0.7, 0.72, 0.74, 1)
+albedo_texture = ExtResource("4_ix3f7")
 
 [sub_resource type="BoxMesh" id="BoxMesh_yfx12"]
 material = SubResource("StandardMaterial3D_tfhkb")
 size = Vector3(8.597155, 0.05714286, 3.33411)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_piffy"]
-albedo_color = Color(0, 0, 0, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_piffy"]
 size = Vector3(8.596408, 0.05714286, 3.3411274)
@@ -1501,7 +1523,7 @@ albedo_color = Color(0.72, 0.55, 0.35, 1)
 roughness = 0.9
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dkbjm"]
-size = Vector3(2.2607117, 0.5303955, 0.6864319)
+size = Vector3(2.2607117, 0.5303955, 0.45698547)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w6s5q"]
 albedo_color = Color(0.15, 0.15, 0.17, 1)
@@ -2589,7 +2611,7 @@ metallic = 0.3
 roughness = 0.75
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bbl10"]
-size = Vector3(0.5300293, 1.661438, 0.7348633)
+size = Vector3(0.5300293, 1.661438, 0.53344727)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yvagl"]
 albedo_color = Color(0.45, 0.3, 0.18, 1)
@@ -4257,6 +4279,40 @@ size = Vector3(0.2581787, 0.5149231, 0.25793457)
 
 [node name="Restaurant" type="Node3D" unique_id=531500159]
 
+[node name="Park_Ground" type="StaticBody3D" parent="." unique_id=1262274188]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7714286, -0.02857143, -2.5020428)
+
+[node name="_MeshInstance3D_15" type="MeshInstance3D" parent="Park_Ground" unique_id=559531957]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9288192, 0, -5.07301)
+mesh = SubResource("BoxMesh_gdgsi")
+surface_material_override/0 = SubResource("StandardMaterial3D_piffy")
+
+[node name="_CollisionShape3D_16" type="CollisionShape3D" parent="Park_Ground" unique_id=1895324175]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.928153, 0, -5.0723424)
+shape = SubResource("BoxShape3D_2te41")
+
+[node name="wide_tree" type="StaticBody3D" parent="." unique_id=692095189]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5872042, 1.5801258, -5.2177076)
+
+[node name="Sprite3D" type="Sprite3D" parent="wide_tree" unique_id=705609978]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
+texture = ExtResource("1_boa77")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wide_tree" unique_id=295170529]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06616402, -0.9253235, 0.0032348633)
+shape = SubResource("BoxShape3D_bh2la")
+
+[node name="long_tree" type="StaticBody3D" parent="." unique_id=1552683312]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1517766, 1.5723033, -5.319077)
+
+[node name="Sprite3D" type="Sprite3D" parent="long_tree" unique_id=1195792992]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
+texture = ExtResource("2_mnjd0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="long_tree" unique_id=38230798]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0049438477, -0.7310791, 0.0021362305)
+shape = SubResource("BoxShape3D_wyeoc")
+
 [node name="OfficeComputer" parent="." unique_id=177017824 instance=ExtResource("1_vo6fk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.593175, 0.72256815, 0.37897962)
 
@@ -5071,7 +5127,7 @@ mesh = SubResource("BoxMesh_tl1pe")
 surface_material_override/0 = SubResource("StandardMaterial3D_unm6v")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="PrepCounter" unique_id=684260890]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0005340576, 0.24957275, -0.15678406)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0005340576, 0.24957275, -0.042060852)
 shape = SubResource("BoxShape3D_dkbjm")
 
 [node name="PrepIsland" type="StaticBody3D" parent="." unique_id=1511377546]
@@ -5344,7 +5400,7 @@ mesh = SubResource("BoxMesh_qpo0d")
 surface_material_override/0 = SubResource("StandardMaterial3D_02jqg")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Fridge" unique_id=1992043659]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0064697266, 0.330719, -0.13256836)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0064697266, 0.330719, -0.03186035)
 shape = SubResource("BoxShape3D_bbl10")
 
 [node name="OfficeDesk" type="StaticBody3D" parent="." unique_id=1509147777]
@@ -6667,3 +6723,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6352315, 0.29150718, -0.720
 [node name="Stove" type="Sprite3D" parent="." unique_id=975027964]
 transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 4.022167, 0.38302672, -0.7201079)
 texture = ExtResource("11_bue68")
+
+[node name="NormalWallpaper" type="Sprite3D" parent="." unique_id=1714369644]
+transform = Transform3D(0.048705664, 0, 0, 0, 0.05914151, 0, 0, 0, 0.025, 9.775516, 0.85685766, -1.2070756)
+texture = ExtResource("13_iqu8l")
+
+[node name="TornTuzWallpaper" type="Sprite3D" parent="." unique_id=808412295]
+transform = Transform3D(0.034052365, 0, 0, 0, 0.050124615, 0, 0, 0, 0.025, 8.231959, 0.8740885, -1.2077479)
+texture = ExtResource("13_boa77")
+
+[node name="Safe" parent="." unique_id=1368170225 instance=ExtResource("14_boa77")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.724816, 0.3630979, -1.5420687)
