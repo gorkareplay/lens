@@ -166,14 +166,14 @@ func _build_world() -> void:
 	_marker("safe", "Empty safe", Vector3(8.725, 0.363, -1.542), "green")
 	_marker("keys", "Keys", Vector3(8.517, 0.257, -2.426), "green")
 	_marker("storage_blood", "Blood on shelves", Vector3(26.5, 0.9, -1), "red")
-	_marker("trail", "Blood trail", Vector3(40, 0.2, 4), "red")
+	_marker("trail", "Blood trail", Vector3(0.0, 0.028, -6.275), "red")
 	_marker("possessions", "Documents, money and knife", Vector3(41, 0.45, -7), "green")
 	# Separate placeholder spaces preserve the original restaurant geometry.
 	_floor_at(Vector3(25, -0.1, 0), Vector3(6, 0.2, 5), Color(0.32, 0.29, 0.25))
 	_floor_at(Vector3(25, 0.9, -2.4), Vector3(6, 1.8, 0.2), Color(0.4, 0.34, 0.3))
 	_floor_at(Vector3(22.1, 0.9, 0), Vector3(0.2, 1.8, 5), Color(0.35, 0.29, 0.25))
 	_floor_at(Vector3(27.9, 0.9, 0), Vector3(0.2, 1.8, 5), Color(0.35, 0.29, 0.25))
-	_character("body", "manager", Vector3(7.75, 0.257, -2.1), "Manager")
+	_character("body", "manager", Vector3(7.631, 0.286, -2.128), "Manager")
 	actors.body.rotation.z = PI / 2
 	_floor_at(Vector3(40, -0.1, 0), Vector3(12, 0.2, 24), Color(0.26, 0.39, 0.24))
 	for tree_pos in [Vector3(36, 0.8, 3), Vector3(44, 0.8, 1), Vector3(37, 0.8, -4), Vector3(42.5, 0.8, -8)]:
@@ -189,7 +189,7 @@ func _build_world() -> void:
 		add_child(drop)
 		drop.position = Vector3(40, 0.03, z)
 		trail_visuals.append(drop)
-	_character("waiter2", "waiter_two", Vector3(40, 0.65, -7), "Waiter #2", self)
+	_character("waiter2", "waiter_two", Vector3(0.0, 0.559, -12.026), "Waiter #2", self)
 	_update_markers()
 
 func _update_markers() -> void:
@@ -262,7 +262,7 @@ func _interact(target: Object) -> void:
 			clues.wallpaper = true
 			await _say(["storage_body_reveal"])
 			_set_objective("Search the hidden space.")
-			target.queue_free()
+			target.position = Vector3(100.0, 100.0, 100.0)
 			wallpaper_costil.queue_free()
 		"closet_exit":
 			_travel(restaurant.to_global(Vector3(9.7, 0.5, 1.75)))

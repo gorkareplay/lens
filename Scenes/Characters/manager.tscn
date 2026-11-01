@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://c5muq6casn0n8"]
 
 [ext_resource type="Script" uid="uid://bw1ovqufltrkk" path="res://manager.gd" id="1_uscr2"]
-[ext_resource type="Texture2D" uid="uid://rcom3uagpuc" path="res://Sprites/photo_2026-10-30_15-24-11.jpg" id="2_xrais"]
+[ext_resource type="Texture2D" uid="uid://di31ueg6a4e4o" path="res://Sprites/manager corpse.png" id="2_xrais"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b1gpb"]
-size = Vector3(1, 1.1401367, 0.19396973)
+size = Vector3(0.8375244, 0.72143555, 0.19396973)
 
 [node name="Manager" type="StaticBody3D" unique_id=450510121]
 collision_layer = 2
@@ -12,11 +12,11 @@ collision_mask = 2
 script = ExtResource("1_uscr2")
 
 [node name="Interactable" type="Sprite3D" parent="." unique_id=133969350]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+transform = Transform3D(-1.0927847e-08, 0.25, -1.0927847e-08, 0, -1.0927847e-08, -0.25, -0.25, -1.0927847e-08, 4.7767137e-16, 0, 0, 0)
 cast_shadow = 0
 texture_filter = 0
 texture = ExtResource("2_xrais")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1751368843]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0.0049438477)
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, -2.2117153e-09, -0.0064697266, -0.045654297)
 shape = SubResource("BoxShape3D_b1gpb")
