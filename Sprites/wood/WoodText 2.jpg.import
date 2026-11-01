@@ -3,16 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://daprcxd1noldu"
-path.s3tc="res://.godot/imported/WoodText 2.jpg-ce1060e29857cd7beb17c4fe9b9de4c9.s3tc.ctex"
+path.etc2="res://.godot/imported/WoodText 2.jpg-ce1060e29857cd7beb17c4fe9b9de4c9.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Sprites/wood/WoodText 2.jpg"
-dest_files=["res://.godot/imported/WoodText 2.jpg-ce1060e29857cd7beb17c4fe9b9de4c9.s3tc.ctex"]
+dest_files=["res://.godot/imported/WoodText 2.jpg-ce1060e29857cd7beb17c4fe9b9de4c9.etc2.ctex"]
 
 [params]
 

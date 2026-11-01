@@ -6,4 +6,4 @@
 script = ExtResource("1_p7ych")
 id = "ending2_detective_responsibility"
 speaker = "Detective"
-lines = Array[String](["I said I'm taking full responsibility.", "None of this will touch you or the rest of the staff.", "And keep your voice down.", "No panic, and don't breathe a word of what happened today to anyone."])
+lines = Array[String](["I said I'm taking full responsibility.", "None of this will affect you or the rest of the staff.", "And keep your voice down.", "No panic, and don't breathe a word of what happened today to anyone."])

@@ -6,4 +6,4 @@
 script = ExtResource("1_jtp67")
 id = "hall_detective_reply"
 speaker = "Detective"
-lines = Array[String](["Some documents are missing.", "But don't panic.", "It'll be easier to continue the investigation if everyone stays calm.", "Which staff members should I talk to?"])
+lines = Array[String](["Some documents are missing, but don't panic.", "It'll be easier to continue the investigation if everyone stays calm.", "Which staff members should I talk to?"])

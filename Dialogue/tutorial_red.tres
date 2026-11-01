@@ -6,4 +6,4 @@
 script = ExtResource("1_qqnc7")
 id = "tutorial_red"
 speaker = "Detective"
-lines = Array[String](["Red filter.", "Organic traces, blood, biological tissues.", "Clean for now... hopefully."])
+lines = Array[String](["Red filter.", "Organic traces, blood, biological tissues."])

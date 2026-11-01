@@ -6,6 +6,7 @@ extends Node3D
 @onready var player = $Player
 @onready var restaurant: Node3D = $Restaurant
 var phase := "tutorial"
+var in_kitchen := false
 var busy := false
 var seen_lenses := {}
 var clues := {}
@@ -118,30 +119,12 @@ func _character(id: String, file: String, pos: Vector3, title: String, parent: N
 	actors[id] = node
 
 func _marker(id: String, title: String, pos: Vector3, lens: String, parent: Node3D = restaurant) -> void:
-	var node := StaticBody3D.new()
-	node.name = id
-	node.collision_layer = 2
-	node.collision_mask = 0
+	var node: StaticBody3D = load("res://Scenes/Interactables/%s.tscn" % id).instantiate()
+	parent.add_child(node)
+	node.position = pos
 	node.set_meta("story_id", id)
 	node.set_meta("label", title)
 	node.set_meta("lens", lens)
-	parent.add_child(node)
-	node.position = pos
-	var shape := CollisionShape3D.new()
-	var box := BoxShape3D.new()
-	box.size = Vector3(0.38, 0.38, 0.38)
-	shape.shape = box
-	node.add_child(shape)
-	var mesh := MeshInstance3D.new()
-	var sphere := SphereMesh.new()
-	sphere.radius = 0.12
-	sphere.height = 0.24
-	mesh.mesh = sphere
-	var mat := StandardMaterial3D.new()
-	mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
-	mat.albedo_color = Color(0.25, 1, 0.4) if lens == "green" else Color(1, 0.2, 0.2) if lens == "red" else Color(1, 0.85, 0.3)
-	mesh.material_override = mat
-	node.add_child(mesh)
 	actors[id] = node
 
 func _floor_at(center: Vector3, size: Vector3, color: Color) -> void:
@@ -167,25 +150,28 @@ func _build_world() -> void:
 	_character("guest", "loyal_customer", Vector3(8.64, 0.65, 4.7), "Regular guest")
 	_character("chef", "chef", Vector3(5.3, 0.65, 0.8), "Chef")
 	_character("cook", "cook", Vector3(4.3, 0.65, 0.8), "Cook")
-	_marker("office_door", "Office door", Vector3(9.74, 0.85, 2.35), "any")
-	_marker("wallpaper", "Torn wallpaper", Vector3(10.35, 0.7, 1.8), "green")
-	_marker("office_window", "Office window", Vector3(10.35, 1.05, 1.1), "green")
-	_marker("office_computer", "Computer", Vector3(8.6, 0.82, 0.25), "green")
-	_marker("office_shelves", "Personnel files", Vector3(10.25, 0.8, -0.95), "green")
-	_marker("office_blood", "Blood", Vector3(9.35, 0.12, 1.75), "red")
-	_marker("counter", "Counter", Vector3(1.2, 0.85, 3.25), "green")
-	_marker("kitchen_stove", "Damaged stove", Vector3(4.3, 0.82, -0.95), "green")
-	_marker("kitchen_blood", "Blood by the stove", Vector3(4.9, 0.16, -0.95), "red")
-	_marker("back_door", "Service door to courtyard", Vector3(0.57, 0.82, -0.95), "any")
+	_marker("office_door", "Office door", Vector3(9.737, 0.0, 2.631), "any")
+	_marker("back_door", "Back door", Vector3(0.572, 0.0, -1.241), "any")
+	_marker("kitchen_door", "Kitchen door", Vector3(5.91, 0.0, 2.052), "any")
+	#_marker("wallpaper", "Torn wallpaper", Vector3(10.35, 0.7, 1.8), "green")
+	#_marker("office_window", "Office window", Vector3(10.35, 1.05, 1.1), "green")
+	#_marker("office_computer", "Computer", Vector3(8.6, 0.82, 0.25), "green")
+	#_marker("office_shelves", "Personnel files", Vector3(10.25, 0.8, -0.95), "green")
+	#_marker("office_blood", "Blood", Vector3(9.35, 0.12, 1.75), "red")
+	#_marker("kitchen_stove", "Damaged stove", Vector3(4.3, 0.82, -0.95), "green")
+	#_marker("kitchen_blood", "Blood by the stove", Vector3(4.9, 0.16, -0.95), "red")
+	#_marker("closet_exit", "Return to office", Vector3(25, 0.8, 1.8), "any", self)
+	#_marker("safe", "Empty safe", Vector3(23.2, 0.8, -1), "green", self)
+	#_marker("keys", "Keys", Vector3(25.9, 0.4, -0.5), "green", self)
+	#_marker("storage_blood", "Blood on shelves", Vector3(26.5, 0.9, -1), "red", self)
+	#_marker("park_exit", "Return to kitchen", Vector3(40, 0.8, 9), "any", self)
+	#_marker("trail", "Blood trail", Vector3(40, 0.2, 4), "red", self)
+	#_marker("possessions", "Documents, money and knife", Vector3(41, 0.45, -7), "green", self)
 	# Separate placeholder spaces preserve the original restaurant geometry.
 	_floor_at(Vector3(25, -0.1, 0), Vector3(6, 0.2, 5), Color(0.32, 0.29, 0.25))
 	_floor_at(Vector3(25, 0.9, -2.4), Vector3(6, 1.8, 0.2), Color(0.4, 0.34, 0.3))
 	_floor_at(Vector3(22.1, 0.9, 0), Vector3(0.2, 1.8, 5), Color(0.35, 0.29, 0.25))
 	_floor_at(Vector3(27.9, 0.9, 0), Vector3(0.2, 1.8, 5), Color(0.35, 0.29, 0.25))
-	_marker("closet_exit", "Return to office", Vector3(25, 0.8, 1.8), "any", self)
-	_marker("safe", "Empty safe", Vector3(23.2, 0.8, -1), "green", self)
-	_marker("keys", "Keys", Vector3(25.9, 0.4, -0.5), "green", self)
-	_marker("storage_blood", "Blood on shelves", Vector3(26.5, 0.9, -1), "red", self)
 	_character("body", "manager", Vector3(25, 0.45, -0.8), "Manager", self)
 	actors.body.rotation.z = PI / 2
 	_floor_at(Vector3(40, -0.1, 0), Vector3(12, 0.2, 24), Color(0.26, 0.39, 0.24))
@@ -202,9 +188,6 @@ func _build_world() -> void:
 		add_child(drop)
 		drop.position = Vector3(40, 0.03, z)
 		trail_visuals.append(drop)
-	_marker("park_exit", "Return to kitchen", Vector3(40, 0.8, 9), "any", self)
-	_marker("trail", "Blood trail", Vector3(40, 0.2, 4), "red", self)
-	_marker("possessions", "Documents, money and knife", Vector3(41, 0.45, -7), "green", self)
 	_character("waiter2", "waiter_two", Vector3(40, 0.65, -7), "Waiter #2", self)
 	_update_markers()
 
@@ -266,6 +249,13 @@ func _interact(target: Object) -> void:
 				_set_objective("Speak to the waiter outside the office.")
 			elif phase == "office":
 				await Dialogue.say_raw(["I should search the office before leaving."], "Detective")
+		"kitchen_door":
+			if in_kitchen:
+				_travel(restaurant.to_global(Vector3(6.213, 0.5, 2.521)))
+				in_kitchen = false
+			else:
+				_travel(restaurant.to_global(Vector3(6.213, 0.5, 1.581)))
+				in_kitchen = true
 		"wallpaper":
 			clues.wallpaper = true
 			_travel(Vector3(25, 0.5, 1.0))
@@ -281,8 +271,6 @@ func _interact(target: Object) -> void:
 		"safe", "keys", "storage_blood", "office_window", "office_computer", "office_shelves", "office_blood":
 			clues[id] = true
 			await _say(["storage_safe" if id == "safe" else "storage_keys" if id == "keys" else id])
-		"counter":
-			await Dialogue.say_raw(["The register and fittings show ordinary wear."], "Detective")
 		"kitchen_stove":
 			await Dialogue.say_raw(["The damage around the stove looks like the remains of an explosion."], "Detective")
 		"kitchen_blood":
@@ -304,7 +292,7 @@ func _interact(target: Object) -> void:
 				_travel(Vector3(40, 0.5, 8))
 				_set_objective("Follow the blood trail.")
 			else:
-				await Dialogue.say_raw(["I should speak to the regular guest and the chef first."], "Detective")
+				await Dialogue.say_raw(["Locked"], "Detective")
 		"park_exit":
 			_travel(restaurant.to_global(Vector3(1.0, 0.5, 0.45)))
 			if phase == "help_return": _set_objective("Return to the waiter by the office and speak to him.")
@@ -316,7 +304,7 @@ func _interact(target: Object) -> void:
 		"waiter2":
 			if phase == "park":
 				await _say(["park_waiter2_confession", "park_detective_silence", "park_waiter2_plea", "park_detective_backstory"], target as Node3D)
-				await _choose_ending()
+				_choose_ending()
 	if phase == "investigate" and clues.has("guest") and clues.has("chef"):
 		_set_objective("Explore the kitchen.")
 	_update_markers()

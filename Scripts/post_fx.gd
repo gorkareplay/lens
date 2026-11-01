@@ -44,12 +44,12 @@ func _on_player_no_lens_signal() -> void:
 
 func _on_player_red_lens_signal() -> void:
 	print("redlens")
-	transition_to_colors(Color(1, 0, 0, 1), Color(0, 1, 1, 1)) # Red to Green
+	transition_to_colors(Color(0, 0, 0, 1), Color(0.898, 0.0, 0.0, 1.0)) # Red to Green
 
 func _on_player_green_lens_signal() -> void:
 	print("greenlens")
-	transition_to_colors(Color(0, 1, 0, 1), Color(1, 0, 1, 1)) # Green to Magenta
+	transition_to_colors(Color(0, 0, 0, 1), Color(0, 1, 0, 1)) # Green to Magenta
 
 func _on_player_blue_lens_signal() -> void:
 	print("bluelens")
-	transition_to_colors(Color(0, 0, 1, 1), Color(1, 1, 0, 1)) # Blue to Yellow
+	transition_to_colors(Color(0, 0, 0, 1), Color(0, 0, 1, 1)) # Blue to Yellow

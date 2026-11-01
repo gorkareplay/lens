@@ -6,4 +6,4 @@
 script = ExtResource("1_cilyq")
 id = "storage_keys"
 speaker = "Detective"
-lines = Array[String](["The keys are probably from the restaurant's lock."])
+lines = Array[String](["The keys are probably from the restaurant's back door."])

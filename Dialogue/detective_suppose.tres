@@ -6,4 +6,4 @@
 script = ExtResource("1_4gakd")
 id = "detective_suppose"
 speaker = "Detective"
-lines = Array[String](["Suppose I am.", "What happened?", "You look like you've seen a ghost."])
+lines = Array[String](["Suppose I am.", "What happened? You look like you've seen a ghost."])

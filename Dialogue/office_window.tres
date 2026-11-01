@@ -6,4 +6,4 @@
 script = ExtResource("1_nacey")
 id = "office_window"
 speaker = "Detective"
-lines = Array[String](["The window was opened from the inside, but someone used it to climb out.", "Into the courtyard."])
+lines = Array[String](["The window was opened from the inside, but someone used it to climb out into the courtyard."])

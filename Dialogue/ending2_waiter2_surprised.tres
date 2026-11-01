@@ -6,4 +6,4 @@
 script = ExtResource("1_t1sxw")
 id = "ending2_waiter2_surprised"
 speaker = "Waiter #2"
-lines = Array[String](["You...", "you're not turning me in?"])
+lines = Array[String](["You...", "You're not turning me in?"])

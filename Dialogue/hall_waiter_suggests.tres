@@ -6,4 +6,4 @@
 script = ExtResource("1_7ipql")
 id = "hall_waiter_suggests"
 speaker = "Waiter #1"
-lines = Array[String](["Well, if you're looking for a thief...", "you'd better ask our regular customer.", "He's been sitting here since this morning,", "so he might have seen someone.", "And you can also drop by the kitchen to check on the chef.", "He's always keeping an eye on everything and everyone."])
+lines = Array[String](["Well, if you're looking for a thief...", "You'd better ask our regular customer.", "He's been sitting here since this morning, so he might have seen someone.", "And you can also drop by the kitchen to check on the chef.", "He's always keeping an eye on everything and everyone."])
