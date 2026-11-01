@@ -2,17 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhcftf53bsuno"
-path.etc2="res://.godot/imported/blood trail.png-adc4659457e1945cc76823c35f4204b8.etc2.ctex"
+uid="uid://di31ueg6a4e4o"
+path.s3tc="res://.godot/imported/manager corpse.png-ca7154258a45b9a04ee3306c6c1e3261.s3tc.ctex"
 metadata={
-"imported_formats": ["etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
-source_file="res://Sprites/blood/blood trail.png"
-dest_files=["res://.godot/imported/blood trail.png-adc4659457e1945cc76823c35f4204b8.etc2.ctex"]
+source_file="res://Sprites/manager corpse.png"
+dest_files=["res://.godot/imported/manager corpse.png-ca7154258a45b9a04ee3306c6c1e3261.s3tc.ctex"]
 
 [params]
 
