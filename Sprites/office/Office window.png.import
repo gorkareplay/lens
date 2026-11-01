@@ -3,16 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d00djdht4b55g"
-path.etc2="res://.godot/imported/Office window.png-332712ff3c6bf7c1c4567f654676c4ef.etc2.ctex"
+path.s3tc="res://.godot/imported/Office window.png-332712ff3c6bf7c1c4567f654676c4ef.s3tc.ctex"
 metadata={
-"imported_formats": ["etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Sprites/office/Office window.png"
-dest_files=["res://.godot/imported/Office window.png-332712ff3c6bf7c1c4567f654676c4ef.etc2.ctex"]
+dest_files=["res://.godot/imported/Office window.png-332712ff3c6bf7c1c4567f654676c4ef.s3tc.ctex"]
 
 [params]
 
