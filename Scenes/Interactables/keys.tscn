@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dbqkf2y5du2lm"]
 
-[ext_resource type="Texture2D" uid="uid://c0aa1oyalk8d5" path="res://Sprites/keys.png" id="1_k35bn"]
+[ext_resource type="Texture2D" uid="uid://c0aa1oyalk8d5" path="res://Sprites/items/keys.png" id="1_k35bn"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b1gpb"]
 size = Vector3(3.3964844, 4.3415527, 0.09667969)

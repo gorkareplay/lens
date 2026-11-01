@@ -2,17 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://570aljx2a0sm"
-path.etc2="res://.godot/imported/documents money and knife.png-a12090c5fab490b889f1f2980c4f7af9.etc2.ctex"
+uid="uid://bcfenurk68lyt"
+path.s3tc="res://.godot/imported/splat.png-4d3730f3ac3ecd146c315e423c744be4.s3tc.ctex"
 metadata={
-"imported_formats": ["etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
-source_file="res://Sprites/documents money and knife.png"
-dest_files=["res://.godot/imported/documents money and knife.png-a12090c5fab490b889f1f2980c4f7af9.etc2.ctex"]
+source_file="res://Sprites/blood/splat.png"
+dest_files=["res://.godot/imported/splat.png-4d3730f3ac3ecd146c315e423c744be4.s3tc.ctex"]
 
 [params]
 
