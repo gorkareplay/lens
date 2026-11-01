@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dsvrpfopktb5w"]
+
+[ext_resource type="Texture2D" uid="uid://dktjr660pcjw1" path="res://Sprites/items/blown_stove.png" id="1_qdinh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fupxo"]
+size = Vector3(1.3667603, 1.2878418, 0.06518555)
+
+[node name="KitchenStove" type="StaticBody3D" unique_id=1235284149]
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=2068727304]
+transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 0, 0, 0)
+texture = ExtResource("1_qdinh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1442202893]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.020843506, -0.004760742, -0.00012207031)
+shape = SubResource("BoxShape3D_fupxo")

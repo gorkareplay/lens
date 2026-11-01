@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://7jccivup7rug"]
+
+[ext_resource type="Texture2D" uid="uid://bcfenurk68lyt" path="res://Sprites/blood/splat.png" id="1_jo4d1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jo4d1"]
+size = Vector3(0.55859375, 0.021240234, 0.38671875)
+
+[node name="KitchenBlood" type="StaticBody3D" unique_id=947702824]
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1828057184]
+transform = Transform3D(-6.5567085e-09, 0.15, -6.5567085e-09, 0, -6.5567085e-09, -0.15, -0.15, -6.5567085e-09, 2.8660284e-16, 0, 0, 0)
+texture = ExtResource("1_jo4d1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1802527017]
+shape = SubResource("BoxShape3D_jo4d1")
