@@ -248,7 +248,7 @@ func _interact(target: Object) -> void:
 			elif phase == "hall":
 				await _say(["hall_waiter_asks", "hall_detective_reply", "hall_waiter_suggests", "hall_detective_thoughts"], target as Node3D)
 				phase = "investigate"
-				_set_objective("Question the regular guest and the chef.")
+				_set_objective("Question people about the strange man.")
 			elif phase == "help_return":
 				await _say(["ending2_waiter1_thief", "ending2_detective_reply", "ending2_waiter1_hesitate", "ending2_detective_responsibility"], target as Node3D)
 				await _revenge_ending()
@@ -258,7 +258,7 @@ func _interact(target: Object) -> void:
 			if phase == "lead":
 				await _say(["office_door_waiter", "office_enter"], actors.waiter1)
 				phase = "office"
-				_set_objective("Search the office. Try the green lens on the torn wallpaper.")
+				_set_objective("Search the office.")
 				_travel(restaurant.to_global(Vector3(9.85, 0.5, 2.0)))
 			elif phase == "office" and clues.has("body"):
 				_travel(restaurant.to_global(Vector3(9.95, 0.5, 3.25)))
@@ -270,14 +270,14 @@ func _interact(target: Object) -> void:
 			clues.wallpaper = true
 			_travel(Vector3(25, 0.5, 1.0))
 			await _say(["storage_body_reveal"])
-			_set_objective("Search the hidden storeroom. Examine the manager.")
+			_set_objective("Search the hidden storeroom.")
 		"closet_exit":
 			_travel(restaurant.to_global(Vector3(9.7, 0.5, 1.75)))
-			_set_objective("Search the office, then use the office door to return to the hall.")
+			_set_objective("Search the office.")
 		"body":
 			clues.body = true
 			await _say(["storage_body"])
-			_set_objective("Search for evidence, then return to the hall through the office door.")
+			_set_objective("Search for evidence.")
 		"safe", "keys", "storage_blood", "office_window", "office_computer", "office_shelves", "office_blood":
 			clues[id] = true
 			await _say(["storage_safe" if id == "safe" else "storage_keys" if id == "keys" else id])
@@ -302,7 +302,7 @@ func _interact(target: Object) -> void:
 			if phase == "investigate" and clues.has("guest") and clues.has("chef"):
 				phase = "park"
 				_travel(Vector3(40, 0.5, 8))
-				_set_objective("Follow the blood trail into the park with the red lens.")
+				_set_objective("Follow the blood trail.")
 			else:
 				await Dialogue.say_raw(["I should speak to the regular guest and the chef first."], "Detective")
 		"park_exit":
@@ -310,7 +310,7 @@ func _interact(target: Object) -> void:
 			if phase == "help_return": _set_objective("Return to the waiter by the office and speak to him.")
 		"trail":
 			await Dialogue.say_raw(["Blood leads from the office window into the park."], "Detective")
-			_set_objective("Follow the trail and speak to the figure in the park.")
+			_set_objective("Follow the blood trail.")
 		"possessions":
 			await Dialogue.say_raw(["Documents, money, and a knife. He took them from the restaurant."], "Detective")
 		"waiter2":
@@ -318,7 +318,7 @@ func _interact(target: Object) -> void:
 				await _say(["park_waiter2_confession", "park_detective_silence", "park_waiter2_plea", "park_detective_backstory"], target as Node3D)
 				await _choose_ending()
 	if phase == "investigate" and clues.has("guest") and clues.has("chef"):
-		_set_objective("Explore the kitchen or use the service door to reach the courtyard.")
+		_set_objective("Explore the kitchen.")
 	_update_markers()
 	busy = false
 

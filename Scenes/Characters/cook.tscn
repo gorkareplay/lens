@@ -1,19 +1,49 @@
 [gd_scene format=3 uid="uid://d23g6qoxvpn58"]
 
-[ext_resource type="Texture2D" uid="uid://55gxhuict02c" path="res://Sprites/icon.svg" id="1_6u6uf"]
+[ext_resource type="Texture2D" uid="uid://cg6yqxlqbyeb2" path="res://Sprites/superkuk/superkuk .png" id="1_2re2b"]
+[ext_resource type="Texture2D" uid="uid://cev6sr6tmstai" path="res://Sprites/superkuk/superkuk_S2.png" id="2_3vhek"]
+[ext_resource type="Texture2D" uid="uid://tp0eky5i7lxg" path="res://Sprites/superkuk/superkuk_Speak1.png" id="3_olvun"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b1gpb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2re2b")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2re2b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_3vhek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_olvun")
+}],
+"loop": 1,
+"name": &"talk",
+"speed": 5.0
+}]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b1gpb"]
-size = Vector3(1, 1.1401367, 1)
+size = Vector3(0.44976807, 1.1401367, 0.43164063)
 
 [node name="Cook" type="StaticBody3D" unique_id=450510121]
 collision_layer = 2
 collision_mask = 2
 
-[node name="Interactable" type="Sprite3D" parent="." unique_id=133969350]
-cast_shadow = 0
+[node name="Interactable" type="AnimatedSprite3D" parent="." unique_id=1921502351]
+transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, 0, 0, 0)
 billboard = 2
-texture_filter = 0
-texture = ExtResource("1_6u6uf")
+sprite_frames = SubResource("SpriteFrames_b1gpb")
+animation = &"talk"
+frame = 2
+frame_progress = 0.3961788
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1751368843]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009979248, 0, -0.0107421875)
 shape = SubResource("BoxShape3D_b1gpb")

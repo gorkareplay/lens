@@ -40,7 +40,7 @@ animations = [{
 }]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b1gpb"]
-size = Vector3(1, 1.1401367, 1)
+size = Vector3(0.32769775, 1.1401367, 0.2919922)
 
 [node name="Chef" type="StaticBody3D" unique_id=450510121]
 collision_layer = 2
@@ -53,4 +53,5 @@ animation = &"talk"
 frame_progress = 0.6949183
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1751368843]
+transform = Transform3D(0.9999841, 0.0055531096, -0.0009944211, -0.00555283, 0.9999846, 0.0002838724, 0.0009959836, -0.00027834147, 0.9999996, 0.009119586, -0.00095793616, 0.0026133507)
 shape = SubResource("BoxShape3D_b1gpb")
