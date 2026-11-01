@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d23g6qoxvpn58"]
 
 [ext_resource type="Texture2D" uid="uid://cg6yqxlqbyeb2" path="res://Sprites/superkuk/superkuk .png" id="1_2re2b"]
+[ext_resource type="PackedScene" uid="uid://da52qkxlsm2vb" path="res://Scenes/arrow.tscn" id="1_3vhek"]
 [ext_resource type="Texture2D" uid="uid://cev6sr6tmstai" path="res://Sprites/superkuk/superkuk_S2.png" id="2_3vhek"]
 [ext_resource type="Texture2D" uid="uid://tp0eky5i7lxg" path="res://Sprites/superkuk/superkuk_Speak1.png" id="3_olvun"]
 
@@ -35,6 +36,8 @@ size = Vector3(0.44976807, 1.1401367, 0.43164063)
 [node name="Cook" type="StaticBody3D" unique_id=450510121]
 collision_layer = 2
 collision_mask = 2
+
+[node name="Arrow" parent="." unique_id=1920264104 instance=ExtResource("1_3vhek")]
 
 [node name="Interactable" type="AnimatedSprite3D" parent="." unique_id=1921502351]
 transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, 0, 0, 0)

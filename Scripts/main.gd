@@ -82,6 +82,7 @@ func _set_objective(value: String) -> void:
 	objective.text = value
 
 func _lens_changed(lens: String) -> void:
+	get_tree().call_group("blue_lens_arrows", "set_blue_lens_active", lens == "blue")
 	_update_markers()
 	if phase != "tutorial" or lens == "base" or seen_lenses.has(lens) or busy:
 		return
@@ -153,20 +154,18 @@ func _build_world() -> void:
 	_marker("office_door", "Office door", Vector3(9.737, 0.0, 2.631), "any")
 	_marker("back_door", "Back door", Vector3(0.572, 0.0, -1.241), "any")
 	_marker("kitchen_door", "Kitchen door", Vector3(5.91, 0.0, 2.052), "any")
-	#_marker("wallpaper", "Torn wallpaper", Vector3(10.35, 0.7, 1.8), "green")
-	#_marker("office_window", "Office window", Vector3(10.35, 1.05, 1.1), "green")
-	#_marker("office_computer", "Computer", Vector3(8.6, 0.82, 0.25), "green")
-	#_marker("office_shelves", "Personnel files", Vector3(10.25, 0.8, -0.95), "green")
+	_marker("wallpaper", "Torn wallpaper", Vector3(10.35, 0.7, 1.8), "green")
+	_marker("office_window", "Office window", Vector3(10.527, 0.857, 1.111), "green")
+	_marker("office_computer", "Computer", Vector3(8.593, 0.723, 0.379), "green")
 	#_marker("office_blood", "Blood", Vector3(9.35, 0.12, 1.75), "red")
 	#_marker("kitchen_stove", "Damaged stove", Vector3(4.3, 0.82, -0.95), "green")
 	#_marker("kitchen_blood", "Blood by the stove", Vector3(4.9, 0.16, -0.95), "red")
-	#_marker("closet_exit", "Return to office", Vector3(25, 0.8, 1.8), "any", self)
 	#_marker("safe", "Empty safe", Vector3(23.2, 0.8, -1), "green", self)
-	#_marker("keys", "Keys", Vector3(25.9, 0.4, -0.5), "green", self)
+	_marker("keys", "Keys", Vector3(25.9, 0.4, -0.5), "green", self)
 	#_marker("storage_blood", "Blood on shelves", Vector3(26.5, 0.9, -1), "red", self)
-	#_marker("park_exit", "Return to kitchen", Vector3(40, 0.8, 9), "any", self)
-	#_marker("trail", "Blood trail", Vector3(40, 0.2, 4), "red", self)
-	#_marker("possessions", "Documents, money and knife", Vector3(41, 0.45, -7), "green", self)
+	_marker("trail", "Blood trail", Vector3(40, 0.2, 4), "red", self)
+	_marker("possessions", "Documents, money and knife", Vector3(41, 0.45, -7), "green", self)
+	
 	# Separate placeholder spaces preserve the original restaurant geometry.
 	_floor_at(Vector3(25, -0.1, 0), Vector3(6, 0.2, 5), Color(0.32, 0.29, 0.25))
 	_floor_at(Vector3(25, 0.9, -2.4), Vector3(6, 1.8, 0.2), Color(0.4, 0.34, 0.3))

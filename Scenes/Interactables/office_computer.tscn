@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://chaa7eoflv5fb"]
+
+[ext_resource type="Texture2D" uid="uid://bn2xibetjy5fr" path="res://Sprites/office/Computer.png" id="1_v15he"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_axb1a"]
+size = Vector3(0.6838379, 0.61279297, 0.079833984)
+
+[node name="OfficeComputer" type="StaticBody3D" unique_id=177017824]
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=388955416]
+transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, 0, 0.27832934, 0)
+texture = ExtResource("1_v15he")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2036067335]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03881836, 0)
+shape = SubResource("BoxShape3D_axb1a")

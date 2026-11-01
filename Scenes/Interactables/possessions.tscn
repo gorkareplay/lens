@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dhcrg42xyawfn"]
+
+[ext_resource type="Texture2D" uid="uid://570aljx2a0sm" path="res://Sprites/documents money and knife.png" id="1_lo8ba"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_70hav"]
+size = Vector3(0.5136719, 0.60498047, 0.07495117)
+
+[node name="Possessions" type="StaticBody3D" unique_id=1816194082]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1431191, 0, 0)
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=2117707997]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+texture = ExtResource("1_lo8ba")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1670559448]
+transform = Transform3D(1, 0, 0, 0, 0.9999888, 0.004737084, 0, -0.004737084, 0.9999888, -0.17578125, 0.00050676614, -0.04504921)
+shape = SubResource("BoxShape3D_70hav")

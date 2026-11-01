@@ -5,6 +5,7 @@
 [ext_resource type="Resource" uid="uid://dn30lvv7kf1dv" path="res://Dialogue/tutorial_base.tres" id="2_6bp64"]
 [ext_resource type="Resource" uid="uid://bthy3qblcwfhp" path="res://Dialogue/prologue_sit_down.tres" id="2_344ge"]
 [ext_resource type="Script" uid="uid://da6udrssgufhh" path="res://Scripts/ui.gd" id="4_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://da52qkxlsm2vb" path="res://Scenes/arrow.tscn" id="4_ynf5e"]
 [ext_resource type="PackedScene" uid="uid://bpouhpt78oiox" path="res://Scenes/post_fx.tscn" id="5_kry3j"]
 [ext_resource type="PackedScene" uid="uid://decougth6v0d1" path="res://Scenes/Restaurant.tscn" id="6_21xkr"]
 [ext_resource type="AudioStream" uid="uid://bgxli1ggacuc5" path="res://Sound/song_placeholder.mp3" id="8_344ge"]
@@ -27,6 +28,9 @@ process_mode = 1
 script = ExtResource("1_8gbba")
 prologue_sit_down = ExtResource("2_344ge")
 tutorial_base = ExtResource("2_6bp64")
+
+[node name="Arrow" parent="." unique_id=1920264104 instance=ExtResource("4_ynf5e")]
+transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, 0, -0.91470385, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1243784798]
 environment = SubResource("Environment_6bp64")

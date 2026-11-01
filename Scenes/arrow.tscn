@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://da52qkxlsm2vb"]
+
+[ext_resource type="Texture2D" uid="uid://clr60irc668na" path="res://Sprites/photo_2026-11-01_11-31-24 (2).jpg" id="1_2u0bd"]
+[ext_resource type="Script" uid="uid://o0p7samwdaoa" path="res://Scripts/arrow.gd" id="2_h5x2m"]
+
+[node name="Arrow" type="Sprite3D" unique_id=1920264104]
+transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, 0, 0, 0)
+visible = false
+billboard = 2
+texture = ExtResource("1_2u0bd")
+script = ExtResource("2_h5x2m")
