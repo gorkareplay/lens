@@ -55,7 +55,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -5.683, 0, -7.332061)
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=2090362334]
-volume_db = -20.0
+volume_db = -25.0
 autoplay = true
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1858061467]

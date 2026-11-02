@@ -3,16 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://drnaa7g3plr6p"
-path.etc2="res://.godot/imported/Aptyp.png-8cf2a66c72d7c97c334f9cd503478c35.etc2.ctex"
+path.s3tc="res://.godot/imported/Aptyp.png-8cf2a66c72d7c97c334f9cd503478c35.s3tc.ctex"
 metadata={
-"imported_formats": ["etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Sprites/Aptyp.png"
-dest_files=["res://.godot/imported/Aptyp.png-8cf2a66c72d7c97c334f9cd503478c35.etc2.ctex"]
+dest_files=["res://.godot/imported/Aptyp.png-8cf2a66c72d7c97c334f9cd503478c35.s3tc.ctex"]
 
 [params]
 

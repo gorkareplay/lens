@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://cp4r8nyatux8s" path="res://Sprites/wallpapers/IMG_9765.jpg" id="13_iqu8l"]
 [ext_resource type="Texture2D" uid="uid://njabcmxk553v" path="res://Sprites/items/safe.png" id="18_7tgqd"]
 [ext_resource type="PackedScene" uid="uid://dhcrg42xyawfn" path="res://Scenes/Interactables/possessions.tscn" id="18_057dj"]
+[ext_resource type="Texture2D" uid="uid://duitrmndwvipk" path="res://Sprites/photo_2026-11-01_19-35-39.jpg" id="19_7tgqd"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bygtq"]
 size = Vector3(0.03955078, 1.9968872, 12.667677)
@@ -8061,3 +8062,7 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -2, 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1980432644]
 transform = Transform3D(-1.3113416e-09, 0, -0.03, 0, 0.03, 0, 0.03, 0, -1.3113416e-09, 8.725, 0.363, -1.542)
 texture = ExtResource("18_7tgqd")
+
+[node name="Poshalko" type="Sprite3D" parent="." unique_id=969567037]
+transform = Transform3D(-8.742278e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.742278e-09, 9.375697, 0.8039669, -1.9472704)
+texture = ExtResource("19_7tgqd")
