@@ -3,16 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://tp0eky5i7lxg"
-path.etc2="res://.godot/imported/superkuk_Speak1.png-81f6ac5c7f2be69fcd2d633557c50ee6.etc2.ctex"
+path.s3tc="res://.godot/imported/superkuk_Speak1.png-81f6ac5c7f2be69fcd2d633557c50ee6.s3tc.ctex"
 metadata={
-"imported_formats": ["etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Sprites/superkuk/superkuk_Speak1.png"
-dest_files=["res://.godot/imported/superkuk_Speak1.png-81f6ac5c7f2be69fcd2d633557c50ee6.etc2.ctex"]
+dest_files=["res://.godot/imported/superkuk_Speak1.png-81f6ac5c7f2be69fcd2d633557c50ee6.s3tc.ctex"]
 
 [params]
 
