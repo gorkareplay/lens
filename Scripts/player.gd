@@ -21,10 +21,14 @@ signal interaction_requested(target: Object)
 
 var lens := "base"
 var controls_locked := false
+var menu_active := false
 
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func _physics_process(delta: float) -> void:
+	if menu_active or controls_locked:
+		velocity = Vector3.ZERO
+		return
 	
 	if not Dialogue.active and not controls_locked and Input.is_action_just_pressed("interact") and raycast.is_colliding():
 		interaction_requested.emit(raycast.get_collider())
@@ -68,7 +72,7 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 
 func _input(_event: InputEvent) -> void:
-	if Dialogue.active or controls_locked:
+	if Dialogue.active or (controls_locked and not menu_active):
 		return
 	if Input.is_action_just_pressed("no_lens"):
 		lens = "base"

@@ -17,6 +17,7 @@ var actors := {}
 var objective: Label
 var prompt: Label
 var menu: Control
+@onready var title_menu = $UI
 var trail_visuals: Array[Node3D] = []
 var waiter_home := Vector3(9.5, 0.65, 3.35)
 
@@ -24,14 +25,26 @@ func _ready() -> void:
 	_build_hud()
 	_build_world()
 	player.global_position = restaurant.to_global(Vector3(5.2, 0.5, 5.5))
+	player.menu_active = true
+	player.controls_locked = true
 	player.interaction_requested.connect(_interact)
 	player.lens_changed.connect(_lens_changed)
-	_set_objective("Try the red (2), green (3), and blue (4) lenses.")
+	title_menu.play_requested.connect(_start_game)
 	busy = true
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+
+func _start_game() -> void:
+	if not player.menu_active:
+		return
+	player.menu_active = false
+	player.controls_locked = true
+	_set_objective("Try the red (2), green (3), and blue (4) lenses.")
 	await Dialogue.say(prologue_sit_down)
 	await Dialogue.say(tutorial_base)
 	await Dialogue.say_raw(["Move with WASD, look with the mouse, and press E to interact. Switch lenses with 1–4."], "")
 	busy = false
+	player.controls_locked = false
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func _build_hud() -> void:
 	var layer := CanvasLayer.new()

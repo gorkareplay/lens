@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bx3i7n6agrjxy" path="res://Scenes/player.tscn" id="1_jjgbg"]
 [ext_resource type="Resource" uid="uid://dn30lvv7kf1dv" path="res://Dialogue/tutorial_base.tres" id="2_6bp64"]
 [ext_resource type="Resource" uid="uid://bthy3qblcwfhp" path="res://Dialogue/prologue_sit_down.tres" id="2_344ge"]
-[ext_resource type="Script" uid="uid://da6udrssgufhh" path="res://Scripts/ui.gd" id="4_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://bxi42o3gkdh03" path="res://Scenes/ui.tscn" id="4_hptm8"]
 [ext_resource type="PackedScene" uid="uid://da52qkxlsm2vb" path="res://Scenes/arrow.tscn" id="4_ynf5e"]
 [ext_resource type="PackedScene" uid="uid://bpouhpt78oiox" path="res://Scenes/post_fx.tscn" id="5_kry3j"]
 [ext_resource type="PackedScene" uid="uid://decougth6v0d1" path="res://Scenes/Restaurant.tscn" id="6_21xkr"]
@@ -35,6 +35,8 @@ script = ExtResource("1_8gbba")
 prologue_sit_down = ExtResource("2_344ge")
 tutorial_base = ExtResource("2_6bp64")
 
+[node name="UI" parent="." unique_id=1310223028 instance=ExtResource("4_hptm8")]
+
 [node name="Arrow" parent="." unique_id=1920264104 instance=ExtResource("4_ynf5e")]
 transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, 0, -0.91470385, 0)
 
@@ -47,24 +49,6 @@ light_angular_distance = 80.0
 
 [node name="Player" parent="." unique_id=482356386 instance=ExtResource("1_jjgbg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
-
-[node name="UI" type="Control" parent="." unique_id=166735091]
-process_mode = 3
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("4_jjvhh")
-
-[node name="ResumeButton" type="Button" parent="UI" unique_id=396119556]
-visible = false
-layout_mode = 0
-offset_left = 370.0
-offset_top = 296.0
-offset_right = 824.0
-offset_bottom = 360.0
-disabled = true
-text = "Resume"
 
 [node name="CanvasLayer" parent="." unique_id=1674007050 instance=ExtResource("5_kry3j")]
 
@@ -88,4 +72,3 @@ shape = SubResource("BoxShape3D_b1gpb")
 [connection signal="green_lens_signal" from="Player" to="CanvasLayer" method="_on_player_green_lens_signal"]
 [connection signal="no_lens_signal" from="Player" to="CanvasLayer" method="_on_player_no_lens_signal"]
 [connection signal="red_lens_signal" from="Player" to="CanvasLayer" method="_on_player_red_lens_signal"]
-[connection signal="pressed" from="UI/ResumeButton" to="UI" method="_on_resume_button_pressed"]

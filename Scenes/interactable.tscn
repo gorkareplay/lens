@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://crs2qme6ukli"]
 
-[ext_resource type="Texture2D" uid="uid://55gxhuict02c" path="res://Sprites/icon.svg" id="1_8s6bd"]
+[ext_resource type="Texture2D" uid="uid://55gxhuict02c" path="res://Sprites/title.svg" id="1_8s6bd"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b1gpb"]
 size = Vector3(1, 1.1401367, 1)
