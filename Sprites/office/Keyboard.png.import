@@ -3,16 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d3xrov4hlmops"
-path.etc2="res://.godot/imported/Keyboard.png-b3c7ff2f7a75070d47c52dc9fd2c7784.etc2.ctex"
+path.s3tc="res://.godot/imported/Keyboard.png-b3c7ff2f7a75070d47c52dc9fd2c7784.s3tc.ctex"
 metadata={
-"imported_formats": ["etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Sprites/office/Keyboard.png"
-dest_files=["res://.godot/imported/Keyboard.png-b3c7ff2f7a75070d47c52dc9fd2c7784.etc2.ctex"]
+dest_files=["res://.godot/imported/Keyboard.png-b3c7ff2f7a75070d47c52dc9fd2c7784.s3tc.ctex"]
 
 [params]
 

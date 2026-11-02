@@ -153,7 +153,7 @@ func _build_world() -> void:
 	_character("waiter1", "waiter_one", Vector3(5.2, 0.65, 4.0), "Waiter #1")
 	_character("guest", "loyal_customer", Vector3(8.64, 0.65, 4.7), "Regular guest")
 	_character("chef", "chef", Vector3(5.3, 0.65, 0.8), "Chef")
-	_character("cook", "cook", Vector3(4.3, 0.65, 0.8), "Cook")
+	_character("cook", "cook", Vector3(4.3, 0.65, -0.5), "Cook")
 	_marker("office_door", "Office door", Vector3(9.737, 0.0, 2.631), "any")
 	_marker("back_door", "Back door", Vector3(0.572, 0.0, -1.241), "any")
 	_marker("kitchen_door", "Kitchen door", Vector3(5.91, 0.0, 2.052), "any")
@@ -378,8 +378,3 @@ func _show_end(title: String) -> void:
 	button.text = "Play again"
 	box.add_child(button)
 	button.pressed.connect(func(): get_tree().reload_current_scene())
-
-func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_cancel") and not player.controls_locked:
-		get_tree().paused = true
-		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
