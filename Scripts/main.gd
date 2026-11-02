@@ -34,13 +34,19 @@ func _ready() -> void:
 	busy = true
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
-func _start_game() -> void:
+func _start_game(fade_duration: float) -> void:
 	if not player.menu_active:
 		return
 	player.menu_active = false
 	player.controls_locked = true
 	music.stream = load("res://Sound/main_theme.mp3")
+	var target_music_volume_db: float = music.volume_db
+	music.volume_db = -80.0
 	music.play()
+	var music_fade := create_tween()
+	music_fade.set_trans(Tween.TRANS_SINE)
+	music_fade.set_ease(Tween.EASE_IN_OUT)
+	music_fade.tween_property(music, "volume_db", target_music_volume_db, fade_duration)
 	_set_objective("Try the red (2), green (3), and blue (4) lenses.")
 	await Dialogue.say(prologue_sit_down)
 	await Dialogue.say(tutorial_base)
@@ -176,7 +182,7 @@ func _build_world() -> void:
 	_marker("wallpaper", "Torn wallpaper", Vector3(8.249, 0.822, -1.163), "green")
 	_marker("office_window", "Office window", Vector3(10.527, 0.857, 1.111), "green")
 	_marker("office_computer", "Computer", Vector3(8.593, 0.723, 0.379), "green")
-	_marker("office_blood", "Blood", Vector3(7.942, 0.12, -1.986), "red")
+	_marker("office_blood", "Blood", Vector3(7.942, 0.02, -1.986), "red")
 	_marker("kitchen_stove", "Damaged stove", Vector3(4.635, 0.292, -0.721), "green")
 	_marker("kitchen_blood", "Blood by the stove", Vector3(4.9, 0.16, -0.95), "red")
 	_marker("safe", "Empty safe", Vector3(8.725, 0.363, -1.542), "green")
