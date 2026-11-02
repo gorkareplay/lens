@@ -186,7 +186,7 @@ func _update_markers() -> void:
 		if id in ["wallpaper", "office_window", "office_computer", "office_shelves", "office_blood"]: available = phase not in ["tutorial", "approach", "lead"]
 		if id == "keys" and clues.has("keys"): available = false
 		# Characters remain visible as silhouettes; evidence appears in its lens.
-		var is_character: bool = id in ["waiter1", "waiter2", "guest", "chef", "cook", "body"]
+		var is_character: bool = id in ["waiter1", "waiter2", "guest", "chef", "cook", "body", "office_door", "back_door", "kitchen_door"]
 		node.visible = available and (is_character or lens == "any" or lens == player.lens)
 		if not is_character:
 			node.collision_layer = 2 if node.visible else 0
@@ -355,8 +355,11 @@ func _show_end(title: String) -> void:
 	var end_layer := CanvasLayer.new()
 	end_layer.layer = 110
 	add_child(end_layer)
-	var backdrop := ColorRect.new()
-	backdrop.color = Color.BLACK
+	var backdrop := TextureRect.new()
+	if title == "The price of life":
+		backdrop.texture = load("res://Sprites/arrest ending.png")
+	else:
+		backdrop.texture = load("res://Sprites/bury manager ending.png")
 	end_layer.add_child(backdrop)
 	backdrop.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	var box := VBoxContainer.new()
