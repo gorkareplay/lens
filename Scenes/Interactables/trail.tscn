@@ -3,14 +3,45 @@
 [ext_resource type="Texture2D" uid="uid://c211oqj0776xd" path="res://Sprites/blood/blood_trail.png" id="1_h2nig"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e72tk"]
-size = Vector3(1.175293, 0.117126465, 5.1220093)
+size = Vector3(0.15065002, 0.117126465, 4.9605637)
 
 [node name="BloodTrail" type="StaticBody3D" unique_id=1277570732]
+transform = Transform3D(-0.17364815, 0, -0.9848075, 0, 1, 0, 0.9848075, 0, -0.17364815, 0, 0, 0)
+collision_layer = 128
+collision_mask = 128
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=856981289]
-transform = Transform3D(0.15, 0, 0, 0, -6.5567085e-09, 0.15, 0, -0.15, -6.5567085e-09, 0, 0, 0)
+transform = Transform3D(0.15, 0, 0, 0, -6.5567085e-09, 0.15, 0, -0.15, -6.5567085e-09, 0, 0.2, 0.5605476)
+texture = ExtResource("1_h2nig")
+
+[node name="Sprite3D6" type="Sprite3D" parent="." unique_id=558527258]
+transform = Transform3D(0.14999999, 0, 0, 0, -6.5567085e-09, 0.15, 0, -0.14999999, -6.556708e-09, 0, 0.2, 4.5586805)
+texture = ExtResource("1_h2nig")
+
+[node name="Sprite3D4" type="Sprite3D" parent="." unique_id=1615316075]
+transform = Transform3D(0.15, 0, 0, 0, -6.5567085e-09, 0.15, 0, -0.15, -6.5567085e-09, 0, 0.2, -4.551285)
+texture = ExtResource("1_h2nig")
+
+[node name="Sprite3D5" type="Sprite3D" parent="." unique_id=1590077484]
+transform = Transform3D(0.15, 0, 0, 0, -6.5567085e-09, 0.15, 0, -0.15, -6.5567085e-09, 0, 0.2, -5.584695)
+texture = ExtResource("1_h2nig")
+
+[node name="Sprite3D7" type="Sprite3D" parent="." unique_id=1824695446]
+transform = Transform3D(0.14368303, 0.043071903, 1.8827326e-09, 6.617445e-24, -6.5567076e-09, 0.14999999, 0.043071903, -0.14368303, -6.2805854e-09, 0.6070389, 0.2, -7.40696)
+texture = ExtResource("1_h2nig")
+
+[node name="Sprite3D8" type="Sprite3D" parent="." unique_id=374115478]
+transform = Transform3D(0.14368309, 0.04307191, 1.8827326e-09, 6.617445e-24, -6.5567076e-09, 0.14999999, 0.04307191, -0.14368309, -6.280589e-09, 1.2718177, 0.2, -9.262348)
+texture = ExtResource("1_h2nig")
+
+[node name="Sprite3D2" type="Sprite3D" parent="." unique_id=1955283690]
+transform = Transform3D(0.15, 0, 0, 0, -6.5567085e-09, 0.15, 0, -0.15, -6.5567085e-09, 0, 0.2, 2.221296)
+texture = ExtResource("1_h2nig")
+
+[node name="Sprite3D3" type="Sprite3D" parent="." unique_id=1084536799]
+transform = Transform3D(0.15, 0, 0, 0, -6.5567085e-09, 0.15, 0, -0.15, -6.5567085e-09, 0, 0.2, -2.174705)
 texture = ExtResource("1_h2nig")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=396280702]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.087646484, 0.022369385, 0.021881104)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.019309998, 0.022369385, 2.4655423)
 shape = SubResource("BoxShape3D_e72tk")

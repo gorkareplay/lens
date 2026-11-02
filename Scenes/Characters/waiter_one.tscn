@@ -30,8 +30,6 @@ animations = [{
 size = Vector3(0.44665527, 1.1401367, 0.5303955)
 
 [node name="WaiterOne" type="StaticBody3D" unique_id=450510121]
-collision_layer = 2
-collision_mask = 2
 
 [node name="Arrow" parent="." unique_id=1920264104 instance=ExtResource("1_jswmb")]
 transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, 0.0046347976, 0, 0)

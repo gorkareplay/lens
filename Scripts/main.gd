@@ -165,31 +165,12 @@ func _build_world() -> void:
 	_marker("kitchen_blood", "Blood by the stove", Vector3(4.9, 0.16, -0.95), "red")
 	_marker("safe", "Empty safe", Vector3(8.725, 0.363, -1.542), "green")
 	_marker("keys", "Keys", Vector3(8.517, 0.257, -2.426), "green")
-	_marker("storage_blood", "Blood on shelves", Vector3(26.5, 0.9, -1), "red")
-	_marker("trail", "Blood trail", Vector3(0.0, 0.028, -6.275), "red")
-	_marker("possessions", "Documents, money and knife", Vector3(41, 0.45, -7), "green")
-	# Separate placeholder spaces preserve the original restaurant geometry.
-	_floor_at(Vector3(25, -0.1, 0), Vector3(6, 0.2, 5), Color(0.32, 0.29, 0.25))
-	_floor_at(Vector3(25, 0.9, -2.4), Vector3(6, 1.8, 0.2), Color(0.4, 0.34, 0.3))
-	_floor_at(Vector3(22.1, 0.9, 0), Vector3(0.2, 1.8, 5), Color(0.35, 0.29, 0.25))
-	_floor_at(Vector3(27.9, 0.9, 0), Vector3(0.2, 1.8, 5), Color(0.35, 0.29, 0.25))
+	_marker("storage_blood", "Blood", Vector3(26.5, 0.9, -1), "red")
+	_marker("trail", "Blood trail", Vector3(4, 0.0, -6.751), "red")
+	_marker("possessions", "Documents, money and knife", Vector3(-2, 0.1, -8.5), "green")
 	_character("body", "manager", Vector3(7.631, 0.286, -2.128), "Manager")
 	actors.body.rotation.z = PI / 2
-	_floor_at(Vector3(40, -0.1, 0), Vector3(12, 0.2, 24), Color(0.26, 0.39, 0.24))
-	for tree_pos in [Vector3(36, 0.8, 3), Vector3(44, 0.8, 1), Vector3(37, 0.8, -4), Vector3(42.5, 0.8, -8)]:
-		_floor_at(tree_pos, Vector3(0.5, 1.6, 0.5), Color(0.28, 0.19, 0.12))
-	for z in [6.0, 3.0, 0.0, -3.0, -6.0]:
-		var drop := MeshInstance3D.new()
-		var drop_mesh := BoxMesh.new()
-		drop_mesh.size = Vector3(0.2, 0.03, 0.35)
-		drop.mesh = drop_mesh
-		var drop_mat := StandardMaterial3D.new()
-		drop_mat.albedo_color = Color(0.8, 0.05, 0.05)
-		drop.material_override = drop_mat
-		add_child(drop)
-		drop.position = Vector3(40, 0.03, z)
-		trail_visuals.append(drop)
-	_character("waiter2", "waiter_two", Vector3(0.0, 0.559, -12.026), "Waiter #2", self)
+	_character("waiter2", "waiter_two", Vector3(-1.8, 0.559, -8.393), "Waiter #2")
 	_update_markers()
 
 func _update_markers() -> void:
@@ -207,7 +188,8 @@ func _update_markers() -> void:
 		# Characters remain visible as silhouettes; evidence appears in its lens.
 		var is_character: bool = id in ["waiter1", "waiter2", "guest", "chef", "cook", "body"]
 		node.visible = available and (is_character or lens == "any" or lens == player.lens)
-		node.collision_layer = 2 if node.visible else 0
+		if not is_character:
+			node.collision_layer = 2 if node.visible else 0
 
 func _travel(pos: Vector3) -> void:
 	player.global_position = pos

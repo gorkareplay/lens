@@ -6,7 +6,7 @@
 size = Vector3(0.5136719, 0.60498047, 0.07495117)
 
 [node name="Possessions" type="StaticBody3D" unique_id=1816194082]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1431191, 0, 0)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=2117707997]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)

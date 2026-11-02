@@ -7,8 +7,6 @@
 size = Vector3(0.8375244, 0.72143555, 0.19396973)
 
 [node name="Manager" type="StaticBody3D" unique_id=450510121]
-collision_layer = 2
-collision_mask = 2
 script = ExtResource("1_uscr2")
 
 [node name="Interactable" type="Sprite3D" parent="." unique_id=133969350]
