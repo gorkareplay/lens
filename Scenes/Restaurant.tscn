@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://dcqbdefb88frj" path="res://Sprites/Trees/Tree1.png" id="1_boa77"]
 [ext_resource type="PackedScene" uid="uid://b6u7pec3ej8oh" path="res://Scenes/Interactables/office_window.tscn" id="1_mdxsm"]
 [ext_resource type="Shader" uid="uid://d03x0husnhw7h" path="res://outline_shader.gdshader" id="1_tfhkb"]
-[ext_resource type="PackedScene" uid="uid://chaa7eoflv5fb" path="res://Scenes/Interactables/office_computer.tscn" id="1_vo6fk"]
 [ext_resource type="Texture2D" uid="uid://d3xrov4hlmops" path="res://Sprites/office/Keyboard.png" id="2_hje71"]
 [ext_resource type="Texture2D" uid="uid://0bl1xjw1oia6" path="res://Sprites/Trees/Tree2.png" id="2_mnjd0"]
 [ext_resource type="Texture2D" uid="uid://xtmu0arg4sv8" path="res://Sprites/silent-guys/Untitled4_20261030182751.PNG" id="2_tfhkb"]
+[ext_resource type="Texture2D" uid="uid://bn2xibetjy5fr" path="res://Sprites/office/Computer.png" id="3_057dj"]
 [ext_resource type="Texture2D" uid="uid://jviga58utpjm" path="res://Sprites/silent-guys/Untitled4_20261030182855.PNG" id="3_yfx12"]
 [ext_resource type="Texture2D" uid="uid://clr60irc668na" path="res://Sprites/photo_2026-11-01_11-31-24 (2).jpg" id="4_ix3f7"]
 [ext_resource type="Texture2D" uid="uid://cfs02uaqdh574" path="res://Sprites/silent-guys/womanstand.PNG" id="4_piffy"]
@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://dlicv72krfu06" path="res://Sprites/items/normal_stove.png" id="11_bue68"]
 [ext_resource type="Texture2D" uid="uid://dc7v2ormdwqeh" path="res://Sprites/wallpapers/порванные wallpapers .jpg" id="13_boa77"]
 [ext_resource type="Texture2D" uid="uid://cp4r8nyatux8s" path="res://Sprites/wallpapers/IMG_9765.jpg" id="13_iqu8l"]
-[ext_resource type="PackedScene" uid="uid://ou5e01uhsivk" path="res://Scenes/Interactables/safe.tscn" id="14_boa77"]
+[ext_resource type="Texture2D" uid="uid://njabcmxk553v" path="res://Sprites/items/safe.png" id="18_7tgqd"]
 [ext_resource type="PackedScene" uid="uid://dhcrg42xyawfn" path="res://Scenes/Interactables/possessions.tscn" id="18_057dj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bygtq"]
@@ -442,7 +442,7 @@ size = Vector3(2.1303747, 1.7142859, 0.085714296)
 
 [sub_resource type="BoxMesh" id="BoxMesh_71d42"]
 material = SubResource("StandardMaterial3D_rutji")
-size = Vector3(1.732912, 1.7702289, 0.085714296)
+size = Vector3(1.507081, 1.7702289, 0.085714296)
 
 [sub_resource type="BoxMesh" id="BoxMesh_ynw7k"]
 material = SubResource("StandardMaterial3D_rutji")
@@ -5633,11 +5633,12 @@ texture = ExtResource("2_mnjd0")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0049438477, -0.7310791, 0.0021362305)
 shape = SubResource("BoxShape3D_wyeoc")
 
-[node name="OfficeComputer" parent="." unique_id=177017824 instance=ExtResource("1_vo6fk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.593175, 0.72256815, 0.37897962)
+[node name="Sprite3D2" type="Sprite3D" parent="." unique_id=22739346]
+transform = Transform3D(-0.09, 0, -7.86805e-09, 0, 0.09, 0, 7.86805e-09, 0, -0.09, 8.593, 0.99953634, 0.379)
+texture = ExtResource("3_057dj")
 
-[node name="Keyboard" type="Sprite3D" parent="OfficeComputer" unique_id=2079950060]
-transform = Transform3D(0.09, 0, 0, 0, -3.934025e-09, -0.09, 0, 0.09, -3.934025e-09, -0.0036201477, -0.2935006, -0.36232036)
+[node name="Keyboard" type="Sprite3D" parent="." unique_id=2079950060]
+transform = Transform3D(0.09, 1.57361e-08, -6.8784676e-16, 0, -3.9340247e-09, -0.09, -1.57361e-08, 0.09, -3.9340247e-09, 8.596795, 0.4290675, 0.036761343)
 texture = ExtResource("2_hje71")
 
 [node name="OfficeWindow" parent="." unique_id=1861236078 instance=ExtResource("1_mdxsm")]
@@ -6033,7 +6034,7 @@ shape = SubResource("BoxShape3D_gkbx8")
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.375296, 0.8571429, -2.2815387)
 
 [node name="_MeshInstance3D_89" type="MeshInstance3D" parent="Office_South_solid2" unique_id=390148819]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41871285, 0, 0.52089787)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.30579758, 0, 0.52089787)
 mesh = SubResource("BoxMesh_71d42")
 
 [node name="_CollisionShape3D_90" type="CollisionShape3D" parent="Office_South_solid2" unique_id=139384707]
@@ -8054,8 +8055,9 @@ texture = ExtResource("13_iqu8l")
 transform = Transform3D(0.034052365, 0, 0, 0, 0.050124615, 0, 0, 0, 0.025, 8.231959, 0.8740885, -1.2077479)
 texture = ExtResource("13_boa77")
 
-[node name="Safe" parent="." unique_id=1368170225 instance=ExtResource("14_boa77")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.724816, 0.3630979, -1.5420687)
-
 [node name="Possessions" parent="." unique_id=1816194082 instance=ExtResource("18_057dj")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -2, 0.1, -8.5)
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1980432644]
+transform = Transform3D(-1.3113416e-09, 0, -0.03, 0, 0.03, 0, 0.03, 0, -1.3113416e-09, 8.725, 0.363, -1.542)
+texture = ExtResource("18_7tgqd")

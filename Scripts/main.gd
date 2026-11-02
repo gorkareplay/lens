@@ -6,6 +6,7 @@ extends Node3D
 @onready var player = $Player
 @onready var restaurant: Node3D = $Restaurant
 @onready var wallpaper_costil = $StaticBody3D/WallpaperCostil
+@onready var music = $MusicPlayer
 
 var phase := "tutorial"
 var in_kitchen := false
@@ -38,6 +39,8 @@ func _start_game() -> void:
 		return
 	player.menu_active = false
 	player.controls_locked = true
+	music.stream = load("res://Sound/main_theme.mp3")
+	music.play()
 	_set_objective("Try the red (2), green (3), and blue (4) lenses.")
 	await Dialogue.say(prologue_sit_down)
 	await Dialogue.say(tutorial_base)
@@ -173,7 +176,7 @@ func _build_world() -> void:
 	_marker("wallpaper", "Torn wallpaper", Vector3(8.249, 0.822, -1.163), "green")
 	_marker("office_window", "Office window", Vector3(10.527, 0.857, 1.111), "green")
 	_marker("office_computer", "Computer", Vector3(8.593, 0.723, 0.379), "green")
-	_marker("office_blood", "Blood", Vector3(9.35, 0.12, 1.75), "red")
+	_marker("office_blood", "Blood", Vector3(7.942, 0.12, -1.986), "red")
 	_marker("kitchen_stove", "Damaged stove", Vector3(4.635, 0.292, -0.721), "green")
 	_marker("kitchen_blood", "Blood by the stove", Vector3(4.9, 0.16, -0.95), "red")
 	_marker("safe", "Empty safe", Vector3(8.725, 0.363, -1.542), "green")
@@ -225,7 +228,7 @@ func _interact(target: Object) -> void:
 				var tween := create_tween()
 				tween.tween_property(actors.waiter1, "position", waiter_home, 4.0)
 			elif phase == "hall":
-				await _say(["hall_waiter_asks", "hall_detective_reply", "hall_waiter_suggests", "hall_detective_thoughts"], target as Node3D)
+				await _say(["hall_waiter_asks", "hall_detective_reply", "hall_waiter_suggests"], target as Node3D)
 				phase = "investigate"
 				_set_objective("Question people about the strange man.")
 			elif phase == "help_return":
@@ -244,6 +247,7 @@ func _interact(target: Object) -> void:
 				_travel(restaurant.to_global(Vector3(9.95, 0.5, 3.25)))
 				phase = "hall"
 				_set_objective("Speak to the waiter outside the office.")
+				await _say(["hall_detective_thoughts"])
 			elif phase == "office":
 				await Dialogue.say_raw(["I should search the office before leaving."], "Detective")
 		"kitchen_door":
@@ -326,7 +330,11 @@ func _choose_ending() -> void:
 	menu.add_child(center)
 	center.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	var box := VBoxContainer.new()
-	center.add_child(box)
+	var back := PanelContainer.new()
+	back.add_theme_stylebox_override("panel", StyleBoxFlat.new())
+	back.get_theme_stylebox("panel").bg_color = Color(0, 0, 0)
+	back.add_child(box)
+	center.add_child(back)
 	box.custom_minimum_size = Vector2(420, 0)
 	box.add_theme_constant_override("separation", 16)
 	var label := Label.new()
@@ -345,8 +353,6 @@ func _ending_selected(choice: String) -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	if choice == "law":
 		await _say(["ending1_law"])
-		_travel(Vector3(40, 0.5, 8))
-		await _say(["ending1_police_call"])
 		_show_end("The price of life")
 	else:
 		await _say(["ending2_sit", "ending2_waiter2_surprised", "ending2_help"])
@@ -356,8 +362,6 @@ func _ending_selected(choice: String) -> void:
 		_update_markers()
 
 func _revenge_ending() -> void:
-	player.controls_locked = true
-	await Dialogue.say_raw(["13:00", "16:00", "19:00", "22:00", "01:00", "A key turns. A body is dragged away. The sound of digging fades into the night."], "")
 	_show_end("The price of revenge")
 
 func _show_end(title: String) -> void:
@@ -366,28 +370,38 @@ func _show_end(title: String) -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	_set_objective("")
 	var end_layer := CanvasLayer.new()
-	end_layer.layer = 110
+	end_layer.layer = 99
 	add_child(end_layer)
 	var backdrop := TextureRect.new()
 	if title == "The price of life":
 		backdrop.texture = load("res://Sprites/arrest ending.png")
+		end_layer.add_child(backdrop)
+		backdrop.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+		await _say(["ending1_police_call"])
 	else:
 		backdrop.texture = load("res://Sprites/bury manager ending.png")
-	end_layer.add_child(backdrop)
-	backdrop.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+		end_layer.add_child(backdrop)
+		backdrop.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+		await Dialogue.say_raw(["13:00", "16:00", "19:00", "22:00", "01:00", "A key turns. A body is dragged away. The sound of digging fades into the night."], "")
 	var box := VBoxContainer.new()
+	var back := PanelContainer.new()
+	back.add_theme_stylebox_override("panel", StyleBoxFlat.new())
+	back.get_theme_stylebox("panel").bg_color = Color(0, 0, 0)
+	back.add_child(box)
 	var center := CenterContainer.new()
 	end_layer.add_child(center)
 	center.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	center.add_child(box)
+	center.add_child(back)
 	box.custom_minimum_size = Vector2(420, 0)
 	box.add_theme_constant_override("separation", 16)
 	var label := Label.new()
-	label.text = "End: " + title
+	label.text = title
 	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	label.add_theme_font_size_override("font_size", 32)
 	box.add_child(label)
 	var button := Button.new()
 	button.text = "Play again"
 	box.add_child(button)
+	music.stream = load("res://Sound/outro.mp3")
+	music.play()
 	button.pressed.connect(func(): get_tree().reload_current_scene())
