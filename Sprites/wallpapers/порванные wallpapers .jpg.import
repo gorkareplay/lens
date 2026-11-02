@@ -3,16 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dc7v2ormdwqeh"
-path.etc2="res://.godot/imported/порванные wallpapers .jpg-c557bd8d5a82ee0ee649cfc344a1c7f2.etc2.ctex"
+path.s3tc="res://.godot/imported/порванные wallpapers .jpg-c557bd8d5a82ee0ee649cfc344a1c7f2.s3tc.ctex"
 metadata={
-"imported_formats": ["etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Sprites/wallpapers/порванные wallpapers .jpg"
-dest_files=["res://.godot/imported/порванные wallpapers .jpg-c557bd8d5a82ee0ee649cfc344a1c7f2.etc2.ctex"]
+dest_files=["res://.godot/imported/порванные wallpapers .jpg-c557bd8d5a82ee0ee649cfc344a1c7f2.s3tc.ctex"]
 
 [params]
 

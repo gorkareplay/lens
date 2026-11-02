@@ -3,16 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cv4k6ifxfj7q"
-path.etc2="res://.godot/imported/play_button.svg-e499746d3ccced250b2274e3ffaeb3e1.etc2.ctex"
+path.s3tc="res://.godot/imported/play_button.svg-e499746d3ccced250b2274e3ffaeb3e1.s3tc.ctex"
 metadata={
-"imported_formats": ["etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Sprites/play_button.svg"
-dest_files=["res://.godot/imported/play_button.svg-e499746d3ccced250b2274e3ffaeb3e1.etc2.ctex"]
+dest_files=["res://.godot/imported/play_button.svg-e499746d3ccced250b2274e3ffaeb3e1.s3tc.ctex"]
 
 [params]
 
