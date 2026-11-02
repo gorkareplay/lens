@@ -3,16 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://di31ueg6a4e4o"
-path.s3tc="res://.godot/imported/manager corpse.png-ca7154258a45b9a04ee3306c6c1e3261.s3tc.ctex"
+path.etc2="res://.godot/imported/manager corpse.png-ca7154258a45b9a04ee3306c6c1e3261.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Sprites/manager corpse.png"
-dest_files=["res://.godot/imported/manager corpse.png-ca7154258a45b9a04ee3306c6c1e3261.s3tc.ctex"]
+dest_files=["res://.godot/imported/manager corpse.png-ca7154258a45b9a04ee3306c6c1e3261.etc2.ctex"]
 
 [params]
 
