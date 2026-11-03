@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bf1yybwshnotl"
 path.s3tc="res://.godot/imported/Office Computer.png-0f6fe0196733313ce94848e2c7f00e7e.s3tc.ctex"
+path.etc2="res://.godot/imported/Office Computer.png-0f6fe0196733313ce94848e2c7f00e7e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Sprites/office/Office Computer.png"
-dest_files=["res://.godot/imported/Office Computer.png-0f6fe0196733313ce94848e2c7f00e7e.s3tc.ctex"]
+dest_files=["res://.godot/imported/Office Computer.png-0f6fe0196733313ce94848e2c7f00e7e.s3tc.ctex", "res://.godot/imported/Office Computer.png-0f6fe0196733313ce94848e2c7f00e7e.etc2.ctex"]
 
 [params]
 

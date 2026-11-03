@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cyca388jl6miv"
 path.s3tc="res://.godot/imported/G3png.png-882ec58edfdec540f3961d522bf87cda.s3tc.ctex"
+path.etc2="res://.godot/imported/G3png.png-882ec58edfdec540f3961d522bf87cda.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Sprites/grass/G3png.png"
-dest_files=["res://.godot/imported/G3png.png-882ec58edfdec540f3961d522bf87cda.s3tc.ctex"]
+dest_files=["res://.godot/imported/G3png.png-882ec58edfdec540f3961d522bf87cda.s3tc.ctex", "res://.godot/imported/G3png.png-882ec58edfdec540f3961d522bf87cda.etc2.ctex"]
 
 [params]
 

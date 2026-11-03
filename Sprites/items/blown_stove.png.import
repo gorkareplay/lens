@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dktjr660pcjw1"
 path.s3tc="res://.godot/imported/blown_stove.png-e4b77edb48b593a32d18dc953be92ce2.s3tc.ctex"
+path.etc2="res://.godot/imported/blown_stove.png-e4b77edb48b593a32d18dc953be92ce2.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Sprites/items/blown_stove.png"
-dest_files=["res://.godot/imported/blown_stove.png-e4b77edb48b593a32d18dc953be92ce2.s3tc.ctex"]
+dest_files=["res://.godot/imported/blown_stove.png-e4b77edb48b593a32d18dc953be92ce2.s3tc.ctex", "res://.godot/imported/blown_stove.png-e4b77edb48b593a32d18dc953be92ce2.etc2.ctex"]
 
 [params]
 

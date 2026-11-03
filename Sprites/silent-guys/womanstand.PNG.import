@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cfs02uaqdh574"
 path.s3tc="res://.godot/imported/womanstand.PNG-65867fff17a0113f22fc26d3c2968963.s3tc.ctex"
+path.etc2="res://.godot/imported/womanstand.PNG-65867fff17a0113f22fc26d3c2968963.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Sprites/silent-guys/womanstand.PNG"
-dest_files=["res://.godot/imported/womanstand.PNG-65867fff17a0113f22fc26d3c2968963.s3tc.ctex"]
+dest_files=["res://.godot/imported/womanstand.PNG-65867fff17a0113f22fc26d3c2968963.s3tc.ctex", "res://.godot/imported/womanstand.PNG-65867fff17a0113f22fc26d3c2968963.etc2.ctex"]
 
 [params]
 
