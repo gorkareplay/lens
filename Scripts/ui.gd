@@ -1,13 +1,15 @@
 extends CanvasLayer
 
-signal play_requested
+signal play_requested(fade_duration: float)
 
-const TITLE_ART := preload("res://Sprites/Sables de Mars .jpg")
-const PLAY_BUTTON_ART := preload("res://Sprites/play_button.svg")
+const MENU_FADE_DURATION := 1.4
+const TITLE_ART := preload("res://Sprites/title.jpg")
+const PLAY_BUTTON_ART := preload("res://Sprites/play_button.png")
 
 var menu_root: Control
 var title_image: TextureRect
-var play_button: Button
+var play_button: TextureButton
+var play_button_height_ratio := 1.0
 
 func _ready() -> void:
 	layer = 120
@@ -54,10 +56,30 @@ func _build_menu() -> void:
 	title_image.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	content.add_child(title_image)
 
-	play_button = Button.new()
+	var button_image := PLAY_BUTTON_ART.get_image()
+	var button_bounds := button_image.get_used_rect()
+	button_image = button_image.get_region(button_bounds)
+	play_button_height_ratio = float(button_image.get_height()) / float(button_image.get_width())
+	var button_texture := ImageTexture.create_from_image(button_image)
+	var click_mask := BitMap.new()
+	click_mask.create_from_image_alpha(button_image)
+
+	play_button = TextureButton.new()
 	play_button.name = "PlayButton"
+	play_button.texture_normal = button_texture
+	play_button.texture_hover = button_texture
+	play_button.texture_pressed = button_texture
+	play_button.texture_focused = button_texture
+	play_button.texture_click_mask = click_mask
+	play_button.ignore_texture_size = true
+	play_button.stretch_mode = TextureButton.STRETCH_KEEP_ASPECT_CENTERED
+	play_button.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+	play_button.size_flags_vertical = Control.SIZE_SHRINK_CENTER
 	play_button.focus_mode = Control.FOCUS_ALL
-	play_button.text = "Play"
+	play_button.tooltip_text = "Play"
+	play_button.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+	play_button.mouse_entered.connect(func(): play_button.modulate = Color(1.18, 1.18, 1.18, 1.0))
+	play_button.mouse_exited.connect(func(): play_button.modulate = Color.WHITE)
 	play_button.pressed.connect(_on_play_pressed)
 	content.add_child(play_button)
 	play_button.grab_focus()
@@ -69,7 +91,21 @@ func _resize_menu() -> void:
 	var title_width := minf(viewport_size.x * 0.88, 920.0)
 	var title_height := minf(viewport_size.y * 0.34, 276.0)
 	title_image.custom_minimum_size = Vector2(title_width, title_height)
+	var available_button_height := maxf(viewport_size.y - title_height - 66.0, 0.0)
+	var button_width := minf(minf(viewport_size.x * 0.4, 360.0), available_button_height / play_button_height_ratio)
+	play_button.custom_minimum_size = Vector2(button_width, button_width * play_button_height_ratio)
 
 func _on_play_pressed() -> void:
+	play_button.disabled = true
+	play_button.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	menu_root.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	menu_root.get_node("WhiteBackground").mouse_filter = Control.MOUSE_FILTER_IGNORE
+	menu_root.get_node("MenuCenter").mouse_filter = Control.MOUSE_FILTER_IGNORE
+	menu_root.get_node("MenuCenter/MenuContent").mouse_filter = Control.MOUSE_FILTER_IGNORE
+	var menu_fade := create_tween()
+	menu_fade.set_trans(Tween.TRANS_SINE)
+	menu_fade.set_ease(Tween.EASE_IN_OUT)
+	menu_fade.tween_property(menu_root, "modulate", Color(1, 1, 1, 0), MENU_FADE_DURATION)
+	await menu_fade.finished
 	menu_root.hide()
-	play_requested.emit()
+	play_requested.emit(MENU_FADE_DURATION)

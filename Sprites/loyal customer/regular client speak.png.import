@@ -4,16 +4,15 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckme83skcikh3"
 path.s3tc="res://.godot/imported/regular client speak.png-482d8a2872afa151a8617feafcee66ee.s3tc.ctex"
-path.etc2="res://.godot/imported/regular client speak.png-482d8a2872afa151a8617feafcee66ee.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Sprites/loyal customer/regular client speak.png"
-dest_files=["res://.godot/imported/regular client speak.png-482d8a2872afa151a8617feafcee66ee.s3tc.ctex", "res://.godot/imported/regular client speak.png-482d8a2872afa151a8617feafcee66ee.etc2.ctex"]
+dest_files=["res://.godot/imported/regular client speak.png-482d8a2872afa151a8617feafcee66ee.s3tc.ctex"]
 
 [params]
 

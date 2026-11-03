@@ -4,16 +4,15 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://jviga58utpjm"
 path.s3tc="res://.godot/imported/Untitled4_20261030182855.PNG-08b731fc6064e1545d61696a561785e7.s3tc.ctex"
-path.etc2="res://.godot/imported/Untitled4_20261030182855.PNG-08b731fc6064e1545d61696a561785e7.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Sprites/silent-guys/Untitled4_20261030182855.PNG"
-dest_files=["res://.godot/imported/Untitled4_20261030182855.PNG-08b731fc6064e1545d61696a561785e7.s3tc.ctex", "res://.godot/imported/Untitled4_20261030182855.PNG-08b731fc6064e1545d61696a561785e7.etc2.ctex"]
+dest_files=["res://.godot/imported/Untitled4_20261030182855.PNG-08b731fc6064e1545d61696a561785e7.s3tc.ctex"]
 
 [params]
 
