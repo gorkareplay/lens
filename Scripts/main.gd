@@ -39,7 +39,8 @@ func _start_game(fade_duration: float) -> void:
 		return
 	player.menu_active = false
 	player.controls_locked = true
-	music.stream = load("res://Sound/main_theme.mp3")
+	music.stream = load("res://Sound/main_theme.ogg")
+	music.stream.loop = true
 	var target_music_volume_db: float = music.volume_db
 	music.volume_db = -80.0
 	music.play()
