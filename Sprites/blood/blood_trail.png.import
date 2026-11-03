@@ -3,16 +3,17 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c211oqj0776xd"
+path.s3tc="res://.godot/imported/blood_trail.png-a17c61cf09a781b0f0ff1479499d7ad3.s3tc.ctex"
 path.etc2="res://.godot/imported/blood_trail.png-a17c61cf09a781b0f0ff1479499d7ad3.etc2.ctex"
 metadata={
-"imported_formats": ["etc2_astc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Sprites/blood/blood_trail.png"
-dest_files=["res://.godot/imported/blood_trail.png-a17c61cf09a781b0f0ff1479499d7ad3.etc2.ctex"]
+dest_files=["res://.godot/imported/blood_trail.png-a17c61cf09a781b0f0ff1479499d7ad3.s3tc.ctex", "res://.godot/imported/blood_trail.png-a17c61cf09a781b0f0ff1479499d7ad3.etc2.ctex"]
 
 [params]
 

@@ -3,16 +3,17 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://570aljx2a0sm"
+path.s3tc="res://.godot/imported/documents money and knife.png-ff5765c086ddc138131d7fe0411ff8ab.s3tc.ctex"
 path.etc2="res://.godot/imported/documents money and knife.png-ff5765c086ddc138131d7fe0411ff8ab.etc2.ctex"
 metadata={
-"imported_formats": ["etc2_astc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Sprites/items/documents money and knife.png"
-dest_files=["res://.godot/imported/documents money and knife.png-ff5765c086ddc138131d7fe0411ff8ab.etc2.ctex"]
+dest_files=["res://.godot/imported/documents money and knife.png-ff5765c086ddc138131d7fe0411ff8ab.s3tc.ctex", "res://.godot/imported/documents money and knife.png-ff5765c086ddc138131d7fe0411ff8ab.etc2.ctex"]
 
 [params]
 

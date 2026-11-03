@@ -233,7 +233,7 @@ func _interact(target: Object) -> void:
 				_set_objective("Question people about the strange man.")
 			elif phase == "help_return":
 				await _say(["ending2_waiter1_thief", "ending2_detective_reply", "ending2_waiter1_hesitate", "ending2_detective_responsibility"], target as Node3D)
-				await _revenge_ending()
+				_revenge_ending()
 			elif phase == "investigate":
 				await _say(["waiter1_q_runner", "waiter1_a_runner"], target as Node3D)
 		"office_door":

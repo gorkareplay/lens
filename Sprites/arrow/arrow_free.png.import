@@ -3,16 +3,17 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://nd2vq5uhnt67"
+path.s3tc="res://.godot/imported/arrow_free.png-bc0bd671124feb309e0f088cf45c9de0.s3tc.ctex"
 path.etc2="res://.godot/imported/arrow_free.png-bc0bd671124feb309e0f088cf45c9de0.etc2.ctex"
 metadata={
-"imported_formats": ["etc2_astc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Sprites/arrow/arrow_free.png"
-dest_files=["res://.godot/imported/arrow_free.png-bc0bd671124feb309e0f088cf45c9de0.etc2.ctex"]
+dest_files=["res://.godot/imported/arrow_free.png-bc0bd671124feb309e0f088cf45c9de0.s3tc.ctex", "res://.godot/imported/arrow_free.png-bc0bd671124feb309e0f088cf45c9de0.etc2.ctex"]
 
 [params]
 

@@ -3,16 +3,17 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://0bl1xjw1oia6"
+path.s3tc="res://.godot/imported/Tree2.png-6c453ac916781087b86da0c90a7f1f78.s3tc.ctex"
 path.etc2="res://.godot/imported/Tree2.png-6c453ac916781087b86da0c90a7f1f78.etc2.ctex"
 metadata={
-"imported_formats": ["etc2_astc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Sprites/Trees/Tree2.png"
-dest_files=["res://.godot/imported/Tree2.png-6c453ac916781087b86da0c90a7f1f78.etc2.ctex"]
+dest_files=["res://.godot/imported/Tree2.png-6c453ac916781087b86da0c90a7f1f78.s3tc.ctex", "res://.godot/imported/Tree2.png-6c453ac916781087b86da0c90a7f1f78.etc2.ctex"]
 
 [params]
 

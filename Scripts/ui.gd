@@ -2,12 +2,12 @@ extends CanvasLayer
 
 signal play_requested
 
-const TITLE_ART := preload("res://Sprites/title.svg")
+const TITLE_ART := preload("res://Sprites/Sables de Mars .jpg")
 const PLAY_BUTTON_ART := preload("res://Sprites/play_button.svg")
 
 var menu_root: Control
 var title_image: TextureRect
-var play_button: TextureButton
+var play_button: Button
 
 func _ready() -> void:
 	layer = 120
@@ -54,19 +54,10 @@ func _build_menu() -> void:
 	title_image.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	content.add_child(title_image)
 
-	play_button = TextureButton.new()
+	play_button = Button.new()
 	play_button.name = "PlayButton"
-	play_button.texture_normal = PLAY_BUTTON_ART
-	play_button.texture_hover = PLAY_BUTTON_ART
-	play_button.texture_pressed = PLAY_BUTTON_ART
-	play_button.texture_focused = PLAY_BUTTON_ART
-	play_button.ignore_texture_size = true
-	play_button.stretch_mode = TextureButton.STRETCH_KEEP_ASPECT_CENTERED
 	play_button.focus_mode = Control.FOCUS_ALL
-	play_button.tooltip_text = "Play"
-	play_button.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
-	play_button.mouse_entered.connect(func(): play_button.modulate = Color(1.18, 1.18, 1.18, 1.0))
-	play_button.mouse_exited.connect(func(): play_button.modulate = Color.WHITE)
+	play_button.text = "Play"
 	play_button.pressed.connect(_on_play_pressed)
 	content.add_child(play_button)
 	play_button.grab_focus()
@@ -78,8 +69,6 @@ func _resize_menu() -> void:
 	var title_width := minf(viewport_size.x * 0.88, 920.0)
 	var title_height := minf(viewport_size.y * 0.34, 276.0)
 	title_image.custom_minimum_size = Vector2(title_width, title_height)
-	var button_width := minf(viewport_size.x * 0.56, 360.0)
-	play_button.custom_minimum_size = Vector2(button_width, button_width * 120.0 / 460.0)
 
 func _on_play_pressed() -> void:
 	menu_root.hide()
